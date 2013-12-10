@@ -1,0 +1,63 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\000038}}
+.alongslide .als-image {
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000312}}
+.alongslide .als-image .image-box img {
+  position: absolute;
+  height: auto;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000324}}
+.alongslide .als-image .caption {
+  position: absolute;
+  bottom: 0.3em;
+  font-size: 0.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000328}}
+.alongslide .als-image .caption p {
+  display: inline;
+  font-size: 11px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000342}}
+article.medium-format .als-image {
+  margin: 2rem 21px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000344}}
+article.medium-format .als-image .image-box {
+  height: auto !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000346}}
+article.medium-format .als-image .image-box img {
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  left: initial;
+  top: initial;
+  -webkit-transform: initial;
+  transform: initial;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000358}}
+article.medium-format .als-image .caption {
+  padding: 10px 0 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000364}}
+article.medium-format .als-image .caption p {
+  text-indent: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000372}}
+article.medium-format .als-gallery .als-image {
+  margin: 0;
+}
