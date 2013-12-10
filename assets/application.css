@@ -1,0 +1,2624 @@
+/*
+ * This is a manifest file that'll be compiled into main.css.
+ * main.css is for all styling toward the front facing TC 3.0, with the exception of any Alongslide
+ * styling.
+ *
+ */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000319}}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000329}}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000332}}
+body {
+  line-height: 1;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000335}}
+ol, ul {
+  list-style: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000338}}
+blockquote, q {
+  quotes: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000342}}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/vendor\/assets\/stylesheets\/reset\.css}line{font-family:\0000346}}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ------------------------------- */
+/* Modules and Variables           */
+/* ------------------------------- */
+/* apply a natural box layout model to all elements */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_base\.scss}line{font-family:\0000314}}
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
+.browse_filters div.type .chosen-results li.update:before {
+  content: "\221E";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
+.browse_filters div.type .chosen-results li.project:before {
+  content: "\E766";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
+.browse_filters div.type .chosen-results li.annotation:before {
+  content: "\E764";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
+.browse_filters div.type .chosen-results li.podcast:before {
+  content: "\1F4F6";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
+.browse_filters div.type .chosen-results li.program:before {
+  content: "\E728";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
+.browse_filters div.type .chosen-results li.cluster:before {
+  content: "\1F4A8";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
+.browse_filters div.type .chosen-results li.issue:before {
+  content: "\F601";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
+.browse_filters div.type .chosen-results li.person:before {
+  content: "\1F464";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
+.browse_filters div.type .chosen-results li.book:before {
+  content: "\1F4D5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
+.browse_filters div.type .chosen-results li.print_publication:before {
+  content: "\E727";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
+.browse_filters div.type .chosen-results li.download {
+  font-size: 12px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
+.browse_filters div.type .chosen-results li.download:before {
+  content: "\1F4E5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
+.browse_filters div.type .chosen-results li.edition:before {
+  content: "\1F4D1";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
+.browse_filters div.type .chosen-results li.whitecube:before {
+  content: "\E737";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
+.browse_filters div.type .chosen-results li.tote:before {
+  content: "\1F4BC";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
+.browse_filters div.type .chosen-results li.store_item:before {
+  content: "\E73D";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
+.browse_filters div.type .chosen-results li.media:before {
+  content: "\1F4BF";
+}
+
+/* ------------------------------- */
+/* Elemental Partials              */
+/* ------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_ie\.scss}line{font-family:\000031}}
+body.ie {
+  overflow: hidden !important;
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_ie\.scss}line{font-family:\000036}}
+#unsupported-browser {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_ie\.scss}line{font-family:\000039}}
+body.ie #unsupported-browser {
+  display: block;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_ie\.scss}line{font-family:\0000312}}
+.ie-overlay {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: transparent;
+  background: rgba(255, 255, 255, 0.9);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=1, StartColorStr='#FFFFFFFF', EndColorStr='#FFFFFFFF')";
+  filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=1, StartColorStr='#FFFFFFFF', EndColorStr='#FFFFFFFF');
+  zoom: 1 !important;
+  z-index: 100000001;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_ie\.scss}line{font-family:\0000323}}
+.ie-overlay .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: white;
+  width: 500px;
+  height: 300px;
+  margin-left: -250px;
+  margin-top: -150px;
+  z-index: 100000001;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\000031}}
+.logo {
+  width: 150px;
+  height: 26px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  display: block;
+  background: url(/assets/ccc_logo.png) no-repeat top left;
+  background-image: url(/assets/ccc_logo.svg), none;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\000039}}
+.logo a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\0000317}}
+.post-date,
+.download-link {
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\0000321}}
+.caption {
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+  padding-top: 1.5rem;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\0000327}}
+.content .meta {
+  margin-bottom: 30px;
+  height: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_global\.scss}line{font-family:\0000333}}
+.type-icon {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\000034}}
+body {
+  font-family: "TCCrimson", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: normal;
+  color: #222222;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000310}}
+h2, h3 {
+  font-family: "tcarchivoregular", "Arial Black", "Arial Bold", sans-serif;
+  font-size: 18px;
+  line-height: 1.22222em;
+  font-weight: normal;
+  word-spacing: -1px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000316}}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #222222;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000321}}
+a {
+  -webkit-transition: color 0.15s ease-out;
+  -moz-transition: color 0.15s ease-out;
+  -o-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000325}}
+a:hover {
+  color: #5050c5;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000331}}
+p a {
+  border-bottom: 1px solid #cccccc;
+  transition: border-bottom-color 0.4s ease-in;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/modules\/_mixins\.scss}line{font-family:\00003151}}
+p a:hover {
+  color: #000;
+  border-bottom: 1px solid #222222;
+  transition: border-bottom-color 0.05s ease-in;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000336}}
+em {
+  font-style: italic;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000341}}
+strong,
+b {
+  font-weight: 900;
+  line-height: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000349}}
+input,
+ul.chosen-choices,
+a.chosen-single,
+.chosen-results {
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 12px;
+  color: #222222 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000354}}
+input::-webkit-input-placeholder,
+ul.chosen-choices::-webkit-input-placeholder,
+a.chosen-single::-webkit-input-placeholder,
+.chosen-results::-webkit-input-placeholder {
+  color: #222222 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000357}}
+input:-moz-placeholder,
+ul.chosen-choices:-moz-placeholder,
+a.chosen-single:-moz-placeholder,
+.chosen-results:-moz-placeholder {
+  /* Firefox 18- */
+  color: #222222 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000361}}
+input::-moz-placeholder,
+ul.chosen-choices::-moz-placeholder,
+a.chosen-single::-moz-placeholder,
+.chosen-results::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #222222 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_typography\.scss}line{font-family:\0000364}}
+input:-ms-input-placeholder,
+ul.chosen-choices:-ms-input-placeholder,
+a.chosen-single:-ms-input-placeholder,
+.chosen-results:-ms-input-placeholder {
+  color: #222222 !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\000033}}
+a,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000325}}
+a.button, .button {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px #ccc solid;
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 12px;
+  background: transparent;
+  cursor: pointer;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000315}}
+a.button:hover, .button:hover {
+  background: transparent;
+  color: #5050c5;
+  border-color: #5050c5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000319}}
+a.button:hover a, .button:hover a {
+  color: #5050c5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000329}}
+.pay .stripe-button-el, .stripe-button .stripe-button-el {
+  border-radius: 0;
+  box-shadow: none;
+  background-image: none;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000335}}
+.pay .stripe-button-el span, .stripe-button .stripe-button-el span {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px #ccc solid;
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 12px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  color: #222222;
+  font-weight: normal;
+  text-shadow: none;
+  height: auto;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000315}}
+.pay .stripe-button-el span:hover, .stripe-button .stripe-button-el span:hover {
+  background: transparent;
+  color: #5050c5;
+  border-color: #5050c5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000319}}
+.pay .stripe-button-el span:hover a, .stripe-button .stripe-button-el span:hover a {
+  color: #5050c5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000348}}
+.pay input {
+  display: inline-block;
+  padding: 15px 30px;
+  border: 1px #ccc solid;
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 12px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 0;
+  box-shadow: none;
+  color: #222222;
+  font-weight: normal;
+  text-shadow: none;
+  height: auto;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000315}}
+.pay input:hover {
+  background: transparent;
+  color: #5050c5;
+  border-color: #5050c5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_buttons\.scss}line{font-family:\0000319}}
+.pay input:hover a {
+  color: #5050c5;
+}
+
+/*
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license
+
+Copyright (c) 2013 Daniel Eden
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_animate\.scss}line{font-family:\0000314}}
+body {
+  /* Addresses a small issue in webkit: http://bit.ly/NEdoDq */
+  -webkit-backface-visibility: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/partials\/_animate\.scss}line{font-family:\0000330}}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@keyframes flash {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUpBig {
+  0% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+@-o-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInLeftBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+}
+
+@-moz-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+}
+
+@-o-keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRightBig {
+  0% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-o-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+}
+
+@-moz-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+}
+
+@-o-keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+}
+
+@keyframes fadeOutUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+@-webkit-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+  }
+}
+
+@-moz-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(20px);
+  }
+}
+
+@-o-keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateY(20px);
+  }
+}
+
+@keyframes fadeOutDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+@-webkit-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+  }
+}
+
+@-moz-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-20px);
+  }
+}
+
+@-o-keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-20px);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+}
+
+@-webkit-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+  }
+}
+
+@-moz-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(20px);
+  }
+}
+
+@-o-keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(20px);
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+}
+
+@-webkit-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+}
+
+@-moz-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+}
+
+@-o-keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+}
+
+@keyframes fadeOutUpBig {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+}
+
+@-webkit-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(2000px);
+  }
+}
+
+@-moz-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateY(2000px);
+  }
+}
+
+@-o-keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateY(2000px);
+  }
+}
+
+@keyframes fadeOutDownBig {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(2000px);
+  }
+}
+
+@-webkit-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(-2000px);
+  }
+}
+
+@-moz-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(-2000px);
+  }
+}
+
+@-o-keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(-2000px);
+  }
+}
+
+@keyframes fadeOutLeftBig {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(-2000px);
+  }
+}
+
+@-webkit-keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateX(2000px);
+  }
+}
+
+@-moz-keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    -moz-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -moz-transform: translateX(2000px);
+  }
+}
+
+@-o-keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    -o-transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    -o-transform: translateX(2000px);
+  }
+}
+
+@keyframes fadeOutRightBig {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateX(2000px);
+  }
+}
+
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05);
+  }
+
+  70% {
+    -moz-transform: scale(0.9);
+  }
+
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+
+@-o-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.05);
+  }
+
+  70% {
+    -o-transform: scale(0.9);
+  }
+
+  100% {
+    -o-transform: scale(1);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  70% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* ------------------------------- */
+/* Third Party 		               */
+/* ------------------------------- */
+/* Vendors that exist outside app/ scope */
+/* ------------------------------- */
+/* Global Components   		       */
+/* ------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\000039}}
+body {
+  background-color: #fbfbfb;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000315}}
+#wrapper,
+#breadcrumb,
+footer.footer {
+  -webkit-transition: margin 0.25s linear;
+  -moz-transition: margin 0.25s linear;
+  -o-transition: margin 0.25s linear;
+  transition: margin 0.25s linear;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000318}}
+.main-sidebar {
+  -webkit-transition: -webkit-transform 0.25s linear;
+  -moz-transition: -moz-transform 0.25s linear;
+  -o-transition: -o-transform 0.25s linear;
+  transition: transform 0.25s linear;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000322}}
+#sidebar-controls .toggle-l {
+  -webkit-transition: left 0.25s linear;
+  -moz-transition: left 0.25s linear;
+  -o-transition: left 0.25s linear;
+  transition: left 0.25s linear;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000326}}
+#sidebar-controls .toggle-r {
+  -webkit-transition: right 0.25s linear;
+  -moz-transition: right 0.25s linear;
+  -o-transition: right 0.25s linear;
+  transition: right 0.25s linear;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000330}}
+.pagewidth {
+  *zoom: 1;
+  max-width: 90.71429%;
+  _width: 90.71429%;
+  padding-left: 24px;
+  padding-right: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 980px;
+  opacity: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/\.rvm\/gems\/ruby-1\.9\.3-p392\@tc_cms\/gems\/compass-0\.12\.2\/frameworks\/compass\/stylesheets\/compass\/utilities\/general\/_clearfix\.scss}line{font-family:\0000338}}
+.pagewidth:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000330}}
+  .pagewidth {
+    padding-left: 24px;
+    padding-right: 24px;
+    /*
+    $total-columns: 18;
+    @include container;
+    */
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000334}}
+.pagewidth.ready {
+  opacity: 1;
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000341}}
+.project #wrapper > .pagewidth {
+  max-width: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000348}}
+.content_items #wrapper {
+  overflow: hidden;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000352}}
+#wrapper {
+  width: 100%;
+  position: relative;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000361}}
+body.sidebar-active-left .main-sidebar.navigation {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000366}}
+body.sidebar-active-left #wrapper,
+body.sidebar-active-left #breadcrumb,
+body.sidebar-active-left footer.footer {
+  margin-left: 300px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000369}}
+body.sidebar-active-left #sidebar-controls .toggle-l {
+  left: 310px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000372}}
+body.sidebar-active-left #sidebar-controls .toggle-r {
+  right: -290px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000378}}
+body.sidebar-active-right .main-sidebar.context-panel {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000383}}
+body.sidebar-active-right #wrapper,
+body.sidebar-active-right #breadcrumb,
+body.sidebar-active-right footer.footer {
+  margin-left: -300px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000386}}
+body.sidebar-active-right #sidebar-controls .toggle-l {
+  left: -290px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/components\/_layout\.scss}line{font-family:\0000389}}
+body.sidebar-active-right #sidebar-controls .toggle-r {
+  right: 310px;
+}
+
+/* ------------------------------- */
+/* Page Specific      		       */
+/* ------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\000036}}
+.home #wrapper > .pagewidth, .collections #wrapper > .pagewidth, .browse #wrapper > .pagewidth, .people #wrapper > .pagewidth, .store #wrapper > .pagewidth, .static #wrapper > .pagewidth, .membership #wrapper > .pagewidth,
+body.registrations #wrapper > .pagewidth,
+body.sessions #wrapper > .pagewidth,
+body.passwords #wrapper > .pagewidth,
+body.routing_error #wrapper > .pagewidth {
+  padding-top: 32px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000312}}
+.generic-wrap {
+  border-top: 1px solid #ccc;
+  padding: 10px 0 0 0;
+  margin-bottom: 44px;
+  overflow: hidden;
+  min-height: 330px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000319}}
+.generic-wrap h1, .generic-wrap h2 {
+  font-size: 31px;
+  line-height: 1.064516129em;
+  font-weight: normal;
+  margin-bottom: 2.412rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000325}}
+.generic-wrap.no-border {
+  border-top: 1px solid transparent;
+  padding-top: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000332}}
+header.generic-wrap {
+  padding: 25px 0 0 0;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000334}}
+  header.generic-wrap .title {
+    width: 42.63217%;
+    float: left;
+    margin-right: 3.26209%;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000339}}
+header.generic-wrap .desc {
+  font-family: "TCCrimson", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 22px;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/shared\.scss}line{font-family:\0000339}}
+  header.generic-wrap .desc {
+    width: 54.10574%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\000037}}
+#markdown-source {
+  -webkit-transition: top 0.25s linear;
+  -moz-transition: top 0.25s linear;
+  -o-transition: top 0.25s linear;
+  transition: top 0.25s linear;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  position: fixed;
+  top: 100%;
+  height: 100%;
+  width: 900px;
+  padding: 50px;
+  background-color: #f9f9f9;
+  color: black;
+  opacity: 0.96;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000318}}
+#markdown-source a.close {
+  font-family: Asap;
+  position: absolute;
+  top: 5px;
+  right: 50px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000324}}
+#markdown-source .source {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000329}}
+#markdown-source .source h3 {
+  font-family: Asap;
+  font-size: 180%;
+  margin-bottom: 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000334}}
+#markdown-source .source pre {
+  font-family: "Source Code Pro", "Lucida Console", Monaco, monospace;
+  white-space: pre-wrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000337}}
+#markdown-source .source pre.indented:before {
+  content: "    ";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000340}}
+#markdown-source .source pre.directive {
+  background-color: royalblue;
+  color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000344}}
+#markdown-source .source pre.in-block {
+  background-color: #e9f9ff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/page\/_demo\.scss}line{font-family:\0000349}}
+#markdown-source.on {
+  top: 0%;
+}
+
+/* ------------------------------- */
+/* Misc                           */
+/* ------------------------------- */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_debug\.scss}line{font-family:\000033}}
+body.debug {
+  background-image: url(/assets/tc_baseline_bg.png);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_debug\.scss}line{font-family:\000035}}
+body.debug .pagewidth {
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(2.47469%, rgba(100, 100, 225, 0.25)), color-stop(2.47469%, rgba(0, 0, 0, 0)), color-stop(5.73678%, rgba(0, 0, 0, 0)), color-stop(5.73678%, rgba(100, 100, 225, 0.25)), color-stop(8.21147%, rgba(100, 100, 225, 0.25)), color-stop(8.21147%, rgba(0, 0, 0, 0)), color-stop(11.47357%, rgba(0, 0, 0, 0)), color-stop(11.47357%, rgba(100, 100, 225, 0.25)), color-stop(13.94826%, rgba(100, 100, 225, 0.25)), color-stop(13.94826%, rgba(0, 0, 0, 0)), color-stop(17.21035%, rgba(0, 0, 0, 0)), color-stop(17.21035%, rgba(100, 100, 225, 0.25)), color-stop(19.68504%, rgba(100, 100, 225, 0.25)), color-stop(19.68504%, rgba(0, 0, 0, 0)), color-stop(22.94713%, rgba(0, 0, 0, 0)), color-stop(22.94713%, rgba(100, 100, 225, 0.25)), color-stop(25.42182%, rgba(100, 100, 225, 0.25)), color-stop(25.42182%, rgba(0, 0, 0, 0)), color-stop(28.68391%, rgba(0, 0, 0, 0)), color-stop(28.68391%, rgba(100, 100, 225, 0.25)), color-stop(31.15861%, rgba(100, 100, 225, 0.25)), color-stop(31.15861%, rgba(0, 0, 0, 0)), color-stop(34.4207%, rgba(0, 0, 0, 0)), color-stop(34.4207%, rgba(100, 100, 225, 0.25)), color-stop(36.89539%, rgba(100, 100, 225, 0.25)), color-stop(36.89539%, rgba(0, 0, 0, 0)), color-stop(40.15748%, rgba(0, 0, 0, 0)), color-stop(40.15748%, rgba(100, 100, 225, 0.25)), color-stop(42.63217%, rgba(100, 100, 225, 0.25)), color-stop(42.63217%, rgba(0, 0, 0, 0)), color-stop(45.89426%, rgba(0, 0, 0, 0)), color-stop(45.89426%, rgba(100, 100, 225, 0.25)), color-stop(48.36895%, rgba(100, 100, 225, 0.25)), color-stop(48.36895%, rgba(0, 0, 0, 0)), color-stop(51.63105%, rgba(0, 0, 0, 0)), color-stop(51.63105%, rgba(100, 100, 225, 0.25)), color-stop(54.10574%, rgba(100, 100, 225, 0.25)), color-stop(54.10574%, rgba(0, 0, 0, 0)), color-stop(57.36783%, rgba(0, 0, 0, 0)), color-stop(57.36783%, rgba(100, 100, 225, 0.25)), color-stop(59.84252%, rgba(100, 100, 225, 0.25)), color-stop(59.84252%, rgba(0, 0, 0, 0)), color-stop(63.10461%, rgba(0, 0, 0, 0)), color-stop(63.10461%, rgba(100, 100, 225, 0.25)), color-stop(65.5793%, rgba(100, 100, 225, 0.25)), color-stop(65.5793%, rgba(0, 0, 0, 0)), color-stop(68.84139%, rgba(0, 0, 0, 0)), color-stop(68.84139%, rgba(100, 100, 225, 0.25)), color-stop(71.31609%, rgba(100, 100, 225, 0.25)), color-stop(71.31609%, rgba(0, 0, 0, 0)), color-stop(74.57818%, rgba(0, 0, 0, 0)), color-stop(74.57818%, rgba(100, 100, 225, 0.25)), color-stop(77.05287%, rgba(100, 100, 225, 0.25)), color-stop(77.05287%, rgba(0, 0, 0, 0)), color-stop(80.31496%, rgba(0, 0, 0, 0)), color-stop(80.31496%, rgba(100, 100, 225, 0.25)), color-stop(82.78965%, rgba(100, 100, 225, 0.25)), color-stop(82.78965%, rgba(0, 0, 0, 0)), color-stop(86.05174%, rgba(0, 0, 0, 0)), color-stop(86.05174%, rgba(100, 100, 225, 0.25)), color-stop(88.52643%, rgba(100, 100, 225, 0.25)), color-stop(88.52643%, rgba(0, 0, 0, 0)), color-stop(91.78853%, rgba(0, 0, 0, 0)), color-stop(91.78853%, rgba(100, 100, 225, 0.25)), color-stop(94.26322%, rgba(100, 100, 225, 0.25)), color-stop(94.26322%, rgba(0, 0, 0, 0)), color-stop(97.52531%, rgba(0, 0, 0, 0)), color-stop(97.52531%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+  -webkit-background-origin: content;
+  -moz-background-origin: content;
+  -ms-background-origin: content-box;
+  -o-background-origin: content-box;
+  background-origin: content-box;
+  -webkit-background-clip: content-box;
+  -moz-background-clip: content-box;
+  background-clip: content-box;
+}
+@media (min-width: 768px) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_debug\.scss}line{font-family:\000035}}
+  body.debug .pagewidth {
+    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(0%, rgba(100, 100, 225, 0.25)), color-stop(2.47469%, rgba(100, 100, 225, 0.25)), color-stop(2.47469%, rgba(0, 0, 0, 0)), color-stop(5.73678%, rgba(0, 0, 0, 0)), color-stop(5.73678%, rgba(100, 100, 225, 0.25)), color-stop(8.21147%, rgba(100, 100, 225, 0.25)), color-stop(8.21147%, rgba(0, 0, 0, 0)), color-stop(11.47357%, rgba(0, 0, 0, 0)), color-stop(11.47357%, rgba(100, 100, 225, 0.25)), color-stop(13.94826%, rgba(100, 100, 225, 0.25)), color-stop(13.94826%, rgba(0, 0, 0, 0)), color-stop(17.21035%, rgba(0, 0, 0, 0)), color-stop(17.21035%, rgba(100, 100, 225, 0.25)), color-stop(19.68504%, rgba(100, 100, 225, 0.25)), color-stop(19.68504%, rgba(0, 0, 0, 0)), color-stop(22.94713%, rgba(0, 0, 0, 0)), color-stop(22.94713%, rgba(100, 100, 225, 0.25)), color-stop(25.42182%, rgba(100, 100, 225, 0.25)), color-stop(25.42182%, rgba(0, 0, 0, 0)), color-stop(28.68391%, rgba(0, 0, 0, 0)), color-stop(28.68391%, rgba(100, 100, 225, 0.25)), color-stop(31.15861%, rgba(100, 100, 225, 0.25)), color-stop(31.15861%, rgba(0, 0, 0, 0)), color-stop(34.4207%, rgba(0, 0, 0, 0)), color-stop(34.4207%, rgba(100, 100, 225, 0.25)), color-stop(36.89539%, rgba(100, 100, 225, 0.25)), color-stop(36.89539%, rgba(0, 0, 0, 0)), color-stop(40.15748%, rgba(0, 0, 0, 0)), color-stop(40.15748%, rgba(100, 100, 225, 0.25)), color-stop(42.63217%, rgba(100, 100, 225, 0.25)), color-stop(42.63217%, rgba(0, 0, 0, 0)), color-stop(45.89426%, rgba(0, 0, 0, 0)), color-stop(45.89426%, rgba(100, 100, 225, 0.25)), color-stop(48.36895%, rgba(100, 100, 225, 0.25)), color-stop(48.36895%, rgba(0, 0, 0, 0)), color-stop(51.63105%, rgba(0, 0, 0, 0)), color-stop(51.63105%, rgba(100, 100, 225, 0.25)), color-stop(54.10574%, rgba(100, 100, 225, 0.25)), color-stop(54.10574%, rgba(0, 0, 0, 0)), color-stop(57.36783%, rgba(0, 0, 0, 0)), color-stop(57.36783%, rgba(100, 100, 225, 0.25)), color-stop(59.84252%, rgba(100, 100, 225, 0.25)), color-stop(59.84252%, rgba(0, 0, 0, 0)), color-stop(63.10461%, rgba(0, 0, 0, 0)), color-stop(63.10461%, rgba(100, 100, 225, 0.25)), color-stop(65.5793%, rgba(100, 100, 225, 0.25)), color-stop(65.5793%, rgba(0, 0, 0, 0)), color-stop(68.84139%, rgba(0, 0, 0, 0)), color-stop(68.84139%, rgba(100, 100, 225, 0.25)), color-stop(71.31609%, rgba(100, 100, 225, 0.25)), color-stop(71.31609%, rgba(0, 0, 0, 0)), color-stop(74.57818%, rgba(0, 0, 0, 0)), color-stop(74.57818%, rgba(100, 100, 225, 0.25)), color-stop(77.05287%, rgba(100, 100, 225, 0.25)), color-stop(77.05287%, rgba(0, 0, 0, 0)), color-stop(80.31496%, rgba(0, 0, 0, 0)), color-stop(80.31496%, rgba(100, 100, 225, 0.25)), color-stop(82.78965%, rgba(100, 100, 225, 0.25)), color-stop(82.78965%, rgba(0, 0, 0, 0)), color-stop(86.05174%, rgba(0, 0, 0, 0)), color-stop(86.05174%, rgba(100, 100, 225, 0.25)), color-stop(88.52643%, rgba(100, 100, 225, 0.25)), color-stop(88.52643%, rgba(0, 0, 0, 0)), color-stop(91.78853%, rgba(0, 0, 0, 0)), color-stop(91.78853%, rgba(100, 100, 225, 0.25)), color-stop(94.26322%, rgba(100, 100, 225, 0.25)), color-stop(94.26322%, rgba(0, 0, 0, 0)), color-stop(97.52531%, rgba(0, 0, 0, 0)), color-stop(97.52531%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(100, 100, 225, 0.25)), color-stop(100%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    background-image: linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(100, 100, 225, 0.25) 0%, rgba(100, 100, 225, 0.25) 2.47469%, rgba(0, 0, 0, 0) 2.47469%, rgba(0, 0, 0, 0) 5.73678%, rgba(100, 100, 225, 0.25) 5.73678%, rgba(100, 100, 225, 0.25) 8.21147%, rgba(0, 0, 0, 0) 8.21147%, rgba(0, 0, 0, 0) 11.47357%, rgba(100, 100, 225, 0.25) 11.47357%, rgba(100, 100, 225, 0.25) 13.94826%, rgba(0, 0, 0, 0) 13.94826%, rgba(0, 0, 0, 0) 17.21035%, rgba(100, 100, 225, 0.25) 17.21035%, rgba(100, 100, 225, 0.25) 19.68504%, rgba(0, 0, 0, 0) 19.68504%, rgba(0, 0, 0, 0) 22.94713%, rgba(100, 100, 225, 0.25) 22.94713%, rgba(100, 100, 225, 0.25) 25.42182%, rgba(0, 0, 0, 0) 25.42182%, rgba(0, 0, 0, 0) 28.68391%, rgba(100, 100, 225, 0.25) 28.68391%, rgba(100, 100, 225, 0.25) 31.15861%, rgba(0, 0, 0, 0) 31.15861%, rgba(0, 0, 0, 0) 34.4207%, rgba(100, 100, 225, 0.25) 34.4207%, rgba(100, 100, 225, 0.25) 36.89539%, rgba(0, 0, 0, 0) 36.89539%, rgba(0, 0, 0, 0) 40.15748%, rgba(100, 100, 225, 0.25) 40.15748%, rgba(100, 100, 225, 0.25) 42.63217%, rgba(0, 0, 0, 0) 42.63217%, rgba(0, 0, 0, 0) 45.89426%, rgba(100, 100, 225, 0.25) 45.89426%, rgba(100, 100, 225, 0.25) 48.36895%, rgba(0, 0, 0, 0) 48.36895%, rgba(0, 0, 0, 0) 51.63105%, rgba(100, 100, 225, 0.25) 51.63105%, rgba(100, 100, 225, 0.25) 54.10574%, rgba(0, 0, 0, 0) 54.10574%, rgba(0, 0, 0, 0) 57.36783%, rgba(100, 100, 225, 0.25) 57.36783%, rgba(100, 100, 225, 0.25) 59.84252%, rgba(0, 0, 0, 0) 59.84252%, rgba(0, 0, 0, 0) 63.10461%, rgba(100, 100, 225, 0.25) 63.10461%, rgba(100, 100, 225, 0.25) 65.5793%, rgba(0, 0, 0, 0) 65.5793%, rgba(0, 0, 0, 0) 68.84139%, rgba(100, 100, 225, 0.25) 68.84139%, rgba(100, 100, 225, 0.25) 71.31609%, rgba(0, 0, 0, 0) 71.31609%, rgba(0, 0, 0, 0) 74.57818%, rgba(100, 100, 225, 0.25) 74.57818%, rgba(100, 100, 225, 0.25) 77.05287%, rgba(0, 0, 0, 0) 77.05287%, rgba(0, 0, 0, 0) 80.31496%, rgba(100, 100, 225, 0.25) 80.31496%, rgba(100, 100, 225, 0.25) 82.78965%, rgba(0, 0, 0, 0) 82.78965%, rgba(0, 0, 0, 0) 86.05174%, rgba(100, 100, 225, 0.25) 86.05174%, rgba(100, 100, 225, 0.25) 88.52643%, rgba(0, 0, 0, 0) 88.52643%, rgba(0, 0, 0, 0) 91.78853%, rgba(100, 100, 225, 0.25) 91.78853%, rgba(100, 100, 225, 0.25) 94.26322%, rgba(0, 0, 0, 0) 94.26322%, rgba(0, 0, 0, 0) 97.52531%, rgba(100, 100, 225, 0.25) 97.52531%, rgba(100, 100, 225, 0.25) 100%, rgba(0, 0, 0, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    background-position: left top;
+    -webkit-background-origin: content;
+    -moz-background-origin: content;
+    -ms-background-origin: content-box;
+    -o-background-origin: content-box;
+    background-origin: content-box;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+  }
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\000033}}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000311}}
+.brand {
+  float: left;
+  padding-right: 8px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000315}}
+ul.nav {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000320}}
+ul.nav li {
+  display: inline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000323}}
+#flash_notice, #flash_alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000327}}
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000331}}
+#flash_alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+/**
+* Content type styles (work in progress)
+*/
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000340}}
+.pagination {
+  text-align: left;
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000344}}
+ul.collections {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000348}}
+.empty {
+  font-size: 10px;
+  line-height: 0.706rem;
+  font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000352}}
+.full {
+  width: 100%;
+  clear: both;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000355}}
+.full .content-context {
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000358}}
+.full ul.partners {
+  padding: 33px 0 0 0;
+}
+
+@media (min-width: 46.83819em) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000369}}
+  body {
+    font-size: 17px;
+    line-height: 22px;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000395}}
+.medium-format .content .text span.buy_link a {
+  transition: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/application\/_shame\.scss}line{font-family:\0000397}}
+.medium-format .content .text span.buy_link a:hover {
+  border-bottom-color: #5050c5;
+  color: #5050c5;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000357}}
+.alongslide {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000362}}
+#frames {
+  height: 100%;
+  background-color: white;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000371}}
+#frames .frame {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000391}}
+#frames .flow .frame .column {
+  width: 40.81633%;
+  height: 81.1102%;
+  top: 8.81633%;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003101}}
+#frames .flow .frame .column:nth-child(1) {
+  left: 5.5102%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003103}}
+#frames .flow .frame .column:nth-child(2) {
+  right: 5.5102%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003112}}
+#frames .flow .frame.with-panel-pinned-bottom .column {
+  height: 34.24653%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003114}}
+#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-one-third .column {
+  height: 48.66612%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003116}}
+#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-two-thirds .column {
+  height: 19.82694%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003120}}
+#frames .flow .frame.with-panel-pinned-top .column {
+  top: 55.68%;
+  height: 34.24653%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003123}}
+#frames .flow .frame.with-panel-pinned-top.with-panel-sized-one-third .column {
+  top: 41.26041%;
+  height: 48.66612%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003126}}
+#frames .flow .frame.with-panel-pinned-top.with-panel-sized-two-thirds .column {
+  top: 70.09959%;
+  height: 19.82694%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003133}}
+#frames .flow .frame.with-panel-pinned-left .column, #frames .flow .frame.with-panel-pinned-right .column {
+  width: 40.81633%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003135}}
+#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column, #frames .flow .frame.with-panel-pinned-right.with-panel-sized-one-third .column {
+  width: 58.36735%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003137}}
+#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column, #frames .flow .frame.with-panel-pinned-right.with-panel-sized-two-thirds .column {
+  width: 27.7551%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003141}}
+#frames .flow .frame.with-panel-pinned-left .column:nth-child(1) {
+  left: 53.67347%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003143}}
+#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column:nth-child(1) {
+  left: 36.12245%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003145}}
+#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column:nth-child(1) {
+  left: 66.73469%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003149}}
+#frames .flow .frame.three-columns .column {
+  width: 27.7551%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003151}}
+#frames .flow .frame.three-columns .column:nth-child(1) {
+  left: 5.5102%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003153}}
+#frames .flow .frame.three-columns .column:nth-child(2) {
+  left: 36.3%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003155}}
+#frames .flow .frame.three-columns .column:nth-child(3) {
+  right: 5.5102%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003177}}
+#frames .panels .panel {
+  position: fixed;
+  width: 980px;
+  height: 612.5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003182}}
+#frames .panels .panel .contents {
+  position: absolute;
+  top: 54px;
+  left: 54px;
+  width: 872px;
+  height: 496.8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003191}}
+#frames .panels .panel .contents .inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003197}}
+#frames .panels .panel .contents .inner img {
+  max-width: 100%;
+  height: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003206}}
+#frames .panels .panel.pin {
+  background-color: white;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003209}}
+#frames .panels .panel.pin.top .contents {
+  height: 248.4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003211}}
+#frames .panels .panel.pin.top .contents .inner {
+  height: 95.55556%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003213}}
+#frames .panels .panel.pin.top.one-third .contents {
+  height: 165.6px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003215}}
+#frames .panels .panel.pin.top.one-third .contents .inner {
+  height: 92.85714%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003217}}
+#frames .panels .panel.pin.top.two-thirds .contents {
+  height: 342.24px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003219}}
+#frames .panels .panel.pin.top.two-thirds .contents .inner {
+  height: 96.66667%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003224}}
+#frames .panels .panel.pin.bottom .contents {
+  top: 302.4px;
+  height: 248.4px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003227}}
+#frames .panels .panel.pin.bottom .contents .inner {
+  top: 4.44444%;
+  height: 95.55556%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003230}}
+#frames .panels .panel.pin.bottom.one-third .contents {
+  top: 396.24px;
+  height: 154.56px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003233}}
+#frames .panels .panel.pin.bottom.one-third .contents .inner {
+  top: 7.14286%;
+  height: 92.85714%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003236}}
+#frames .panels .panel.pin.bottom.two-thirds .contents {
+  top: 219.6px;
+  height: 331.2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003239}}
+#frames .panels .panel.pin.bottom.two-thirds .contents .inner {
+  top: 3.33333%;
+  height: 96.66667%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003250}}
+#frames .panels .panel.pin.left, #frames .panels .panel.pin.right {
+  background-color: transparent;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003252}}
+#frames .panels .panel.pin.left .contents, #frames .panels .panel.pin.right .contents {
+  width: 436px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003254}}
+#frames .panels .panel.pin.left .contents .inner, #frames .panels .panel.pin.right .contents .inner {
+  width: 91.74312%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003256}}
+#frames .panels .panel.pin.left.one-third .contents, #frames .panels .panel.pin.right.one-third .contents {
+  width: 286px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003258}}
+#frames .panels .panel.pin.left.one-third .contents .inner, #frames .panels .panel.pin.right.one-third .contents .inner {
+  width: 95.1049%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003260}}
+#frames .panels .panel.pin.left.two-thirds .contents, #frames .panels .panel.pin.right.two-thirds .contents {
+  width: 586px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003262}}
+#frames .panels .panel.pin.left.two-thirds .contents .inner, #frames .panels .panel.pin.right.two-thirds .contents .inner {
+  width: 97.61092%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003265}}
+#frames .panels .panel.pin.left {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(95%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
+  background-image: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
+  background-image: -moz-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
+  background-image: linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003270}}
+#frames .panels .panel.pin.right {
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(5%, #ffffff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
+  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
+  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
+  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003273}}
+#frames .panels .panel.pin.right .contents {
+  left: 490px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003275}}
+#frames .panels .panel.pin.right .contents .inner {
+  left: 8.25688%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003277}}
+#frames .panels .panel.pin.right.one-third .contents {
+  left: 640px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003279}}
+#frames .panels .panel.pin.right.one-third .contents .inner {
+  left: 4.8951%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003281}}
+#frames .panels .panel.pin.right.two-thirds .contents {
+  left: 340px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003283}}
+#frames .panels .panel.pin.right.two-thirds .contents .inner {
+  left: 2.38908%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003289}}
+#frames .backgrounds .background {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003304}}
+#frames p {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003317}}
+#frames sup[id^="fnref"] {
+  position: absolute;
+  left: -25px;
+  margin-top: -2px;
+  width: 27px;
+  display: inline-block;
+  height: 37px;
+  z-index: 214748364;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003325}}
+#frames sup[id^="fnref"] > a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003330}}
+#powerTip {
+  cursor: default;
+  background: white;
+  background: rgba(255, 255, 255, 0.9);
+  display: none;
+  position: absolute;
+  text-indent: 14px;
+  width: 45%;
+  z-index: 100001;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003339}}
+#powerTip > * {
+  max-width: 80%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003345}}
+#als-debug-grid {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003351}}
+#als-debug-grid.hidden {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003354}}
+#als-debug-grid .margins {
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003357}}
+#als-debug-grid .margins.horizontal {
+  width: 100%;
+  height: 81.1102%;
+  top: 9.01224%;
+  left: 0;
+  border: 1px solid #00feff;
+  border-left-width: 0;
+  border-right-width: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003366}}
+#als-debug-grid .margins.vertical {
+  width: 88.97959%;
+  height: 100%;
+  left: 5.5102%;
+  top: 0;
+  border: 1px solid #ff2598;
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003375}}
+#als-debug-grid .margins.vertical.inner {
+  width: 7.34694%;
+  left: 46.32653%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003379}}
+#als-debug-grid .more {
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003383}}
+#als-debug-grid .units {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003390}}
+#als-debug-grid .units.vertical .unit {
+  width: 100%;
+  border-top: 1px solid #def0f7;
+  height: 1.80245%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003395}}
+#als-debug-grid .units.horizontal {
+  top: 9.01224%;
+  height: 81.1102%;
+  margin: 0 5.5102%;
+  width: 88.97959%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003401}}
+#als-debug-grid .units.horizontal .unit {
+  height: 100%;
+  width: 2.52294%;
+  margin-right: 3.21101%;
+  float: left;
+  background-color: #d8e7f6;
+  opacity: 0.4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003408}}
+#als-debug-grid .units.horizontal .unit:last-child {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003411}}
+#als-debug-grid.thirds .margins.vertical.inner {
+  width: 2.85714%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003413}}
+#als-debug-grid.thirds .margins.vertical.inner:nth-child(1) {
+  left: 33.26531%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003415}}
+#als-debug-grid.thirds .margins.vertical.inner:nth-child(2) {
+  left: 63.87755%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003418}}
+#source {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003421}}
+#please-rotate {
+  display: none;
+}
+
+@media only screen and (min-device-width: 768px) and (orientation: portrait) {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003425}}
+  #please-rotate {
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+  }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003432}}
+  #please-rotate h1 {
+    font-size: 100px;
+    line-height: 1em;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 150px;
+    text-align: center;
+  }
+}
+@media print {
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000032}}
+  aside, nav, #breadcrumb {
+    display: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000033}}
+  #source {
+    display: block !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000034}}
+  #content-display {
+    display: none !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000035}}
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+
+  /* Black prints faster: h5bp.com/s */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000036}}
+  a, a:visited {
+    text-decoration: underline;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000037}}
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000038}}
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000039}}
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+
+  /* Don't show links for images, or javascript/internal links */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000310}}
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000311}}
+  thead {
+    display: table-header-group;
+  }
+
+  /* h5bp.com/t */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000312}}
+  tr, img {
+    page-break-inside: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000313}}
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000315}}
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000316}}
+  h2, h3 {
+    page-break-after: avoid;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000317}}
+  body {
+    font-size: 30px !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000320}}
+  p, a {
+    font-size: 1em !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000323}}
+  h1 {
+    font-size: 1.3em !important;
+  }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000326}}
+  h2, h3, h4 {
+    font-size: 1.2em !important;
+  }
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
+.browse_filters div.type .chosen-results li.update:before {
+  content: "\221E";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
+.browse_filters div.type .chosen-results li.project:before {
+  content: "\E766";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
+.browse_filters div.type .chosen-results li.annotation:before {
+  content: "\E764";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
+.browse_filters div.type .chosen-results li.podcast:before {
+  content: "\1F4F6";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
+.browse_filters div.type .chosen-results li.program:before {
+  content: "\E728";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
+.browse_filters div.type .chosen-results li.cluster:before {
+  content: "\1F4A8";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
+.browse_filters div.type .chosen-results li.issue:before {
+  content: "\F601";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
+.browse_filters div.type .chosen-results li.person:before {
+  content: "\1F464";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
+.browse_filters div.type .chosen-results li.book:before {
+  content: "\1F4D5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
+.browse_filters div.type .chosen-results li.print_publication:before {
+  content: "\E727";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
+.browse_filters div.type .chosen-results li.download {
+  font-size: 12px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
+.browse_filters div.type .chosen-results li.download:before {
+  content: "\1F4E5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
+.browse_filters div.type .chosen-results li.edition:before {
+  content: "\1F4D1";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
+.browse_filters div.type .chosen-results li.whitecube:before {
+  content: "\E737";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
+.browse_filters div.type .chosen-results li.tote:before {
+  content: "\1F4BC";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
+.browse_filters div.type .chosen-results li.store_item:before {
+  content: "\E73D";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
+.browse_filters div.type .chosen-results li.media:before {
+  content: "\1F4BF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000311}}
+.alongslide .als-gallery {
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000314}}
+.alongslide .als-gallery a.control {
+  cursor: pointer;
+  position: absolute;
+  font-size: 0.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000318}}
+.alongslide .als-gallery a.control.prev {
+  top: -30px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\0000352}}
+.alongslide .als-gallery a.control.prev:before {
+  content: "\E767";
+  font-family: "EntypoRegular";
+  font-size: 3.3em;
+  line-height: 0.5em;
+  vertical-align: -4px;
+  margin-right: 5px;
+  text-transform: none;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000322}}
+.alongslide .als-gallery a.control.next {
+  bottom: -40px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\0000352}}
+.alongslide .als-gallery a.control.next:before {
+  content: "\E764";
+  font-family: "EntypoRegular";
+  font-size: 3.3em;
+  line-height: 0.5em;
+  vertical-align: -4px;
+  margin-right: 5px;
+  text-transform: none;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000327}}
+.alongslide .als-gallery .items {
+  height: 100%;
+  overflow: hidden;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000330}}
+.alongslide .als-gallery .items > ul {
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000333}}
+.alongslide .als-gallery .items > ul > li {
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000345}}
+article.medium-format .alongslide .als-gallery {
+  margin: 40px 0 60px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000347}}
+article.medium-format .alongslide .als-gallery a.control {
+  top: auto;
+  bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000350}}
+article.medium-format .alongslide .als-gallery a.control.prev {
+  left: -65px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\0000352}}
+article.medium-format .alongslide .als-gallery a.control.prev:before {
+  content: "\E765";
+  font-family: "EntypoRegular";
+  font-size: 3.3em;
+  line-height: 0.5em;
+  vertical-align: -4px;
+  margin-right: 5px;
+  text-transform: none;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000354}}
+article.medium-format .alongslide .als-gallery a.control.next {
+  right: -80px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\0000352}}
+article.medium-format .alongslide .als-gallery a.control.next:before {
+  content: "\E766";
+  font-family: "EntypoRegular";
+  font-size: 3.3em;
+  line-height: 0.5em;
+  vertical-align: -4px;
+  margin-right: 5px;
+  text-transform: none;
+  padding-right: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000359}}
+article.medium-format .alongslide .als-gallery .items {
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000362}}
+article.medium-format .alongslide .als-gallery .items > ul {
+  width: 9999999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/gallery\.scss}line{font-family:\0000364}}
+article.medium-format .alongslide .als-gallery .items > ul > li {
+  float: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\000038}}
+.alongslide .als-image {
+  height: 100%;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000312}}
+.alongslide .als-image .image-box img {
+  position: absolute;
+  height: auto;
+  width: 80%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000324}}
+.alongslide .als-image .caption {
+  position: absolute;
+  bottom: 0.3em;
+  font-size: 0.6em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000328}}
+.alongslide .als-image .caption p {
+  display: inline;
+  font-size: 11px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000342}}
+article.medium-format .als-image {
+  margin: 2rem 21px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000344}}
+article.medium-format .als-image .image-box {
+  height: auto !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000346}}
+article.medium-format .als-image .image-box img {
+  position: static;
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  left: initial;
+  top: initial;
+  -webkit-transform: initial;
+  transform: initial;
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000358}}
+article.medium-format .als-image .caption {
+  padding: 10px 0 0;
+  position: static;
+  bottom: 0;
+  width: 100%;
+  text-align: left;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000364}}
+article.medium-format .als-image .caption p {
+  text-indent: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/alongslide\/image\.scss}line{font-family:\0000372}}
+article.medium-format .als-gallery .als-image {
+  margin: 0;
+}
