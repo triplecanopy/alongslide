@@ -1,260 +1,279 @@
+
 <!DOCTYPE html>
-<!-- saved from url=(0046)http://alongslide.com/contents/alongslide_demo -->
-<html lang="en" ng-app="triple_canopy" style="" class="wf-freeuniversal-n4-active wf-tccrimson-n4-active wf-asap-n4-active wf-asap-n7-active wf-asap-i4-active wf-asap-i7-active wf-sourcecodepro-n4-active wf-active skrollr skrollr-desktop"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <div class="fit-vids-style" id="fit-vids-style" style="display: none;">­<style>.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:12.5%;width:75%;height:75%;}</style></div><script async="" src="assets/analytics.js"></script><script type="text/javascript">
+<html lang='en' ng-app='triple_canopy'>
+  <head>
+  <script type="text/javascript">
     WEB_SOCKET_SWF_LOCATION = "/__rack/WebSocketMain.swf";
     
   </script>
-  <script type="text/javascript" src="assets/swfobject.js"></script>
-  <script type="text/javascript" src="assets/web_socket.js"></script>
+  <script type="text/javascript" src="/__rack/swfobject.js"></script>
+  <script type="text/javascript" src="/__rack/web_socket.js"></script>
 
 <script type="text/javascript">
   RACK_LIVERELOAD_PORT = 35729;
 </script>
-<script type="text/javascript" src="assets/livereload.js"></script>
+<script type="text/javascript" src="/__rack/livereload.js?host=localhost"></script>
 
 
-    <meta charset="utf-8">
-    <meta content="IE=Edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta charset='utf-8'>
+    <meta content='IE=Edge,chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
     <title>
-      Alongslide Demo -
-      Triple Canopy
+      Alongslide
     </title>
-    <meta content="authenticity_token" name="csrf-param">
-    <meta content="QugUaYVTrWKisMJM/5s5ePO7ASZhVCpWzTGPLHaX/6E=" name="csrf-token">
-    <!--  -->
-    <!-- _metadata.haml: Metadata for SEO, Facebook, Twitter... -->
-    <!--  -->
-    <!-- Generic -->
-    <!--  -->
-    <meta content="" name="description">
-    <!-- Facebook -->
-    <!--  -->
-    <!-- http://ogp.me/ -->
-    <!--  -->
-    <meta content="Triple Canopy" property="og:site_name">
-    <meta content="http://alongslide.com/contents/alongslide_demo" property="og:url">
-    <meta content="Triple Canopy – Alongslide Demo" property="og:title">
-    <meta content="" property="og:description">
-    <meta content="http://localhost/assets/ccc_logo.png" property="og:image">
-    <meta content="article" property="og:type">
-    <meta content="Projects" property="article:section">
-    <!-- Twitter -->
-    <!--  -->
-    <!-- https://dev.twitter.com/docs/cards/large-image-summary-card -->
-    <!--  -->
-    <meta content="@Triple_Canopy" name="twitter:site">
-    <meta content="http://alongslide.com/contents/alongslide_demo" name="twitter:url">
-    <meta content="Triple Canopy – Alongslide Demo" name="twitter:title">
-    <meta content="summary" name="twitter:card">
-    <meta content="" name="twitter:description">
-    <link rel="apple-touch-icon" sizes="57x57" href="http://alongslide.com/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://alongslide.com/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://alongslide.com/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="http://alongslide.com/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="http://alongslide.com/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="http://alongslide.com/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="http://alongslide.com/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="http://alongslide.com/apple-touch-icon-152x152.png">
-    <link rel="icon" type="image/png" href="http://alongslide.com/favicon-196x196.png" sizes="196x196">
-    <link rel="icon" type="image/png" href="http://alongslide.com/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="http://alongslide.com/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="http://alongslide.com/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="http://alongslide.com/favicon-16x16.png" sizes="16x16">
-    <meta name="msapplication-TileColor" content="#fbfbfb">
-    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <!-- atom feed -->
-    <link href="http://alongslide.com/feed" rel="alternate" title="ATOM" type="application/atom+xml">
-    <link href="assets/main.css" media="all" rel="stylesheet" type="text/css">
-    <link href="assets/gallery.css" media="all" rel="stylesheet" type="text/css">
-    <link href="assets/image.css" media="all" rel="stylesheet" type="text/css">
-    <link href="assets/application.css" media="all" rel="stylesheet" type="text/css">
-    <script src="assets/modernizr.custom.41763.js" type="text/javascript"></script>
-    <script src="assets/jquery.js" type="text/javascript"></script>
-    <script src="assets/jquery_ujs.js" type="text/javascript"></script>
-    <script src="assets/jquery.scrollTo.min.js" type="text/javascript"></script>
-    <script src="assets/enquire.min.js" type="text/javascript"></script>
-    <script src="assets/fastclick.js" type="text/javascript"></script>
-    <script src="assets/application.js" type="text/javascript"></script>
-    <script src="assets/debug_grid.js" type="text/javascript"></script>
-    <script src="assets/webfont-1.4.10.js" type="text/javascript"></script>
-    <script src="assets/webfonts.js" type="text/javascript"></script>
-    <script src="assets/underscore-min.js" type="text/javascript"></script>
-    <script src="assets/keypress.min.js" type="text/javascript"></script>
-    <script src="assets/jquery.mousewheel.js" type="text/javascript"></script>
-    <script src="assets/gallery.js" type="text/javascript"></script>
-    <script src="assets/image.js" type="text/javascript"></script>
-    <!-- = javascript_include_tag "configs" -->
+    <link href="/assets/application/main.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/alongslide/gallery.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/alongslide/image.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" />
+    <script src="/assets/modernizr.custom.41763.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery_ujs.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.scrollTo.min.js?body=1" type="text/javascript"></script>
+    <script src="/assets/enquire.min.js?body=1" type="text/javascript"></script>
+    <script src="/assets/fastclick.js?body=1" type="text/javascript"></script>
+    <script src="/assets/application.js?body=1" type="text/javascript"></script>
+    <script src="/assets/application/debug_grid.js?body=1" type="text/javascript"></script>
+    <script src="/assets/webfont-1.4.10.js?body=1" type="text/javascript"></script>
+    <script src="/assets/application/webfonts.js?body=1" type="text/javascript"></script>
+    <script src="/assets/underscore-min.js?body=1" type="text/javascript"></script>
+    <script src="/assets/keypress.min.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.mousewheel.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/gallery.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/image.js?body=1" type="text/javascript"></script>
     <!-- Additional frontend -->
-    <script src="assets/regionFlow.js" type="text/javascript"></script>
-    <script src="assets/skrollr.js" type="text/javascript"></script>
-    <script src="assets/jquery.powertip.js" type="text/javascript"></script>
-    <script src="assets/prefix.js" type="text/javascript"></script>
-    <script src="assets/jquery.fitvids.js" type="text/javascript"></script>
-    <script src="assets/alongslide.js" type="text/javascript"></script>
-    <script src="assets/parser.js" type="text/javascript"></script>
-    <script src="assets/layout.js" type="text/javascript"></script>
-    <script src="assets/scrolling.js" type="text/javascript"></script>
-    <script src="assets/alongslide(1).js" type="text/javascript"></script>
-    <script src="assets/styles.js" type="text/javascript"></script>
-    <script src="assets/fixedAspect.js" type="text/javascript"></script>
-    <script src="assets/loader.js" type="text/javascript"></script>
-    <script src="assets/application(1).js" type="text/javascript"></script>
+    <script src="/assets/regionFlow.js?body=1" type="text/javascript"></script>
+    <script src="/assets/skrollr.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.powertip.js?body=1" type="text/javascript"></script>
+    <script src="/assets/prefix.js?body=1" type="text/javascript"></script>
+    <script src="/assets/jquery.fitvids.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/alongslide.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/parser.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/layout.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide/scrolling.js?body=1" type="text/javascript"></script>
+    <script src="/assets/alongslide.js?body=1" type="text/javascript"></script>
+    <script src="/assets/project/styles.js?body=1" type="text/javascript"></script>
+    <script src="/assets/project/fixedAspect.js?body=1" type="text/javascript"></script>
+    <script src="/assets/project/loader.js?body=1" type="text/javascript"></script>
+    <script src="/assets/project/application.js?body=1" type="text/javascript"></script>
     <script>
       (function() {
-        Styles.prototype.loadLater('<link href="/assets/alongslide.css" media="screen" rel="stylesheet" type="text/css" />\
-      <link href="http://alongslide.com/assets/project/content.css" media="screen" rel="stylesheet" type="text/css" />\
-      <link href="http://alongslide.com/assets/project/custom.css" media="screen" rel="stylesheet" type="text/css" />\
-      <link href="http://alongslide.com/assets/project/readability.css" media="screen" rel="stylesheet" type="text/css" />\
-      <link href="http://alongslide.com/assets/project/application.css" media="screen" rel="stylesheet" type="text/css" />');
+        Styles.prototype.loadLater('<link href="/assets/alongslide.css?body=1" media="screen" rel="stylesheet" type="text/css" />\
+      <link href="/assets/project/content.css?body=1" media="screen" rel="stylesheet" type="text/css" />\
+      <link href="/assets/project/custom.css?body=1" media="screen" rel="stylesheet" type="text/css" />\
+      <link href="/assets/project/readability.css?body=1" media="screen" rel="stylesheet" type="text/css" />\
+      <link href="/assets/project/application.css?body=1" media="screen" rel="stylesheet" type="text/css" />');
       
       }).call(this);
     </script>
     
-    <link rel="stylesheet" href="http://alongslide.com/assets/webfonts.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Asap:400,700,400italic,700italic%7CSource+Code+Pro">
-  <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
-  <body class="content_items show project" style="width: 6280px;">
+  </head>
+  <body class='content_items show project'>
     <div id="unsupported-browser">
-    	<div class="ie-overlay">
-    		<div class="modal">
-    			<p>Content here.</p>
-    		</div>
-    	</div>
-    	<!--[if IE]><script>document.body.className = 'ie'</script><![end if]-->
+      <div class="ie-overlay">
+        <div class="modal">
+          <p>Content here.</p>
+        </div>
+      </div>
+      <!--[if IE]><script>document.body.className = 'ie'</script><![end if]-->
     </div>
-    <main id="wrapper">
+    <main id='wrapper'>
       <!-- Content's Custom CSS -->
-      
+      <style class='custom' type='text/css'>.browse_filters div.type .chosen-results li.update:before{content:"\221E"}.browse_filters div.type .chosen-results li.project:before{content:"\E766"}.browse_filters div.type .chosen-results li.annotation:before{content:"\E764"}.browse_filters div.type .chosen-results li.podcast:before{content:"\1F4F6"}.browse_filters div.type .chosen-results li.program:before{content:"\E728"}.browse_filters div.type .chosen-results li.cluster:before{content:"\1F4A8"}.browse_filters div.type .chosen-results li.issue:before{content:"\F601"}.browse_filters div.type .chosen-results li.person:before{content:"\1F464"}.browse_filters div.type .chosen-results li.book:before{content:"\1F4D5"}.browse_filters div.type .chosen-results li.print_publication:before{content:"\E727"}.browse_filters div.type .chosen-results li.download{font-size:12px !important}.browse_filters div.type .chosen-results li.download:before{content:"\1F4E5"}.browse_filters div.type .chosen-results li.edition:before{content:"\1F4D1"}.browse_filters div.type .chosen-results li.whitecube:before{content:"\E737"}.browse_filters div.type .chosen-results li.tote:before{content:"\1F4BC"}.browse_filters div.type .chosen-results li.store_item:before{content:"\E73D"}.browse_filters div.type .chosen-results li.media:before{content:"\1F4BF"}#content-display{font-family:Asap;font-size:120%;line-height:1.4em}#content-display h3{font-family:Asap;font-weight:bold}#content-display a{border-bottom:2px solid darkcyan}#frames .panels [data-alongslide-id=intro].panel h1,nav h1,nav#sidebar-controls>a h1,#breadcrumb h1,#breadcrumb #inner-breadcrumb a h1{padding-right:20%}#frames .panels [data-alongslide-id=intro].panel{background-color:aquamarine}#frames .panels [data-alongslide-id=footer].panel{background-color:#222}#frames .panels [data-alongslide-id=footer].panel,nav,nav#sidebar-controls>a,#breadcrumb,#breadcrumb #inner-breadcrumb a{color:floralwhite}#frames .panels [data-alongslide-id=footer].panel p:nth-child(1),nav p:nth-child(1),nav#sidebar-controls>a p:nth-child(1),#breadcrumb p:nth-child(1),#breadcrumb #inner-breadcrumb a p:nth-child(1){margin-top:2em}#frames .panels [data-alongslide-id=footer].panel p:nth-child(3),nav p:nth-child(3),nav#sidebar-controls>a p:nth-child(3),#breadcrumb p:nth-child(3),#breadcrumb #inner-breadcrumb a p:nth-child(3){padding-top:1.6em;font-size:75%}#frames .panels [data-alongslide-id=footer].panel a,nav a,nav#sidebar-controls>a a,#breadcrumb a,#breadcrumb #inner-breadcrumb a a{color:white}#frames .panels [data-alongslide-id=technology-layers].panel{background-color:gold}#frames .panels [data-alongslide-id=technology-layers].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner{padding-right:40%}#frames .panels [data-alongslide-id=technology-layers].panel ol li,nav ol li,nav#sidebar-controls>a ol li,#breadcrumb ol li,#breadcrumb #inner-breadcrumb a ol li{list-style-type:upper-roman;margin-left:4%;margin-bottom:0.5em}#frames .panels [data-alongslide-id=aspect].panel{background-color:tomato}#frames .panels [data-alongslide-id=aspect].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner,#frames .panels [data-alongslide-id=philosophy].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner{padding:10%}#frames .panels [data-alongslide-id=philosophy].panel{background-color:dodgerblue}.column [data-alongslide-id=structure],nav,nav#sidebar-controls>a,#breadcrumb,#breadcrumb #inner-breadcrumb a{color:#eee}</style>
       <!-- Content's Custom JS -->
-      <script type="text/javascript">
+      <script type='text/javascript'>
         WebFontConfig.google = {families: ['Asap:400,700,400italic,700italic', 'Source Code Pro']};
       </script>
       <!-- Body for TC v3.0 Project -->
       <!-- Alongslide renders content here. -->
-      <div id="content-display">
-        <article id="frames">
-          <div class="backgrounds"><div class="section background frame skrollable skrollable-before" data-alongslide-id="structure" data-200p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-300p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-400p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" style="-webkit-transform: translate(1256px, 0px) translateZ(0px); opacity: 1;">&nbsp;</div></div>
-          <div class="flow"><div class="frame skrollable skrollable-before" data-200p="-webkit-transform: translate(1265px, 0) translateZ(0); opacity: 1" data-300p="-webkit-transform: translate(9px, 0) translateZ(0); opacity: 1" data-400p="-webkit-transform: translate(-1247px, 0) translateZ(0); opacity: 1" style="-webkit-transform: translate(1265px, 0px) translateZ(0px); opacity: 1;"><div class="column"><div class="section" data-alongslide-id="structure"><p>In addition to normal flowing text, Alongslide offers two main structural elements:</p><ul>
-          <li><strong>Sections</strong> break up flowing text sequentially</li>
-          <li><strong>Panels</strong> function like sidebars which can interrupt or supplement the flowing text.</li>
-          </ul><p>In Alongslide Markdown, these structural elements are specified by indented blocks of text (traditionally used for <code>&lt;code&gt;</code>) to show visually that they sit outside the primary flow.</p><p>Both <strong>sections</strong> and <strong>panels</strong> may specify transitions—either fading or sliding in.</p><p><strong>Panels</strong> may occupy the full content area, or be pinned to one edge—being unpinned at a later point in the flowing text. Their size may also be configured as a simple one-word parameter.</p><p><strong></strong></p></div></div><div class="column"><div class="section" data-alongslide-id="structure"><p><strong>Panels</strong> may contain user-specified templates, which may be nested according to their defined “greediness”. Templates defined as “greedy” will effectively consume any subsequent Markdown, treating it as their contents. “Non-greedy” templates will treat subsequent Markdown as a sibling.</p></div></div></div></div>
-          <div class="panels"><div class="alongslide now panel pin top two-thirds frame skrollable skrollable-between" data-alongslide-id="intro" style="display: block; width: 100%; height: 66.13183254455888%; -webkit-transform: translate(-1256px, 0px) translateZ(0px); opacity: 1;" data--100p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-0p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-100p="-webkit-transform: translate(-1256px, 0) translateZ(0); opacity: 1">
-            <div class="contents" style="left: 6.133627973482387%; top: 19.286252244945246%; width: 87.73274405303523%; height: 80.71374775505473%;">
-              <div class="inner">
+      <div id='content-display'>
+        <article id='frames'>
+          <div class='backgrounds'></div>
+          <div class='flow'></div>
+          <div class='panels'></div>
+        </article>
+      </div>
+      <!-- Secret hidden div for pre-rendered content. -->
+      <div id='content' style='display:none'>
+        <div class='raw'>
+          <div class='alongslide now panel pin show top two-thirds' data-alongslide-id='intro'>
+            <div class='contents'>
+              <div class='inner'>
                 <h1><strong>Alongslide</strong> is a responsive, parallax-inspired presentation framework for long-form reading on the web, employing a lightweight templating syntax for <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. »</h1>
               </div>
             </div>
-          </div><div class="alongslide bottom now one-third panel pin frame skrollable skrollable-between" data-alongslide-id="footer" style="display: block; width: 100%; height: 33.86816745544113%; bottom: 0%; -webkit-transform: translate(0px, 0px) translateZ(0px); opacity: 1;" data--100p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-0p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-100p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-200p="-webkit-transform: translate(-1256px, 0) translateZ(0); opacity: 1">
-            <div class="contents" style="left: 6.133627973482387%; top: 0%; width: 87.73274405303523%; height: 71.42857142857143%;">
-              <div class="inner">
+          </div>
+          <div class='alongslide bottom now one-third panel pin show' data-alongslide-id='footer'>
+            <div class='contents'>
+              <div class='inner'>
                 <p>The various components of Alongslide will be open-sourced by early 2014.</p>
-                <p><a href="http://alongslide.com/contents/alongslide_demo#">Show Markdown Source</a></p>
+                <p><a href="#">Show Markdown Source</a></p>
                 <p>Copyright 2013, Canopy Canopy Canopy, Inc.</p>
               </div>
             </div>
-          </div><div class="alongslide panel pin top two-thirds frame skrollable skrollable-between" data-alongslide-id="technology-layers" style="display: block; width: 100%; height: 66.13183254455888%; -webkit-transform: translate(0px, 0px) translateZ(0px); opacity: 1;" data-0p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-100p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-200p="-webkit-transform: translate(-1256px, 0) translateZ(0); opacity: 1">
-            <div class="contents" style="left: 6.133627973482387%; top: 19.286252244945246%; width: 87.73274405303523%; height: 80.71374775505473%;">
-              <div class="inner">
+          </div>
+          <div class='alongslide unpin panel' data-alongslide-id='intro'></div>
+          <div class='alongslide panel pin show top two-thirds' data-alongslide-id='technology-layers'>
+            <div class='contents'>
+              <div class='inner'>
                 <h3>Technology layers</h3>
                 
                 <ol>
                 <li>A fine-tuned parallax-like <strong>scrolling framework</strong> built on a <a href="https://github.com/triplecanopy/skrollr">fork</a> of <a href="http://prinzhorn.github.io/skrollr/">Skrollr</a></li>
-                <li><strong>Flowing text columns</strong> using a custom implementation of the emerging <a href="http://dev.w3.org/csswg/css-regions/">CSS Regions</a> spec</li>
+                <li><strong>Flowing text columns</strong> using a <a href="https://github.com/triplecanopy/region-flow">custom implementation</a> of the emerging <a href="http://dev.w3.org/csswg/css-regions/">CSS Regions</a> spec</li>
                 <li>A responsive-and-beyond layout logic in CSS+JS.</li>
                 <li>A lightweight <strong>templating syntax for Markdown</strong> implemented in Ruby with <a href="https://github.com/vmg/redcarpet">Redcarpet</a> and <a href="http://treetop.rubyforge.org/">Treetop</a></li>
                 </ol>
               </div>
             </div>
-          </div><div class="alongslide fullscreen panel frame skrollable skrollable-between" data-alongslide-id="aspect" style="display: block; width: 100%; height: 100%; -webkit-transform: translate(1256px, 0px) translateZ(0px); opacity: 1;" data-100p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-200p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1" data-300p="-webkit-transform: translate(-1256px, 0) translateZ(0); opacity: 1">
-            <div class="contents" style="left: 6.133627973482387%; top: 12.754352038748419%; width: 87.73274405303523%; height: 77.56902868826839%;">
-              <div class="inner">
+          </div>
+          <div class='alongslide unpin panel' data-alongslide-id='technology-layers'></div>
+          <div class='alongslide unpin panel' data-alongslide-id='footer'></div>
+          <div class='alongslide fullscreen panel show' data-alongslide-id='aspect'>
+            <div class='contents'>
+              <div class='inner'>
                 <h3>Alongslide puts layout first, respecting the aspect ratio of the content area at all window sizes and resolutions.</h3>
                 <h3>On desktop, hit <code>opt-g</code> to see the grid(s)—and resize the window to any size or shape.</h3>
                 <h4>Try it on mobile, too.</h4>
               </div>
             </div>
-          </div><div class="alongslide fade-out fullscreen panel frame skrollable skrollable-before" data-alongslide-id="philosophy" style="display: block; width: 100%; height: 100%; -webkit-transform: translate(1256px, 0px) translateZ(0px); opacity: 1;" data-300p="-webkit-transform: translate(1256px, 0) translateZ(0); opacity: 1" data-400p="-webkit-transform: translate(0px, 0) translateZ(0); opacity: 1">
-            <div class="contents" style="left: 6.133627973482387%; top: 12.754352038748419%; width: 87.73274405303523%; height: 77.56902868826839%;">
-              <div class="inner">
+          </div>
+          <div class='alongslide enter section' data-alongslide-id='structure'></div>
+          
+          <p>In addition to normal flowing text, Alongslide offers two main structural elements:</p>
+          
+          <ul>
+          <li><strong>Sections</strong> break up flowing text sequentially</li>
+          <li><strong>Panels</strong> function like sidebars which can interrupt or supplement the flowing text.</li>
+          </ul>
+          
+          <p>In Alongslide Markdown, these structural elements are specified by indented blocks of text (traditionally used for <code>&lt;code&gt;</code>) to show visually that they sit outside the primary flow.</p>
+          
+          <p>Both <strong>sections</strong> and <strong>panels</strong> may specify transitions—either fading or sliding in.</p>
+          
+          <p><strong>Panels</strong> may occupy the full content area, or be pinned to one edge—being unpinned at a later point in the flowing text. Their size may also be configured as a simple one-word parameter.</p>
+          
+          <p><strong>Panels</strong> may contain user-specified templates, which may be nested according to their defined “greediness”. Templates defined as “greedy” will effectively consume any subsequent Markdown, treating it as their contents. “Non-greedy” templates will treat subsequent Markdown as a sibling.</p>
+          <div class='alongslide fade-out fullscreen panel show' data-alongslide-id='philosophy'>
+            <div class='contents'>
+              <div class='inner'>
                 <h3>As with Markdown, a philosophical principle of Alongslide is that WYSIWIG authoring environments are not as powerful as a simple enough syntax enabling (and encouraging) writers and editors to write solid, structural markup.</h3>
               </div>
             </div>
-          </div></div>
-        </article>
-      </div>
-      <!-- Secret hidden div for pre-rendered content. -->
-      <div id="content" style="display:none">
-        <div class="raw">
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
-          
+          </div>
         </div>
       </div>
-      <div id="source"><h1><strong>Alongslide</strong> is a responsive, parallax-inspired presentation framework for long-form reading on the web, employing a lightweight templating syntax for <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. »</h1><a href="http://daringfireball.net/projects/markdown/">Markdown</a><p>The various components of Alongslide will be open-sourced by early 2014.</p><p><a href="http://alongslide.com/contents/alongslide_demo#">Show Markdown Source</a></p><a href="http://alongslide.com/contents/alongslide_demo#">Show Markdown Source</a><p>Copyright 2013, Canopy Canopy Canopy, Inc.</p><h3>Technology layers</h3><a href="https://github.com/triplecanopy/skrollr">fork</a><a href="http://prinzhorn.github.io/skrollr/">Skrollr</a><a href="http://dev.w3.org/csswg/css-regions/">CSS Regions</a><a href="https://github.com/vmg/redcarpet">Redcarpet</a><a href="http://treetop.rubyforge.org/">Treetop</a><h3>Alongslide puts layout first, respecting the aspect ratio of the content area at all window sizes and resolutions.</h3><h3>On desktop, hit <code>opt-g</code> to see the grid(s)—and resize the window to any size or shape.</h3><h4>Try it on mobile, too.</h4><p>In addition to normal flowing text, Alongslide offers two main structural elements:</p><p>In Alongslide Markdown, these structural elements are specified by indented blocks of text (traditionally used for <code>&lt;code&gt;</code>) to show visually that they sit outside the primary flow.</p><p>Both <strong>sections</strong> and <strong>panels</strong> may specify transitions—either fading or sliding in.</p><p><strong>Panels</strong> may occupy the full content area, or be pinned to one edge—being unpinned at a later point in the flowing text. Their size may also be configured as a simple one-word parameter.</p><p><strong>Panels</strong> may contain user-specified templates, which may be nested according to their defined “greediness”. Templates defined as “greedy” will effectively consume any subsequent Markdown, treating it as their contents. “Non-greedy” templates will treat subsequent Markdown as a sibling.</p><h3>As with Markdown, a philosophical principle of Alongslide is that WYSIWIG authoring environments are not as powerful as a simple enough syntax enabling (and encouraging) writers and editors to write solid, structural markup.</h3></div>
-      <div id="loading" style="display: none; opacity: 0;">
-        <div class="progress" style="width: 100%;"></div>
+      <div id='source'>
+        <div class='alongslide now panel pin show top two-thirds' data-alongslide-id='intro'>
+          <div class='contents'>
+            <div class='inner'>
+              <h1><strong>Alongslide</strong> is a responsive, parallax-inspired presentation framework for long-form reading on the web, employing a lightweight templating syntax for <a href="http://daringfireball.net/projects/markdown/">Markdown</a>. »</h1>
+            </div>
+          </div>
+        </div>
+        <div class='alongslide bottom now one-third panel pin show' data-alongslide-id='footer'>
+          <div class='contents'>
+            <div class='inner'>
+              <p>The various components of Alongslide will be open-sourced by early 2014.</p>
+              <p><a href="#">Show Markdown Source</a></p>
+              <p>Copyright 2013, Canopy Canopy Canopy, Inc.</p>
+            </div>
+          </div>
+        </div>
+        <div class='alongslide unpin panel' data-alongslide-id='intro'></div>
+        <div class='alongslide panel pin show top two-thirds' data-alongslide-id='technology-layers'>
+          <div class='contents'>
+            <div class='inner'>
+              <h3>Technology layers</h3>
+              
+              <ol>
+              <li>A fine-tuned parallax-like <strong>scrolling framework</strong> built on a <a href="https://github.com/triplecanopy/skrollr">fork</a> of <a href="http://prinzhorn.github.io/skrollr/">Skrollr</a></li>
+              <li><strong>Flowing text columns</strong> using a <a href="https://github.com/triplecanopy/region-flow">custom implementation</a> of the emerging <a href="http://dev.w3.org/csswg/css-regions/">CSS Regions</a> spec</li>
+              <li>A responsive-and-beyond layout logic in CSS+JS.</li>
+              <li>A lightweight <strong>templating syntax for Markdown</strong> implemented in Ruby with <a href="https://github.com/vmg/redcarpet">Redcarpet</a> and <a href="http://treetop.rubyforge.org/">Treetop</a></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <div class='alongslide unpin panel' data-alongslide-id='technology-layers'></div>
+        <div class='alongslide unpin panel' data-alongslide-id='footer'></div>
+        <div class='alongslide fullscreen panel show' data-alongslide-id='aspect'>
+          <div class='contents'>
+            <div class='inner'>
+              <h3>Alongslide puts layout first, respecting the aspect ratio of the content area at all window sizes and resolutions.</h3>
+              <h3>On desktop, hit <code>opt-g</code> to see the grid(s)—and resize the window to any size or shape.</h3>
+              <h4>Try it on mobile, too.</h4>
+            </div>
+          </div>
+        </div>
+        <div class='alongslide enter section' data-alongslide-id='structure'></div>
+        
+        <p>In addition to normal flowing text, Alongslide offers two main structural elements:</p>
+        
+        <ul>
+        <li><strong>Sections</strong> break up flowing text sequentially</li>
+        <li><strong>Panels</strong> function like sidebars which can interrupt or supplement the flowing text.</li>
+        </ul>
+        
+        <p>In Alongslide Markdown, these structural elements are specified by indented blocks of text (traditionally used for <code>&lt;code&gt;</code>) to show visually that they sit outside the primary flow.</p>
+        
+        <p>Both <strong>sections</strong> and <strong>panels</strong> may specify transitions—either fading or sliding in.</p>
+        
+        <p><strong>Panels</strong> may occupy the full content area, or be pinned to one edge—being unpinned at a later point in the flowing text. Their size may also be configured as a simple one-word parameter.</p>
+        
+        <p><strong>Panels</strong> may contain user-specified templates, which may be nested according to their defined “greediness”. Templates defined as “greedy” will effectively consume any subsequent Markdown, treating it as their contents. “Non-greedy” templates will treat subsequent Markdown as a sibling.</p>
+        <div class='alongslide fade-out fullscreen panel show' data-alongslide-id='philosophy'>
+          <div class='contents'>
+            <div class='inner'>
+              <h3>As with Markdown, a philosophical principle of Alongslide is that WYSIWIG authoring environments are not as powerful as a simple enough syntax enabling (and encouraging) writers and editors to write solid, structural markup.</h3>
+            </div>
+          </div>
+        </div>
       </div>
-      <div id="please-rotate">
+      <div id='loading'>
+        <div class='progress'></div>
+      </div>
+      <div id='please-rotate'>
         <h1>Please rotate your device.</h1>
       </div>
-      <div id="markdown-source" class="">
-        <a class="close" href="http://alongslide.com/contents/alongslide_demo#">Close</a>
-        <div class="source">
+      <div id='markdown-source'>
+        <a class='close' href='#'>Close</a>
+        <div class='source'>
           <h3>Alongslide/Markdown Source for this page</h3>
-          <pre class="indented directive">+ panel intro pin top two-thirds now</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block"># **Alongslide** is a responsive, parallax-inspired presentation framework for long-form reading on the web, employing a lightweight templating syntax for [Markdown](http://daringfireball.net/projects/markdown/). »</pre>
+          <pre class='indented directive'>+ panel intro pin top two-thirds now</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'># **Alongslide** is a responsive, parallax-inspired presentation framework for long-form reading on the web, employing a lightweight templating syntax for [Markdown](http://daringfireball.net/projects/markdown/). »</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ panel footer pin bottom one-third now</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">The various components of Alongslide will be open-sourced by early 2014.</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">[Show Markdown Source](#)</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">Copyright 2013, Canopy Canopy Canopy, Inc.</pre>
+          <pre class='indented directive'>+ panel footer pin bottom one-third now</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>The various components of Alongslide will be open-sourced by early 2014.</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>[Show Markdown Source](#)</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>Copyright 2013, Canopy Canopy Canopy, Inc.</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ unpin intro</pre>
+          <pre class='indented directive'>+ unpin intro</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ panel technology-layers pin top two-thirds</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">### Technology layers</pre>
-          <pre class="indented in-block">1. A fine-tuned parallax-like **scrolling framework** built on a [fork](https://github.com/triplecanopy/skrollr) of [Skrollr](http://prinzhorn.github.io/skrollr/)</pre>
-          <pre class="indented in-block">- **Flowing text columns** using a custom implementation of the emerging [CSS Regions](http://dev.w3.org/csswg/css-regions/) spec</pre>
-          <pre class="indented in-block">- A responsive-and-beyond layout logic in CSS+JS.</pre>
-          <pre class="indented in-block">- A lightweight **templating syntax for Markdown** implemented in Ruby with [Redcarpet](https://github.com/vmg/redcarpet) and [Treetop](http://treetop.rubyforge.org/)</pre>
+          <pre class='indented directive'>+ panel technology-layers pin top two-thirds</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>### Technology layers</pre>
+          <pre class='indented in-block'>1. A fine-tuned parallax-like **scrolling framework** built on a [fork](https://github.com/triplecanopy/skrollr) of [Skrollr](http://prinzhorn.github.io/skrollr/)</pre>
+          <pre class='indented in-block'>- **Flowing text columns** using a [custom implementation](https://github.com/triplecanopy/region-flow) of the emerging [CSS Regions](http://dev.w3.org/csswg/css-regions/) spec</pre>
+          <pre class='indented in-block'>- A responsive-and-beyond layout logic in CSS+JS.</pre>
+          <pre class='indented in-block'>- A lightweight **templating syntax for Markdown** implemented in Ruby with [Redcarpet](https://github.com/vmg/redcarpet) and [Treetop](http://treetop.rubyforge.org/)</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ unpin technology-layers</pre>
+          <pre class='indented directive'>+ unpin technology-layers</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ unpin footer</pre>
+          <pre class='indented directive'>+ unpin footer</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ panel aspect fullscreen</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">### Alongslide puts layout first, respecting the aspect ratio of the content area at all window sizes and resolutions.</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">### On desktop, hit `opt-g` to see the grid(s)—and resize the window to any size or shape.</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">#### Try it on mobile, too.</pre>
+          <pre class='indented directive'>+ panel aspect fullscreen</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>### Alongslide puts layout first, respecting the aspect ratio of the content area at all window sizes and resolutions.</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>### On desktop, hit `opt-g` to see the grid(s)—and resize the window to any size or shape.</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>#### Try it on mobile, too.</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ section structure</pre>
+          <pre class='indented directive'>+ section structure</pre>
           <pre>&nbsp;</pre>
           <pre>In addition to normal flowing text, Alongslide offers two main structural elements:</pre>
           <pre>&nbsp;</pre>
@@ -269,800 +288,11 @@
           <pre>&nbsp;</pre>
           <pre>**Panels** may contain user-specified templates, which may be nested according to their defined “greediness”. Templates defined as “greedy” will effectively consume any subsequent Markdown, treating it as their contents. “Non-greedy” templates will treat subsequent Markdown as a sibling.</pre>
           <pre>&nbsp;</pre>
-          <pre class="indented directive">+ panel philosophy fullscreen fade-out</pre>
-          <pre class="in-block">&nbsp;</pre>
-          <pre class="indented in-block">### As with Markdown, a philosophical principle of Alongslide is that WYSIWIG authoring environments are not as powerful as a simple enough syntax enabling (and encouraging) writers and editors to write solid, structural markup.</pre>
+          <pre class='indented directive'>+ panel philosophy fullscreen fade-out</pre>
+          <pre class='in-block'>&nbsp;</pre>
+          <pre class='indented in-block'>### As with Markdown, a philosophical principle of Alongslide is that WYSIWIG authoring environments are not as powerful as a simple enough syntax enabling (and encouraging) writers and editors to write solid, structural markup.</pre>
         </div>
       </div>
     </main>
-  
-
-<style type="text/css">@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000357}}
-.alongslide {
-  display: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000362}}
-#frames {
-  height: 100%;
-  background-color: white;
-  position: absolute;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000371}}
-#frames .frame {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\0000391}}
-#frames .flow .frame .column {
-  width: 40.81633%;
-  height: 81.1102%;
-  top: 8.81633%;
-  position: absolute;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003101}}
-#frames .flow .frame .column:nth-child(1) {
-  left: 5.5102%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003103}}
-#frames .flow .frame .column:nth-child(2) {
-  right: 5.5102%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003112}}
-#frames .flow .frame.with-panel-pinned-bottom .column {
-  height: 34.24653%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003114}}
-#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-one-third .column {
-  height: 48.66612%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003116}}
-#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-two-thirds .column {
-  height: 19.82694%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003120}}
-#frames .flow .frame.with-panel-pinned-top .column {
-  top: 55.68%;
-  height: 34.24653%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003123}}
-#frames .flow .frame.with-panel-pinned-top.with-panel-sized-one-third .column {
-  top: 41.26041%;
-  height: 48.66612%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003126}}
-#frames .flow .frame.with-panel-pinned-top.with-panel-sized-two-thirds .column {
-  top: 70.09959%;
-  height: 19.82694%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003133}}
-#frames .flow .frame.with-panel-pinned-left .column, #frames .flow .frame.with-panel-pinned-right .column {
-  width: 40.81633%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003135}}
-#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column, #frames .flow .frame.with-panel-pinned-right.with-panel-sized-one-third .column {
-  width: 58.36735%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003137}}
-#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column, #frames .flow .frame.with-panel-pinned-right.with-panel-sized-two-thirds .column {
-  width: 27.7551%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003141}}
-#frames .flow .frame.with-panel-pinned-left .column:nth-child(1) {
-  left: 53.67347%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003143}}
-#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column:nth-child(1) {
-  left: 36.12245%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003145}}
-#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column:nth-child(1) {
-  left: 66.73469%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003149}}
-#frames .flow .frame.three-columns .column {
-  width: 27.7551%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003151}}
-#frames .flow .frame.three-columns .column:nth-child(1) {
-  left: 5.5102%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003153}}
-#frames .flow .frame.three-columns .column:nth-child(2) {
-  left: 36.3%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003155}}
-#frames .flow .frame.three-columns .column:nth-child(3) {
-  right: 5.5102%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003177}}
-#frames .panels .panel {
-  position: fixed;
-  width: 980px;
-  height: 612.5px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003182}}
-#frames .panels .panel .contents {
-  position: absolute;
-  top: 54px;
-  left: 54px;
-  width: 872px;
-  height: 496.8px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003191}}
-#frames .panels .panel .contents .inner {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003197}}
-#frames .panels .panel .contents .inner img {
-  max-width: 100%;
-  height: auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003206}}
-#frames .panels .panel.pin {
-  background-color: white;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003209}}
-#frames .panels .panel.pin.top .contents {
-  height: 248.4px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003211}}
-#frames .panels .panel.pin.top .contents .inner {
-  height: 95.55556%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003213}}
-#frames .panels .panel.pin.top.one-third .contents {
-  height: 165.6px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003215}}
-#frames .panels .panel.pin.top.one-third .contents .inner {
-  height: 92.85714%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003217}}
-#frames .panels .panel.pin.top.two-thirds .contents {
-  height: 342.24px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003219}}
-#frames .panels .panel.pin.top.two-thirds .contents .inner {
-  height: 96.66667%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003224}}
-#frames .panels .panel.pin.bottom .contents {
-  top: 302.4px;
-  height: 248.4px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003227}}
-#frames .panels .panel.pin.bottom .contents .inner {
-  top: 4.44444%;
-  height: 95.55556%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003230}}
-#frames .panels .panel.pin.bottom.one-third .contents {
-  top: 396.24px;
-  height: 154.56px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003233}}
-#frames .panels .panel.pin.bottom.one-third .contents .inner {
-  top: 7.14286%;
-  height: 92.85714%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003236}}
-#frames .panels .panel.pin.bottom.two-thirds .contents {
-  top: 219.6px;
-  height: 331.2px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003239}}
-#frames .panels .panel.pin.bottom.two-thirds .contents .inner {
-  top: 3.33333%;
-  height: 96.66667%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003250}}
-#frames .panels .panel.pin.left, #frames .panels .panel.pin.right {
-  background-color: transparent;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003252}}
-#frames .panels .panel.pin.left .contents, #frames .panels .panel.pin.right .contents {
-  width: 436px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003254}}
-#frames .panels .panel.pin.left .contents .inner, #frames .panels .panel.pin.right .contents .inner {
-  width: 91.74312%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003256}}
-#frames .panels .panel.pin.left.one-third .contents, #frames .panels .panel.pin.right.one-third .contents {
-  width: 286px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003258}}
-#frames .panels .panel.pin.left.one-third .contents .inner, #frames .panels .panel.pin.right.one-third .contents .inner {
-  width: 95.1049%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003260}}
-#frames .panels .panel.pin.left.two-thirds .contents, #frames .panels .panel.pin.right.two-thirds .contents {
-  width: 586px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003262}}
-#frames .panels .panel.pin.left.two-thirds .contents .inner, #frames .panels .panel.pin.right.two-thirds .contents .inner {
-  width: 97.61092%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003265}}
-#frames .panels .panel.pin.left {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(95%, #ffffff), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: -moz-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: -o-linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-  background-image: linear-gradient(left, #ffffff 0%, #ffffff 95%, rgba(255, 255, 255, 0) 100%);
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003270}}
-#frames .panels .panel.pin.right {
-  *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255, 255, 255, 0)), color-stop(5%, #ffffff), color-stop(100%, #ffffff));
-  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
-  background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
-  background-image: -o-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
-  background-image: linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 5%, #ffffff 100%);
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003273}}
-#frames .panels .panel.pin.right .contents {
-  left: 490px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003275}}
-#frames .panels .panel.pin.right .contents .inner {
-  left: 8.25688%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003277}}
-#frames .panels .panel.pin.right.one-third .contents {
-  left: 640px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003279}}
-#frames .panels .panel.pin.right.one-third .contents .inner {
-  left: 4.8951%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003281}}
-#frames .panels .panel.pin.right.two-thirds .contents {
-  left: 340px;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003283}}
-#frames .panels .panel.pin.right.two-thirds .contents .inner {
-  left: 2.38908%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003289}}
-#frames .backgrounds .background {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003304}}
-#frames p {
-  -webkit-hyphens: auto;
-  -moz-hyphens: auto;
-  -ms-hyphens: auto;
-  hyphens: auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003317}}
-#frames sup[id^="fnref"] {
-  position: absolute;
-  left: -25px;
-  margin-top: -2px;
-  width: 27px;
-  display: inline-block;
-  height: 37px;
-  z-index: 214748364;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003325}}
-#frames sup[id^="fnref"] > a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003330}}
-#powerTip {
-  cursor: default;
-  background: white;
-  background: rgba(255, 255, 255, 0.9);
-  display: none;
-  position: absolute;
-  text-indent: 14px;
-  width: 45%;
-  z-index: 100001;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003339}}
-#powerTip > * {
-  max-width: 80%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003345}}
-#als-debug-grid {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  opacity: 0.8;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003351}}
-#als-debug-grid.hidden {
-  display: none;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003354}}
-#als-debug-grid .margins {
-  position: absolute;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003357}}
-#als-debug-grid .margins.horizontal {
-  width: 100%;
-  height: 81.1102%;
-  top: 9.01224%;
-  left: 0;
-  border: 1px solid #00feff;
-  border-left-width: 0;
-  border-right-width: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003366}}
-#als-debug-grid .margins.vertical {
-  width: 88.97959%;
-  height: 100%;
-  left: 5.5102%;
-  top: 0;
-  border: 1px solid #ff2598;
-  border-top-width: 0;
-  border-bottom-width: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003375}}
-#als-debug-grid .margins.vertical.inner {
-  width: 7.34694%;
-  left: 46.32653%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003379}}
-#als-debug-grid .more {
-  width: 100%;
-  height: 100%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003383}}
-#als-debug-grid .units {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003390}}
-#als-debug-grid .units.vertical .unit {
-  width: 100%;
-  border-top: 1px solid #def0f7;
-  height: 1.80245%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003395}}
-#als-debug-grid .units.horizontal {
-  top: 9.01224%;
-  height: 81.1102%;
-  margin: 0 5.5102%;
-  width: 88.97959%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003401}}
-#als-debug-grid .units.horizontal .unit {
-  height: 100%;
-  width: 2.52294%;
-  margin-right: 3.21101%;
-  float: left;
-  background-color: #d8e7f6;
-  opacity: 0.4;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003408}}
-#als-debug-grid .units.horizontal .unit:last-child {
-  margin-right: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003411}}
-#als-debug-grid.thirds .margins.vertical.inner {
-  width: 2.85714%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003413}}
-#als-debug-grid.thirds .margins.vertical.inner:nth-child(1) {
-  left: 33.26531%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003415}}
-#als-debug-grid.thirds .margins.vertical.inner:nth-child(2) {
-  left: 63.87755%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003418}}
-#source {
-  display: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003421}}
-#please-rotate {
-  display: none;
-}
-
-@media only screen and (min-device-width: 768px) and (orientation: portrait) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003425}}
-  #please-rotate {
-    display: block;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: white;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/alongslide\.sass}line{font-family:\00003432}}
-  #please-rotate h1 {
-    font-size: 100px;
-    line-height: 1em;
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 150px;
-    text-align: center;
-  }
-}
-@media print {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000032}}
-  aside, nav, #breadcrumb {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000033}}
-  #source {
-    display: block !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000034}}
-  #content-display {
-    display: none !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000035}}
-  * {
-    background: transparent !important;
-    color: black !important;
-    text-shadow: none !important;
-    filter: none !important;
-    -ms-filter: none !important;
-  }
-
-  /* Black prints faster: h5bp.com/s */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000036}}
-  a, a:visited {
-    text-decoration: underline;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000037}}
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000038}}
-  abbr[title]:after {
-    content: " (" attr(title) ")";
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\000039}}
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
-    content: "";
-  }
-
-  /* Don't show links for images, or javascript/internal links */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000310}}
-  pre, blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000311}}
-  thead {
-    display: table-header-group;
-  }
-
-  /* h5bp.com/t */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000312}}
-  tr, img {
-    page-break-inside: avoid;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000313}}
-  img {
-    max-width: 100% !important;
-  }
-
-  @page {
-    margin: 0.5cm;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000315}}
-  p, h2, h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000316}}
-  h2, h3 {
-    page-break-after: avoid;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000317}}
-  body {
-    font-size: 30px !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000320}}
-  p, a {
-    font-size: 1em !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000323}}
-  h1 {
-    font-size: 1.3em !important;
-  }
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/lib\/alongslide\/app\/assets\/stylesheets\/print\.scss}line{font-family:\0000326}}
-  h2, h3, h4 {
-    font-size: 1.2em !important;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
-.browse_filters div.type .chosen-results li.update:before {
-  content: "\221E";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
-.browse_filters div.type .chosen-results li.project:before {
-  content: "\E766";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
-.browse_filters div.type .chosen-results li.annotation:before {
-  content: "\E764";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
-.browse_filters div.type .chosen-results li.podcast:before {
-  content: "\1F4F6";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
-.browse_filters div.type .chosen-results li.program:before {
-  content: "\E728";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
-.browse_filters div.type .chosen-results li.cluster:before {
-  content: "\1F4A8";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
-.browse_filters div.type .chosen-results li.issue:before {
-  content: "\F601";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
-.browse_filters div.type .chosen-results li.person:before {
-  content: "\1F464";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
-.browse_filters div.type .chosen-results li.book:before {
-  content: "\1F4D5";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
-.browse_filters div.type .chosen-results li.print_publication:before {
-  content: "\E727";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
-.browse_filters div.type .chosen-results li.download {
-  font-size: 12px !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
-.browse_filters div.type .chosen-results li.download:before {
-  content: "\1F4E5";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
-.browse_filters div.type .chosen-results li.edition:before {
-  content: "\1F4D1";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
-.browse_filters div.type .chosen-results li.whitecube:before {
-  content: "\E737";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
-.browse_filters div.type .chosen-results li.tote:before {
-  content: "\1F4BC";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
-.browse_filters div.type .chosen-results li.store_item:before {
-  content: "\E73D";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
-.browse_filters div.type .chosen-results li.media:before {
-  content: "\1F4BF";
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000317}}
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-/* apply a natural box layout model to all elements & reset
-  TODO: apply this globally */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000324}}
-*, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000328}}
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000336}}
-#content-display h1 {
-  font-size: 200%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000337}}
-#content-display h2 {
-  font-size: 150%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000338}}
-#content-display h3 {
-  font-size: 125%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000339}}
-#content-display h4 {
-  font-size: 100%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000340}}
-#content-display h1, #content-display h2, #content-display h3, #content-display h4, #content-display h5, #content-display h6, #content-display p {
-  line-height: 1.5em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000343}}
-#content-display h1, #content-display h2, #content-display h3, #content-display h4, #content-display h5, #content-display h6 {
-  margin: 0 0 0.5em;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000345}}
-p + #content-display h1, p + #content-display h2, p + #content-display h3, p + #content-display h4, p + #content-display h5, p + #content-display h6 {
-  margin-top: 1em;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000354}}
-#content {
-  display: none;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000364}}
-#content-display {
-  font-family: "TCCrimson", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-  font-size: 17px;
-  line-height: 22px;
-  font-weight: normal;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000367}}
-#content-display p {
-  text-indent: 6%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000369}}
-#content-display p.region-flow-post-text-break {
-  text-indent: 0;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000373}}
-#content-display .panels p {
-  text-indent: 0;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000378}}
-#frames .panels [data-alongslide-id=ThreePointOhFinal].panel {
-  background-color: #fff;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000384}}
-#loading {
-  display: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-color: #fff;
-  opacity: 0.0;
-  transition: opacity .2s;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000393}}
-#loading .progress {
-  height: 4px;
-  background-color: #D81921;
-  width: 0%;
-  transition: width 0.1s;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
-.browse_filters div.type .chosen-results li.update:before {
-  content: "\221E";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
-.browse_filters div.type .chosen-results li.project:before {
-  content: "\E766";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
-.browse_filters div.type .chosen-results li.annotation:before {
-  content: "\E764";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
-.browse_filters div.type .chosen-results li.podcast:before {
-  content: "\1F4F6";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
-.browse_filters div.type .chosen-results li.program:before {
-  content: "\E728";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
-.browse_filters div.type .chosen-results li.cluster:before {
-  content: "\1F4A8";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
-.browse_filters div.type .chosen-results li.issue:before {
-  content: "\F601";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
-.browse_filters div.type .chosen-results li.person:before {
-  content: "\1F464";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
-.browse_filters div.type .chosen-results li.book:before {
-  content: "\1F4D5";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
-.browse_filters div.type .chosen-results li.print_publication:before {
-  content: "\E727";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
-.browse_filters div.type .chosen-results li.download {
-  font-size: 12px !important;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
-.browse_filters div.type .chosen-results li.download:before {
-  content: "\1F4E5";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
-.browse_filters div.type .chosen-results li.edition:before {
-  content: "\1F4D1";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
-.browse_filters div.type .chosen-results li.whitecube:before {
-  content: "\E737";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
-.browse_filters div.type .chosen-results li.tote:before {
-  content: "\1F4BC";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
-.browse_filters div.type .chosen-results li.store_item:before {
-  content: "\E73D";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
-.browse_filters div.type .chosen-results li.media:before {
-  content: "\1F4BF";
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000031}}
-body.readability {
-  font-size: 62.5%;
-}
-
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000035}}
-.readability #content-display {
-  width: 90%;
-  margin: 20px 5%;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000039}}
-.readability #content-display h1 {
-  font-size: 2.125rem;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000315}}
-.readability #content-display .panel img, .readability #content-display .panel video {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 10px auto;
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000323}}
-.readability #content-display .footnotes {
-  margin-top: 50px;
-}
-</style><style class="custom" type="text/css">.browse_filters div.type .chosen-results li.update:before{content:"\221E"}.browse_filters div.type .chosen-results li.project:before{content:"\E766"}.browse_filters div.type .chosen-results li.annotation:before{content:"\E764"}.browse_filters div.type .chosen-results li.podcast:before{content:"\1F4F6"}.browse_filters div.type .chosen-results li.program:before{content:"\E728"}.browse_filters div.type .chosen-results li.cluster:before{content:"\1F4A8"}.browse_filters div.type .chosen-results li.issue:before{content:"\F601"}.browse_filters div.type .chosen-results li.person:before{content:"\1F464"}.browse_filters div.type .chosen-results li.book:before{content:"\1F4D5"}.browse_filters div.type .chosen-results li.print_publication:before{content:"\E727"}.browse_filters div.type .chosen-results li.download{font-size:12px !important}.browse_filters div.type .chosen-results li.download:before{content:"\1F4E5"}.browse_filters div.type .chosen-results li.edition:before{content:"\1F4D1"}.browse_filters div.type .chosen-results li.whitecube:before{content:"\E737"}.browse_filters div.type .chosen-results li.tote:before{content:"\1F4BC"}.browse_filters div.type .chosen-results li.store_item:before{content:"\E73D"}.browse_filters div.type .chosen-results li.media:before{content:"\1F4BF"}#content-display{font-family:Asap;font-size:120%;line-height:1.4em}#content-display h3{font-family:Asap;font-weight:bold}#content-display a{border-bottom:2px solid darkcyan}#frames .panels [data-alongslide-id=intro].panel h1,nav h1,nav#sidebar-controls>a h1,#breadcrumb h1,#breadcrumb #inner-breadcrumb a h1{padding-right:20%}#frames .panels [data-alongslide-id=intro].panel{background-color:aquamarine}#frames .panels [data-alongslide-id=footer].panel{background-color:#222}#frames .panels [data-alongslide-id=footer].panel,nav,nav#sidebar-controls>a,#breadcrumb,#breadcrumb #inner-breadcrumb a{color:floralwhite}#frames .panels [data-alongslide-id=footer].panel p:nth-child(1),nav p:nth-child(1),nav#sidebar-controls>a p:nth-child(1),#breadcrumb p:nth-child(1),#breadcrumb #inner-breadcrumb a p:nth-child(1){margin-top:2em}#frames .panels [data-alongslide-id=footer].panel p:nth-child(3),nav p:nth-child(3),nav#sidebar-controls>a p:nth-child(3),#breadcrumb p:nth-child(3),#breadcrumb #inner-breadcrumb a p:nth-child(3){padding-top:1.6em;font-size:75%}#frames .panels [data-alongslide-id=footer].panel a,nav a,nav#sidebar-controls>a a,#breadcrumb a,#breadcrumb #inner-breadcrumb a a{color:white}#frames .panels [data-alongslide-id=technology-layers].panel{background-color:gold}#frames .panels [data-alongslide-id=technology-layers].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner{padding-right:40%}#frames .panels [data-alongslide-id=technology-layers].panel ol li,nav ol li,nav#sidebar-controls>a ol li,#breadcrumb ol li,#breadcrumb #inner-breadcrumb a ol li{list-style-type:upper-roman;margin-left:4%;margin-bottom:0.5em}#frames .panels [data-alongslide-id=aspect].panel{background-color:tomato}#frames .panels [data-alongslide-id=aspect].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner,#frames .panels [data-alongslide-id=philosophy].panel .inner,nav .inner,nav#sidebar-controls>a .inner,#breadcrumb .inner,#breadcrumb #inner-breadcrumb a .inner{padding:10%}#frames .panels [data-alongslide-id=philosophy].panel{background-color:dodgerblue}.column [data-alongslide-id=structure],nav,nav#sidebar-controls>a,#breadcrumb,#breadcrumb #inner-breadcrumb a{color:#eee}</style><style type="text/css" id="debug-grid-aspect">#als-debug-grid { width: 98.59872611464968%;height: 95.67367119901112%;left: 0.7006369426751591%;top: 4.326328800988875% }</style><style type="text/css" id="frame-aspect">#frames > .flow > .frame { width: 98.59872611464968%;height: 95.67367119901112%;top: 4.326328800988875% }</style><style type="text/css" id="markdown-source-frame-aspect">#markdown-source { left: 18.152866242038215% }</style><style type="text/css" id="frame-text">#frames { font-size: 25.273469387755103px;line-height: 35.38285714285715px }</style></body></html>
+  </body>
+</html>
