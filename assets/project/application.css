@@ -1,1 +1,260 @@
-.alongslide{display:none}#frames{height:100%;background-color:#fff;position:absolute}#frames .frame{width:100%;height:100%;position:fixed}#frames .flow .frame .column{width:40.81633%;height:81.1102%;top:8.81633%;position:absolute}#frames .flow .frame .column:nth-child(1){left:5.5102%}#frames .flow .frame .column:nth-child(2){right:5.5102%}#frames .flow .frame.with-panel-pinned-bottom .column{height:34.24653%}#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-one-third .column{height:48.66612%}#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-two-thirds .column{height:19.82694%}#frames .flow .frame.with-panel-pinned-top .column{top:55.68%;height:34.24653%}#frames .flow .frame.with-panel-pinned-top.with-panel-sized-one-third .column{top:41.26041%;height:48.66612%}#frames .flow .frame.with-panel-pinned-top.with-panel-sized-two-thirds .column{top:70.09959%;height:19.82694%}#frames .flow .frame.with-panel-pinned-left .column,#frames .flow .frame.with-panel-pinned-right .column{width:40.81633%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column,#frames .flow .frame.with-panel-pinned-right.with-panel-sized-one-third .column{width:58.36735%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column,#frames .flow .frame.with-panel-pinned-right.with-panel-sized-two-thirds .column{width:27.7551%}#frames .flow .frame.with-panel-pinned-left .column:nth-child(1){left:53.67347%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column:nth-child(1){left:36.12245%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column:nth-child(1){left:66.73469%}#frames .flow .frame.three-columns .column{width:27.7551%}#frames .flow .frame.three-columns .column:nth-child(1){left:5.5102%}#frames .flow .frame.three-columns .column:nth-child(2){left:36.3%}#frames .flow .frame.three-columns .column:nth-child(3){right:5.5102%}#frames .panels .panel{position:fixed;width:980px;height:612.5px}#frames .panels .panel .contents{position:absolute;top:54px;left:54px;width:872px;height:496.8px}#frames .panels .panel .contents .inner{width:100%;height:100%;position:absolute}#frames .panels .panel .contents .inner img{max-width:100%;height:auto}#frames .panels .panel.pin{background-color:#fff}#frames .panels .panel.pin.top .contents{height:248.4px}#frames .panels .panel.pin.top .contents .inner{height:95.55556%}#frames .panels .panel.pin.top.one-third .contents{height:165.6px}#frames .panels .panel.pin.top.one-third .contents .inner{height:92.85714%}#frames .panels .panel.pin.top.two-thirds .contents{height:342.24px}#frames .panels .panel.pin.top.two-thirds .contents .inner{height:96.66667%}#frames .panels .panel.pin.bottom .contents{top:302.4px;height:248.4px}#frames .panels .panel.pin.bottom .contents .inner{top:4.44444%;height:95.55556%}#frames .panels .panel.pin.bottom.one-third .contents{top:396.24px;height:154.56px}#frames .panels .panel.pin.bottom.one-third .contents .inner{top:7.14286%;height:92.85714%}#frames .panels .panel.pin.bottom.two-thirds .contents{top:219.6px;height:331.2px}#frames .panels .panel.pin.bottom.two-thirds .contents .inner{top:3.33333%;height:96.66667%}#frames .panels .panel.pin.left,#frames .panels .panel.pin.right{background-color:transparent}#frames .panels .panel.pin.left .contents,#frames .panels .panel.pin.right .contents{width:436px}#frames .panels .panel.pin.left .contents .inner,#frames .panels .panel.pin.right .contents .inner{width:91.74312%}#frames .panels .panel.pin.left.one-third .contents,#frames .panels .panel.pin.right.one-third .contents{width:286px}#frames .panels .panel.pin.left.one-third .contents .inner,#frames .panels .panel.pin.right.one-third .contents .inner{width:95.1049%}#frames .panels .panel.pin.left.two-thirds .contents,#frames .panels .panel.pin.right.two-thirds .contents{width:586px}#frames .panels .panel.pin.left.two-thirds .contents .inner,#frames .panels .panel.pin.right.two-thirds .contents .inner{width:97.61092%}#frames .panels .panel.pin.left{*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');background-image:-webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #fff), color-stop(95%, #fff), color-stop(100%, rgba(255,255,255,0)));background-image:-webkit-linear-gradient(left, #fff 0%, #fff 95%, rgba(255,255,255,0) 100%);background-image:-moz-linear-gradient(left, #fff 0%, #fff 95%, rgba(255,255,255,0) 100%);background-image:-o-linear-gradient(left, #fff 0%, #fff 95%, rgba(255,255,255,0) 100%);background-image:linear-gradient(left, #ffffff 0%,#ffffff 95%,rgba(255,255,255,0) 100%)}#frames .panels .panel.pin.right{*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');background-image:-webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255,255,255,0)), color-stop(5%, #fff), color-stop(100%, #fff));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 5%, #fff 100%);background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 5%, #fff 100%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0%, #fff 5%, #fff 100%);background-image:linear-gradient(left, rgba(255,255,255,0) 0%,#ffffff 5%,#ffffff 100%)}#frames .panels .panel.pin.right .contents{left:490px}#frames .panels .panel.pin.right .contents .inner{left:8.25688%}#frames .panels .panel.pin.right.one-third .contents{left:640px}#frames .panels .panel.pin.right.one-third .contents .inner{left:4.8951%}#frames .panels .panel.pin.right.two-thirds .contents{left:340px}#frames .panels .panel.pin.right.two-thirds .contents .inner{left:2.38908%}#frames .backgrounds .background{position:fixed;width:100%;height:100%}#frames p{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}#frames sup[id^="fnref"]{position:absolute;left:-25px;margin-top:-2px;width:27px;display:inline-block;height:37px;z-index:214748364}#frames sup[id^="fnref"]>a{display:block;height:100%;width:100%}#powerTip{cursor:default;background:#fff;background:rgba(255,255,255,0.9);display:none;position:absolute;text-indent:14px;width:45%;z-index:100001}#powerTip>*{max-width:80%}#als-debug-grid{position:fixed;width:100%;height:100%;opacity:0.8}#als-debug-grid.hidden{display:none}#als-debug-grid .margins{position:absolute}#als-debug-grid .margins.horizontal{width:100%;height:81.1102%;top:9.01224%;left:0;border:1px solid #00feff;border-left-width:0;border-right-width:0}#als-debug-grid .margins.vertical{width:88.97959%;height:100%;left:5.5102%;top:0;border:1px solid #ff2598;border-top-width:0;border-bottom-width:0}#als-debug-grid .margins.vertical.inner{width:7.34694%;left:46.32653%}#als-debug-grid .more{width:100%;height:100%}#als-debug-grid .units{position:absolute;top:0;width:100%;height:100%}#als-debug-grid .units.vertical .unit{width:100%;border-top:1px solid #def0f7;height:1.80245%}#als-debug-grid .units.horizontal{top:9.01224%;height:81.1102%;margin:0 5.5102%;width:88.97959%}#als-debug-grid .units.horizontal .unit{height:100%;width:2.52294%;margin-right:3.21101%;float:left;background-color:#d8e7f6;opacity:0.4}#als-debug-grid .units.horizontal .unit:last-child{margin-right:0}#als-debug-grid.thirds .margins.vertical.inner{width:2.85714%}#als-debug-grid.thirds .margins.vertical.inner:nth-child(1){left:33.26531%}#als-debug-grid.thirds .margins.vertical.inner:nth-child(2){left:63.87755%}#source{display:none}#please-rotate{display:none}@media only screen and (min-device-width: 768px) and (orientation: portrait){#please-rotate{display:block;position:fixed;top:0;width:100%;height:100%;background:#fff}#please-rotate h1{font-size:100px;line-height:1em;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;height:150px;text-align:center}}@media print{aside,nav,#breadcrumb{display:none !important}#source{display:block !important}#content-display{display:none !important}*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}body{font-size:30px !important}p,a{font-size:1em !important}h1{font-size:1.3em !important}h2,h3,h4{font-size:1.2em !important}}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}.browse_filters div.type .chosen-results li.update:before{content:"\221E"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}.browse_filters div.type .chosen-results li.project:before{content:"\E766"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}.browse_filters div.type .chosen-results li.annotation:before{content:"\E764"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}.browse_filters div.type .chosen-results li.podcast:before{content:"\1F4F6"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}.browse_filters div.type .chosen-results li.program:before{content:"\E728"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}.browse_filters div.type .chosen-results li.cluster:before{content:"\1F4A8"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}.browse_filters div.type .chosen-results li.issue:before{content:"\F601"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}.browse_filters div.type .chosen-results li.person:before{content:"\1F464"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}.browse_filters div.type .chosen-results li.book:before{content:"\1F4D5"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}.browse_filters div.type .chosen-results li.print_publication:before{content:"\E727"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}.browse_filters div.type .chosen-results li.download{font-size:12px !important}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}.browse_filters div.type .chosen-results li.download:before{content:"\1F4E5"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}.browse_filters div.type .chosen-results li.edition:before{content:"\1F4D1"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}.browse_filters div.type .chosen-results li.whitecube:before{content:"\E737"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}.browse_filters div.type .chosen-results li.tote:before{content:"\1F4BC"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}.browse_filters div.type .chosen-results li.store_item:before{content:"\E73D"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}.browse_filters div.type .chosen-results li.media:before{content:"\1F4BF"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000317}}html,body{width:100%;height:100%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000324}}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000328}}*{margin:0;padding:0}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000336}}#content-display h1{font-size:200%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000337}}#content-display h2{font-size:150%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000338}}#content-display h3{font-size:125%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000339}}#content-display h4{font-size:100%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000340}}#content-display h1,#content-display h2,#content-display h3,#content-display h4,#content-display h5,#content-display h6,#content-display p{line-height:1.5em}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000343}}#content-display h1,#content-display h2,#content-display h3,#content-display h4,#content-display h5,#content-display h6{margin:0 0 0.5em}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000345}}p+#content-display h1,p+#content-display h2,p+#content-display h3,p+#content-display h4,p+#content-display h5,p+#content-display h6{margin-top:1em}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000354}}#content{display:none}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000364}}#content-display{font-family:"TCCrimson", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;font-size:17px;line-height:22px;font-weight:normal}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000367}}#content-display p{text-indent:6%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000369}}#content-display p.region-flow-post-text-break{text-indent:0}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000373}}#content-display .panels p{text-indent:0}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000378}}#frames .panels [data-alongslide-id=ThreePointOhFinal].panel{background-color:#fff}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000384}}#loading{display:none;position:fixed;width:100%;height:100%;background-color:#fff;opacity:0.0;transition:opacity .2s}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000393}}#loading .progress{height:4px;background-color:#D81921;width:0%;transition:width 0.1s}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}.browse_filters div.type .chosen-results li.update:before{content:"\221E"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}.browse_filters div.type .chosen-results li.project:before{content:"\E766"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}.browse_filters div.type .chosen-results li.annotation:before{content:"\E764"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}.browse_filters div.type .chosen-results li.podcast:before{content:"\1F4F6"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}.browse_filters div.type .chosen-results li.program:before{content:"\E728"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}.browse_filters div.type .chosen-results li.cluster:before{content:"\1F4A8"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}.browse_filters div.type .chosen-results li.issue:before{content:"\F601"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}.browse_filters div.type .chosen-results li.person:before{content:"\1F464"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}.browse_filters div.type .chosen-results li.book:before{content:"\1F4D5"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}.browse_filters div.type .chosen-results li.print_publication:before{content:"\E727"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}.browse_filters div.type .chosen-results li.download{font-size:12px !important}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}.browse_filters div.type .chosen-results li.download:before{content:"\1F4E5"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}.browse_filters div.type .chosen-results li.edition:before{content:"\1F4D1"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}.browse_filters div.type .chosen-results li.whitecube:before{content:"\E737"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}.browse_filters div.type .chosen-results li.tote:before{content:"\1F4BC"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}.browse_filters div.type .chosen-results li.store_item:before{content:"\E73D"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}.browse_filters div.type .chosen-results li.media:before{content:"\1F4BF"}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000031}}body.readability{font-size:62.5%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000035}}.readability #content-display{width:90%;margin:20px 5%}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000039}}.readability #content-display h1{font-size:2.125rem}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000315}}.readability #content-display .panel img,.readability #content-display .panel video{display:block;max-width:100%;height:auto;margin:10px auto}@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000323}}.readability #content-display .footnotes{margin-top:50px}
+.alongslide{display:none}#frames{height:100%;background-color:#fff;position:absolute}#frames .frame{width:100%;height:100%;position:fixed}#frames .flow .frame .column{width:40.81633%;height:81.1102%;top:8.81633%;position:absolute}#frames .flow .frame .column:nth-child(1){left:5.5102%}#frames .flow .frame .column:nth-child(2){right:5.5102%}#frames .flow .frame.with-panel-pinned-bottom .column{height:34.24653%}#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-one-third .column{height:48.66612%}#frames .flow .frame.with-panel-pinned-bottom.with-panel-sized-two-thirds .column{height:19.82694%}#frames .flow .frame.with-panel-pinned-top .column{top:55.68%;height:34.24653%}#frames .flow .frame.with-panel-pinned-top.with-panel-sized-one-third .column{top:41.26041%;height:48.66612%}#frames .flow .frame.with-panel-pinned-top.with-panel-sized-two-thirds .column{top:70.09959%;height:19.82694%}#frames .flow .frame.with-panel-pinned-left .column,#frames .flow .frame.with-panel-pinned-right .column{width:40.81633%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column,#frames .flow .frame.with-panel-pinned-right.with-panel-sized-one-third .column{width:58.36735%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column,#frames .flow .frame.with-panel-pinned-right.with-panel-sized-two-thirds .column{width:27.7551%}#frames .flow .frame.with-panel-pinned-left .column:nth-child(1){left:53.67347%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-one-third .column:nth-child(1){left:36.12245%}#frames .flow .frame.with-panel-pinned-left.with-panel-sized-two-thirds .column:nth-child(1){left:66.73469%}#frames .flow .frame.three-columns .column{width:27.7551%}#frames .flow .frame.three-columns .column:nth-child(1){left:5.5102%}#frames .flow .frame.three-columns .column:nth-child(2){left:36.3%}#frames .flow .frame.three-columns .column:nth-child(3){right:5.5102%}#frames .panels .panel{position:fixed;width:980px;height:612.5px}#frames .panels .panel .contents{position:absolute;top:54px;left:54px;width:872px;height:496.8px}#frames .panels .panel .contents .inner{width:100%;height:100%;position:absolute}#frames .panels .panel .contents .inner img{max-width:100%;height:auto}#frames .panels .panel.pin{background-color:#fff}#frames .panels .panel.pin.top .contents{height:248.4px}#frames .panels .panel.pin.top .contents .inner{height:95.55556%}#frames .panels .panel.pin.top.one-third .contents{height:165.6px}#frames .panels .panel.pin.top.one-third .contents .inner{height:92.85714%}#frames .panels .panel.pin.top.two-thirds .contents{height:342.24px}#frames .panels .panel.pin.top.two-thirds .contents .inner{height:96.66667%}#frames .panels .panel.pin.bottom .contents{top:302.4px;height:248.4px}#frames .panels .panel.pin.bottom .contents .inner{top:4.44444%;height:95.55556%}#frames .panels .panel.pin.bottom.one-third .contents{top:396.24px;height:154.56px}#frames .panels .panel.pin.bottom.one-third .contents .inner{top:7.14286%;height:92.85714%}#frames .panels .panel.pin.bottom.two-thirds .contents{top:219.6px;height:331.2px}#frames .panels .panel.pin.bottom.two-thirds .contents .inner{top:3.33333%;height:96.66667%}#frames .panels .panel.pin.left,#frames .panels .panel.pin.right{background-color:transparent}#frames .panels .panel.pin.left .contents,#frames .panels .panel.pin.right .contents{width:436px}#frames .panels .panel.pin.left .contents .inner,#frames .panels .panel.pin.right .contents .inner{width:91.74312%}#frames .panels .panel.pin.left.one-third .contents,#frames .panels .panel.pin.right.one-third .contents{width:286px}#frames .panels .panel.pin.left.one-third .contents .inner,#frames .panels .panel.pin.right.one-third .contents .inner{width:95.1049%}#frames .panels .panel.pin.left.two-thirds .contents,#frames .panels .panel.pin.right.two-thirds .contents{width:586px}#frames .panels .panel.pin.left.two-thirds .contents .inner,#frames .panels .panel.pin.right.two-thirds .contents .inner{width:97.61092%}#frames .panels .panel.pin.left{*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');background-image:-webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #ffffff), color-stop(95%, #ffffff), color-stop(100%, rgba(255,255,255,0)));background-image:-webkit-linear-gradient(left, #ffffff 0%,#ffffff 95%,rgba(255,255,255,0) 100%);background-image:-moz-linear-gradient(left, #ffffff 0%,#ffffff 95%,rgba(255,255,255,0) 100%);background-image:-o-linear-gradient(left, #ffffff 0%,#ffffff 95%,rgba(255,255,255,0) 100%);background-image:linear-gradient(left, #ffffff 0%,#ffffff 95%,rgba(255,255,255,0) 100%)}#frames .panels .panel.pin.right{*zoom:1;filter:progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFFFFFFF', endColorstr='#FFFFFFFF');background-image:-webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(255,255,255,0)), color-stop(5%, #ffffff), color-stop(100%, #ffffff));background-image:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,#ffffff 5%,#ffffff 100%);background-image:-moz-linear-gradient(left, rgba(255,255,255,0) 0%,#ffffff 5%,#ffffff 100%);background-image:-o-linear-gradient(left, rgba(255,255,255,0) 0%,#ffffff 5%,#ffffff 100%);background-image:linear-gradient(left, rgba(255,255,255,0) 0%,#ffffff 5%,#ffffff 100%)}#frames .panels .panel.pin.right .contents{left:490px}#frames .panels .panel.pin.right .contents .inner{left:8.25688%}#frames .panels .panel.pin.right.one-third .contents{left:640px}#frames .panels .panel.pin.right.one-third .contents .inner{left:4.8951%}#frames .panels .panel.pin.right.two-thirds .contents{left:340px}#frames .panels .panel.pin.right.two-thirds .contents .inner{left:2.38908%}#frames .backgrounds .background{position:fixed;width:100%;height:100%}#frames p{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}#frames sup[id^="fnref"]{position:absolute;left:-25px;margin-top:-2px;width:27px;display:inline-block;height:37px;z-index:214748364}#frames sup[id^="fnref"]>a{display:block;height:100%;width:100%}#powerTip{cursor:default;background:#fff;background:rgba(255,255,255,0.9);display:none;position:absolute;text-indent:14px;width:45%;z-index:100001}#powerTip>*{max-width:80%}#als-debug-grid{position:fixed;width:100%;height:100%;opacity:0.8}#als-debug-grid.hidden{display:none}#als-debug-grid .margins{position:absolute}#als-debug-grid .margins.horizontal{width:100%;height:81.1102%;top:9.01224%;left:0;border:1px solid #00feff;border-left-width:0;border-right-width:0}#als-debug-grid .margins.vertical{width:88.97959%;height:100%;left:5.5102%;top:0;border:1px solid #ff2598;border-top-width:0;border-bottom-width:0}#als-debug-grid .margins.vertical.inner{width:7.34694%;left:46.32653%}#als-debug-grid .more{width:100%;height:100%}#als-debug-grid .units{position:absolute;top:0;width:100%;height:100%}#als-debug-grid .units.vertical .unit{width:100%;border-top:1px solid #def0f7;height:1.80245%}#als-debug-grid .units.horizontal{top:9.01224%;height:81.1102%;margin:0 5.5102%;width:88.97959%}#als-debug-grid .units.horizontal .unit{height:100%;width:2.52294%;margin-right:3.21101%;float:left;background-color:#d8e7f6;opacity:0.4}#als-debug-grid .units.horizontal .unit:last-child{margin-right:0}#als-debug-grid.thirds .margins.vertical.inner{width:2.85714%}#als-debug-grid.thirds .margins.vertical.inner:nth-child(1){left:33.26531%}#als-debug-grid.thirds .margins.vertical.inner:nth-child(2){left:63.87755%}#source{display:none}#please-rotate{display:none}@media only screen and (min-device-width: 768px) and (orientation: portrait){#please-rotate{display:block;position:fixed;top:0;width:100%;height:100%;background:#fff}#please-rotate h1{font-size:100px;line-height:1em;margin:auto;position:absolute;top:0;left:0;bottom:0;right:0;height:150px;text-align:center}}@media print{aside,nav,#breadcrumb{display:none !important}#source{display:block !important}#content-display{display:none !important}*{background:transparent !important;color:black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h2,h3{page-break-after:avoid}body{font-size:30px !important}p,a{font-size:1em !important}h1{font-size:1.3em !important}h2,h3,h4{font-size:1.2em !important}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
+.browse_filters div.type .chosen-results li.update:before {
+  content: "\221E";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
+.browse_filters div.type .chosen-results li.project:before {
+  content: "\E766";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
+.browse_filters div.type .chosen-results li.annotation:before {
+  content: "\E764";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
+.browse_filters div.type .chosen-results li.podcast:before {
+  content: "\1F4F6";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
+.browse_filters div.type .chosen-results li.program:before {
+  content: "\E728";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
+.browse_filters div.type .chosen-results li.cluster:before {
+  content: "\1F4A8";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
+.browse_filters div.type .chosen-results li.issue:before {
+  content: "\F601";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
+.browse_filters div.type .chosen-results li.person:before {
+  content: "\1F464";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
+.browse_filters div.type .chosen-results li.book:before {
+  content: "\1F4D5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
+.browse_filters div.type .chosen-results li.print_publication:before {
+  content: "\E727";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
+.browse_filters div.type .chosen-results li.download {
+  font-size: 12px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
+.browse_filters div.type .chosen-results li.download:before {
+  content: "\1F4E5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
+.browse_filters div.type .chosen-results li.edition:before {
+  content: "\1F4D1";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
+.browse_filters div.type .chosen-results li.whitecube:before {
+  content: "\E737";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
+.browse_filters div.type .chosen-results li.tote:before {
+  content: "\1F4BC";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
+.browse_filters div.type .chosen-results li.store_item:before {
+  content: "\E73D";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
+.browse_filters div.type .chosen-results li.media:before {
+  content: "\1F4BF";
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000317}}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* apply a natural box layout model to all elements & reset
+  TODO: apply this globally */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000324}}
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000328}}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000336}}
+#content-display h1 {
+  font-size: 200%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000337}}
+#content-display h2 {
+  font-size: 150%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000338}}
+#content-display h3 {
+  font-size: 125%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000339}}
+#content-display h4 {
+  font-size: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000340}}
+#content-display h1, #content-display h2, #content-display h3, #content-display h4, #content-display h5, #content-display h6, #content-display p {
+  line-height: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000343}}
+#content-display h1, #content-display h2, #content-display h3, #content-display h4, #content-display h5, #content-display h6 {
+  margin: 0 0 0.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000345}}
+p + #content-display h1, p + #content-display h2, p + #content-display h3, p + #content-display h4, p + #content-display h5, p + #content-display h6 {
+  margin-top: 1em;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000354}}
+#content {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000364}}
+#content-display {
+  font-family: "TCCrimson", TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+  font-size: 17px;
+  line-height: 22px;
+  font-weight: normal;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000367}}
+#content-display p {
+  text-indent: 6%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000369}}
+#content-display p.region-flow-post-text-break {
+  text-indent: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000373}}
+#content-display .panels p {
+  text-indent: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000378}}
+#frames .panels [data-alongslide-id=ThreePointOhFinal].panel {
+  background-color: #fff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000384}}
+#loading {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.0;
+  transition: opacity .2s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/content\.css\.scss}line{font-family:\0000393}}
+#loading .progress {
+  height: 4px;
+  background-color: #5050c5;
+  width: 0%;
+  transition: width 0.1s;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003129}}
+.browse_filters div.type .chosen-results li.update:before {
+  content: "\221E";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003132}}
+.browse_filters div.type .chosen-results li.project:before {
+  content: "\E766";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003135}}
+.browse_filters div.type .chosen-results li.annotation:before {
+  content: "\E764";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003138}}
+.browse_filters div.type .chosen-results li.podcast:before {
+  content: "\1F4F6";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003141}}
+.browse_filters div.type .chosen-results li.program:before {
+  content: "\E728";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003144}}
+.browse_filters div.type .chosen-results li.cluster:before {
+  content: "\1F4A8";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003147}}
+.browse_filters div.type .chosen-results li.issue:before {
+  content: "\F601";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003150}}
+.browse_filters div.type .chosen-results li.person:before {
+  content: "\1F464";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003153}}
+.browse_filters div.type .chosen-results li.book:before {
+  content: "\1F4D5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003156}}
+.browse_filters div.type .chosen-results li.print_publication:before {
+  content: "\E727";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003159}}
+.browse_filters div.type .chosen-results li.download {
+  font-size: 12px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003161}}
+.browse_filters div.type .chosen-results li.download:before {
+  content: "\1F4E5";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003165}}
+.browse_filters div.type .chosen-results li.edition:before {
+  content: "\1F4D1";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003168}}
+.browse_filters div.type .chosen-results li.whitecube:before {
+  content: "\E737";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003171}}
+.browse_filters div.type .chosen-results li.tote:before {
+  content: "\1F4BC";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003174}}
+.browse_filters div.type .chosen-results li.store_item:before {
+  content: "\E73D";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/shared\/modules\/_icons\.scss}line{font-family:\00003177}}
+.browse_filters div.type .chosen-results li.media:before {
+  content: "\1F4BF";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000031}}
+body.readability {
+  font-size: 62.5%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000035}}
+.readability #content-display {
+  width: 90%;
+  margin: 20px 5%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\000039}}
+.readability #content-display h1 {
+  font-size: 2.125rem;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000315}}
+.readability #content-display .panel img, .readability #content-display .panel video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/adam\/projects\/triplecanopy\/code\/tc-3\.0\/app\/assets\/stylesheets\/project\/readability\.css\.scss}line{font-family:\0000323}}
+.readability #content-display .footnotes {
+  margin-top: 50px;
+}
