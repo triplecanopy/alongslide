@@ -8,6 +8,10 @@
 #= require prefix
 #= require jquery.fitvids
 # 
+# Utility
+#= require ./styles
+#= require ./fixedAspect
+#
 # Core
 #= require alongslide/alongslide
 #= require alongslide/parser
