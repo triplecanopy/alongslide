@@ -1,0 +1,9 @@
+---
+greedy: false
+---
+- url ||= ""
+- alt ||= ""
+- content ||= ""
+.image
+  %img{src: url, alt: alt}
+  .caption= content.join

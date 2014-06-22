@@ -1,0 +1,162 @@
+#
+# Grammar for Alongslide directives embedded in Markdown.
+#
+# This grammar is used to parse large blocks of Markdown, which consists of
+# typical text content as well as special directives, which are lines
+# beginning with a plus sign.
+#
+# Copyright 2013 Canopy Canopy Canopy, Inc.
+# Authors Adam Florin & Anthony Tran
+#
+module Alongslide
+  module Grammar
+
+    grammar Root
+      include Alongslide::Templates
+      include Panel
+      
+      # Root context: Parse input as a sequence of "blocks".
+      #
+      rule root
+        blocks:(paragraph_break* content:(block:block/template:independent_template))*
+        paragraph_break*
+        <RootNode>
+      end
+
+      # A "block" is a top-level directive.
+      #
+      # For example, defining (or hiding) a panel, entering or exiting a section.
+      #
+      rule block
+        panel / section
+      end
+
+      # Panel declaration.
+      #
+      # Panels may contain templates, or text directly.
+      #
+      rule panel
+        directive_prefix
+        command:("panel"/"unpin") space
+        identifier
+        class_params:panel_params
+        contents:((paragraph_break 2..) content:(template:template_wrapper/text:text))*
+        <PanelNode>
+      end
+
+      # Flowing text section
+      #
+      rule section
+        directive_prefix
+        command:("section"/"exit")
+        space
+        identifier
+        class_params:section_params
+        <SectionNode>
+      end
+
+      # Commonalities between greedy and nongreedy templates.
+      #
+      rule template_wrapper
+        !block
+        directive_prefix
+        renderable:(template:greedy_template / template:nongreedy_template)
+      end
+
+      # Greedy templates may contain other templates.
+      #
+      # Consult Alongslide::Templates to get valid template names.
+      #
+      rule greedy_template
+        command:(identifier &{|seq|
+          @@template_names[:greedy].include? seq.first.text_value
+        })
+        template_params:template_params
+        contents:((paragraph_break 2..) content:(template:template_wrapper))*
+        <UserTemplateNode>
+      end
+
+      # Nongreedy templates may only contain text.
+      #
+      # Consult Alongslide::Templates to get valid template names.
+      #
+      rule nongreedy_template
+        command:(identifier &{|seq|
+          @@template_names[:nongreedy].include? seq.first.text_value
+        })
+        template_params:template_params
+        contents:((paragraph_break 2..) content:text)*
+        <UserTemplateNode>
+      end
+
+      # Independent templates stand alone, outside of the panel-nesting system.
+      # E.g. column breaks.
+      #
+      rule independent_template
+        directive_prefix
+        command:(identifier &{|seq|
+          @@template_names[:independent].include? seq.first.text_value
+        })
+        template_params:template_params
+        <UserTemplateNode>
+      end
+
+      # 
+      #
+      rule template_params
+        (space param:key_value_pair)*
+      end
+
+      # Key/value pair. Value is optionally a quoted string.
+      #
+      rule key_value_pair
+        key:identifier space value:(quoted_string / (!"\s" .)+)
+      end
+
+      # Plain old Markdown text (one paragraph).
+      #
+      rule text
+        !directive_prefix
+        (!(paragraph_break 2..) .)+
+      end
+
+      # Signal that what follows is an Alongslide directive, not plain text.
+      #
+      rule directive_prefix
+        "+" extra_space
+      end
+
+      # Often required two-at-a-time to match familiar Markdown syntax.
+      #
+      rule paragraph_break
+        extra_space "\n"
+      end
+
+      # Panels and sections must be tracked by unique identifiers.
+      #
+      # Underscore notation for compatibility with CSS classes, etc.
+      #
+      rule identifier
+        [a-zA-Z0-9_-]+
+      end
+
+      # String in double quotes, with backslash escaping.
+      #
+      rule quoted_string
+        '"' ( ('\\' .) / (!'"' .) )+ '"'
+      end
+
+      # One or more spaces.
+      #
+      rule space
+        "\s"+
+      end
+
+      # Zero or more spaces.
+      #
+      rule extra_space
+        "\s"*
+      end
+    end
+  end
+end

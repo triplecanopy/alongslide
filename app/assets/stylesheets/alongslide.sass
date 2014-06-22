@@ -1,0 +1,444 @@
+//
+// alongslide.sass: Set up CSS Regions and basic scrolling mechanism.
+//
+// Copyright 2013 Canopy Canopy Canopy, Inc.
+// 
+
+@import "compass"
+
+// 
+// FIXED pixel-based values from comps.
+// 
+$fixed-frame-width: 980px
+$fixed-frame-height: 612.5px
+
+// at all four edges
+$fixed-column-outer-margin: 54px
+
+// vertical
+$fixed-vertical-grid-unit: 11.04px
+// $num-vertical-units: 56
+
+$fixed-wide-bar: 28px
+$fixed-narrow-bar: 22px
+
+@function fixed-width-in-bars($wide, $narrow)
+  @return $wide * $fixed-wide-bar + $narrow * $fixed-narrow-bar
+
+// computed
+$fixed-usable-width: fixed-width-in-bars($wide: 17, $narrow: 18)
+$fixed-usable-height: 45 * $fixed-vertical-grid-unit
+$fixed-two-column-width: fixed-width-in-bars($wide: 8, $narrow: 8)
+$fixed-three-column-width: fixed-width-in-bars($wide: 5, $narrow: 6)
+$fixed-2-column-inner-margin: fixed-width-in-bars($wide: 1, $narrow: 2)
+$fixed-3-column-inner-margin: fixed-width-in-bars($wide: 1, $narrow: 0)
+
+// 
+// PERCENTAGE-based values based on fixed values above
+// 
+$full-bleed: 100%
+$outer-margin-width: percentage($fixed-column-outer-margin / $fixed-frame-width)
+$outer-margin-height: percentage($fixed-column-outer-margin / $fixed-frame-height)
+$inner-margin-2-column: percentage($fixed-2-column-inner-margin / $fixed-frame-width)
+$inner-margin-3-column: percentage($fixed-3-column-inner-margin / $fixed-frame-width)
+$vertical-grid-unit: percentage($fixed-vertical-grid-unit / $fixed-frame-height)
+$width-2-column: ($full-bleed - 2 * $outer-margin-width - $inner-margin-2-column) / 2
+$width-3-column: ($full-bleed - 2 * $outer-margin-width - 2 * $inner-margin-3-column) / 3
+
+$white-bg: #fbfbfb
+
+
+// skrollr elements must all be fixed.
+// 
+@mixin scrollable
+  position: fixed
+  &.unstaged
+    position: static
+
+// Hide Alongslide directives.
+// 
+.alongslide
+  display: none
+
+// Horizontally-scrolling content viewer.
+// 
+#frames
+  height: $full-bleed
+  background-color: $white-bg
+  position: absolute
+  text-rendering: optimizelegibility
+  text-transform: auto
+
+  // One frame is one screen's worth.
+  // 
+  // Panels, flow, backgrounds (front-to-back order) all contain frames.
+  // 
+  .frame
+    width: $full-bleed
+    height: $full-bleed
+    @include scrollable
+
+  // Columns
+  // 
+  // Flowing text laid out by CSS Regions.
+  // 
+  // Column dimensions are all defined in percentages. FixedAspect then overwites
+  // the dimensions of `#frames > .flow > .frame`, and the contained columns
+  // fit accordingly.
+  // 
+  // Contrast with what FixedAspect does with panels below.
+  // 
+  .flow
+    .frame
+
+      // One text column
+      // 
+      .column
+        width: $width-2-column
+        height: 45 * $vertical-grid-unit
+        top: $outer-margin-height
+        position: absolute
+        // > div
+        //   height: $full-bleed - $frame-height-padding
+
+        // Left/right columns
+        // 
+        &:nth-child(1)
+          left: $outer-margin-width
+        &:nth-child(2)
+          right: $outer-margin-width
+
+      // With pinned panel: top/bottom
+      // 
+      // All column values assume 'half' size by default and treat
+      // 'one-third' and 'two-thirds' as overwrites.
+      // 
+      &.with-panel-pinned-bottom
+        .column
+          height: 19 * $vertical-grid-unit
+        &.with-panel-sized-one-third .column
+          height: 27 * $vertical-grid-unit
+        &.with-panel-sized-two-thirds .column
+          height: 11 * $vertical-grid-unit
+
+      &.with-panel-pinned-top
+        .column
+          top: $outer-margin-height + 26 * $vertical-grid-unit
+          height: 19 * $vertical-grid-unit
+        &.with-panel-sized-one-third .column
+          top: $outer-margin-height + 18 * $vertical-grid-unit
+          height: 27 * $vertical-grid-unit
+        &.with-panel-sized-two-thirds .column
+          top: $outer-margin-height + 34 * $vertical-grid-unit
+          height: 11 * $vertical-grid-unit
+
+      // With pinned panel: left/right
+      // 
+      &.with-panel-pinned-left, &.with-panel-pinned-right
+        .column
+          width: $width-2-column
+        &.with-panel-sized-one-third .column
+          width: 2 * $width-3-column + $inner-margin-3-column
+        &.with-panel-sized-two-thirds .column
+          width: $width-3-column
+
+      &.with-panel-pinned-left
+        .column:nth-child(1)
+          left: $outer-margin-width + $width-2-column + $inner-margin-2-column
+        &.with-panel-sized-one-third .column:nth-child(1)
+          left: $outer-margin-width + $width-3-column + $inner-margin-3-column
+        &.with-panel-sized-two-thirds .column:nth-child(1)
+          left: $outer-margin-width + 2 * ($width-3-column + $inner-margin-3-column)
+
+      // Three column layout
+      // 
+      &.three-columns
+        .column
+          width: $width-3-column
+          &:nth-child(1)
+            left: $outer-margin-width
+          &:nth-child(2)
+            left: $outer-margin-width + $width-3-column + $inner-margin-3-column
+          &:nth-child(3)
+            right: $outer-margin-width
+
+        // Three columns with pinned panel: maintain width
+        &.with-panel-pinned-left, &.with-panel-pinned-right
+          .column
+            width: $width-3-column
+
+        &.with-panel-pinned-left
+          &.with-panel-sized-one-third
+            .column:nth-child(1)
+              left: $outer-margin-width + $width-3-column + $inner-margin-3-column
+            .column:nth-child(2)
+              left: $outer-margin-width + 2 * ($width-3-column + $inner-margin-3-column)
+
+  // Panels
+  // 
+  // Contrary to columns above, all values are defined in pixels, which
+  // FixedAspect uses to re-apply percentages in JS. It then overwrites
+  // the below pixel-based values with percentage values based on aspect.
+  // 
+  // The reason is that JS can't access the CSS percentage values anyway,
+  // so, to maintain floating point precision, we may as well do the
+  // math in JS--rather than go from pixels to percentages in SASS, and then
+  // re-derive the percentages in JS, which will be rounded to integers
+  // (and therefore exhibit sampling inaccuracy).
+  // 
+  // The rule is:
+  // - `.panel` is the content area, defined in fixed pixel widths
+  // - `.panel .contents` is relative to the content area
+  // 
+  .panels
+    .panel
+      width: $fixed-frame-width
+      height: $fixed-frame-height
+      top: 0
+      overflow: hidden
+
+      .contents
+        position: absolute
+        top: $fixed-column-outer-margin
+        left: $fixed-column-outer-margin
+        width: $fixed-usable-width
+        height: $fixed-usable-height
+        z-index: 101
+        overflow: visible
+
+        // Class for inner padding. This one _is_ percentage-based.
+        // 
+        .inner
+          width: 100%
+          height: 100%
+          position: absolute
+          z-index: 101
+
+          // Responsive images
+          img 
+            max-width: 100%
+            height: auto
+      
+      // Pinned
+      // 
+      // As with columns, default size is 'half'.
+      // 'one-third' and 'two-thirds' overwrite.
+      // 
+      &.pin
+        background-color: $white-bg
+        &.top
+          bottom: auto
+          .contents
+            height: 22.5 * $fixed-vertical-grid-unit
+            .inner
+              height: $full-bleed - percentage(1 / 22.5)
+          &.one-third .contents
+            height: 15 * $fixed-vertical-grid-unit
+            .inner
+              height: $full-bleed - percentage(1 / 14)
+          &.two-thirds .contents
+            height: 31 * $fixed-vertical-grid-unit
+            .inner
+              height: $full-bleed - percentage(1 / 30)
+
+
+        &.bottom
+          top: auto
+          .contents
+            top: $fixed-column-outer-margin + 22.5 * $fixed-vertical-grid-unit
+            height: 22.5 * $fixed-vertical-grid-unit
+            .inner
+              top: percentage(1 / 22.5)
+              height: $full-bleed - percentage(1 / 22.5)
+          &.one-third .contents
+            top: $fixed-column-outer-margin + 31 * $fixed-vertical-grid-unit
+            height: 14 * $fixed-vertical-grid-unit
+            .inner
+              top: percentage(1 / 14)
+              height: $full-bleed - percentage(1 / 14)
+          &.two-thirds .contents
+            top: $fixed-column-outer-margin + 15 * $fixed-vertical-grid-unit
+            height: 30 * $fixed-vertical-grid-unit
+            .inner
+              top: percentage(1 / 30)
+              height: $full-bleed - percentage(1 / 30)
+
+        $fixed-panel-margin-half: fixed-width-in-bars($wide: 1, $narrow: 2) / 2
+        $fixed-panel-width-half: fixed-width-in-bars($wide: 8, $narrow: 8) + $fixed-panel-margin-half
+        $fixed-panel-margin-one-third: fixed-width-in-bars($wide: 1, $narrow: 0) / 2
+        $fixed-panel-width-one-third: fixed-width-in-bars($wide: 5, $narrow: 6) + $fixed-panel-margin-one-third
+        $fixed-panel-margin-two-thirds: fixed-width-in-bars($wide: 1, $narrow: 0) / 2
+        $fixed-panel-width-two-thirds: fixed-width-in-bars($wide: 11, $narrow: 12) + $fixed-panel-margin-two-thirds
+
+        &.left, &.right
+          background-color: $white-bg
+          .contents
+            width: $fixed-panel-width-half
+            .inner
+              width: $full-bleed - percentage($fixed-panel-margin-half / $fixed-panel-width-half)
+          &.one-third .contents
+            width: $fixed-panel-width-one-third
+            .inner
+              width: $full-bleed - percentage($fixed-panel-margin-one-third / $fixed-panel-width-one-third)
+          &.two-thirds .contents
+            width: $fixed-panel-width-two-thirds
+            .inner
+              width: $full-bleed - percentage($fixed-panel-margin-two-thirds / $fixed-panel-width-two-thirds)
+
+        &.left
+
+        // JS will turn these left values into `margin-left`
+        &.right
+          .contents
+            left: $fixed-column-outer-margin + $fixed-panel-width-half
+            .inner
+              left: percentage($fixed-panel-margin-half / $fixed-panel-width-half)
+          &.one-third .contents
+            left: $fixed-column-outer-margin + $fixed-panel-width-two-thirds
+            .inner
+              left: percentage($fixed-panel-margin-one-third / $fixed-panel-width-one-third)
+          &.two-thirds .contents
+            left: $fixed-column-outer-margin + $fixed-panel-width-one-third
+            .inner
+              left: percentage($fixed-panel-margin-two-thirds / $fixed-panel-width-two-thirds)
+
+  // Section backgrounds
+  // 
+  .backgrounds
+    .background
+      width: $full-bleed
+      height: $full-bleed
+  p
+    -webkit-hyphens: auto
+    -moz-hyphens: auto
+    -ms-hyphens: auto
+    hyphens: auto
+
+  // Footnotes
+  sup[id^="fnref"]
+    position: absolute
+    left: -25px
+    z-index: 214748364
+    > a
+      border: none
+      position: absolute
+      height: 25px
+      width: 25px
+      z-index: 1000001
+    > li
+      background-color: $white-bg
+      opacity: 0
+      float: left
+      list-style: none
+      p:first-child
+        text-indent: 5% !important
+      ul,
+      a[rev="footnote"]
+        display: none
+    > a:hover,
+    > a.active
+      ~ li
+        opacity: 1
+
+
+
+// DEBUG GRID
+// 
+#als-debug-grid
+  position: fixed
+  width: 100%
+  height: 100%
+  opacity: 0.8
+
+  &.hidden
+    display: none
+
+  .margins
+    position: absolute
+
+    &.horizontal
+      width: $full-bleed
+      height: 45 * $vertical-grid-unit
+      top: $vertical-grid-unit * 5
+      left: 0
+      border: 1px solid #00feff
+      border-left-width: 0
+      border-right-width: 0
+
+    &.vertical
+      width: $full-bleed - 2 * $outer-margin-width
+      height: $full-bleed
+      left: $outer-margin-width
+      top: 0
+      border: 1px solid #ff2598
+      border-top-width: 0
+      border-bottom-width: 0
+
+      &.inner
+        width: $inner-margin-2-column
+        left: $outer-margin-width + percentage(8 * ($fixed-wide-bar + $fixed-narrow-bar) / $fixed-frame-width)
+
+  .more
+    width: 100%
+    height: 100%
+
+  .units
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+
+    &.vertical
+      .unit
+        width: $full-bleed
+        border-top: 1px solid #def0f7
+        height: $vertical-grid-unit
+
+    &.horizontal
+      top: 5 * $vertical-grid-unit
+      height: 45 * $vertical-grid-unit
+      margin: 0 $outer-margin-width
+      width: percentage($fixed-usable-width / $fixed-frame-width)
+
+      .unit
+        height: 100%
+        width: percentage($fixed-narrow-bar / ($fixed-usable-width))
+        margin-right: percentage($fixed-wide-bar / ($fixed-usable-width))
+        float: left
+        background-color: #d8e7f6
+        opacity: 0.4
+        &:last-child
+          margin-right: 0
+
+  &.thirds .margins.vertical.inner
+    width: $inner-margin-3-column
+    &:nth-child(1)
+      left: $outer-margin-width + percentage($fixed-three-column-width / $fixed-frame-width)
+    &:nth-child(2)
+      left: $outer-margin-width + percentage(($fixed-three-column-width * 2 + $fixed-3-column-inner-margin) / $fixed-frame-width)
+
+#source
+  display: none
+
+#please-rotate
+  display: none
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait)
+  #please-rotate
+    display: block
+    position: fixed
+    top: 0
+    width: 100%
+    height: 100%
+    background: white
+    h1
+      font-size: 100px
+      line-height: 1em
+      margin: auto
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+      height: 150px
+      text-align: center

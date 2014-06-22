@@ -1,0 +1,67 @@
+#
+# 
+#
+# Copyright 2013 Canopy Canopy Canopy, Inc.
+# Authors Adam Florin & Anthony Tran.
+#
+module Alongslide
+  module Grammar
+    grammar Panel
+
+      # All panel params.
+      #
+      rule panel_params
+        (space param:(position/transition/placement/depth))*
+      end
+
+      # All section params.
+      #
+      rule section_params
+        (space param:(transition/columns))*
+      end
+
+      # Position: fullscreen or pinned.
+      #
+      rule position
+        "fullscreen" / ("pin" space edge (space size)?)
+      end
+
+      #
+      #
+      rule columns
+        "three-columns"
+      end
+
+      # Screen edge.
+      #
+      rule edge
+        "left" / "top" / "right" / "bottom"
+      end
+
+      # Transition animation style.
+      #
+      rule transition
+        ("fade" / "slide") "-" ("in" / "out")
+      end
+
+      # Keyword to bias panel placement immediately or later (default)
+      #
+      rule placement
+        "now" / "later"
+      end
+
+      # Size of panel
+      #
+      rule size
+        "one-third" / "half" / "two-thirds"
+      end
+
+      # Depth, i.e. z-index.
+      #
+      rule depth
+        "front"
+      end
+
+    end
+  end
+end
