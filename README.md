@@ -1,12 +1,15 @@
 # Alongslide
 
-Alongslide is a layout engine extending Markdown syntax.
+Alongslide is a layout engine extending Markdown syntax for use in Rails-based
+web applications
 
 It was developed by [Triple Canopy](http://canopycanopycanopy.com/) as a
 text-editable yet sophisticated platform for producing long-form reading
 content on the web.
 
 Try the demo at [alongslide.com](http://alongslide.com) or [read some theory](http://canopycanopycanopy.com/contents/announcing_alongslide) underlying the project.
+
+*Copyright 2013-2014 Canopy Canopy Canopy, Inc.*
 
 ## Dependencies
 
@@ -15,10 +18,79 @@ Markdown, Treetop to parse their grammar, and HAML to render them into
 templates.
 
 The CoffeeScript/SASS frontend then scan the resulting HTML for layout
-cues, using Adobe's CSS Regions polyfill to flow the body text, and
-skrollr to build transition animations and respond to user scrolling.
+cues, using a custom CSS Regions polyfill to flow the body text,
+skrollr to build transition animations and respond to user scrolling,
+plus jQuery and underscore.js as utilities.
 
-*Copyright 2013 Canopy Canopy Canopy, Inc.*
+## Installing
+
+```bash
+gem install alongslide
+```
+
+The gem includes both the Ruby and frontend components.
+
+## Usage
+
+To use Alongslide, begin by setting up your view:
+
+```erb
+<article id="frames">
+	<div class="backgrounds"></div>
+	<div class="flow"></div>
+	<div class="panels"></div>
+</article>
+<div id="content" style="display: none">
+	<%= Alongslide::render(your_markdown_string) %>
+</div>
+```
+
+Where `your_markdown_string` is a string of Alongslide-flavored Markdown.
+
+Note that the Alongslide HTML is rendered into a hidden DOM element. The empty
+elements above are there for Alongslide's JS to write into.
+
+Then, once the page is loaded and ready, you can kick off the Alongslide render:
+
+```javascript
+MIN_WINDOW_WIDTH = 980
+window.alongslide = new Alongslide({
+  source: '#content',
+  to: '#frames'
+})
+frameAspect = FixedAspect.prototype.fitFrame(MIN_WINDOW_WIDTH)
+window.alongslide.render(frameAspect, function({
+	FixedAspect.prototype.fitPanels(frameAspect)
+}))
+```
+
+For RegionFlow (our CSS Regions polyfill) to work properly, it is critical that
+_all_ styles and webfonts be loaded in browser memory before the Alongslide
+render begins. For that reason, it is recommend that you use the included
+`Styles.prototype.doLoad()` utility to force CSS to load (by loading it via
+Ajax and writing it to the DOM) and/or a tool such as
+[webfontloader](https://github.com/typekit/webfontloader).
+
+After the inital render, you can use `window.alongslide.refresh(frameAspect)`
+to update just the scroll positioning (after a window resize for example) without
+incurring the full cost of doing the layout over again. 
+
+### Creating custom templates
+
+You may specify a directory in your application where you can specify your own
+custom Alongslide templates. To do so, create an `alongslide.rb` in
+`config/initializers` with the contents:
+
+```ruby
+Alongslide.configure do |config|
+  config.user_template_dir = Rails.root.join("app/views/alongslide")
+end
+```
+
+Then you may create views in that directory using the YAML frontmatter format
+described below.
+
+If these template have JS/CSS components, those may go wherever you like.
 
 ## Syntax
 
