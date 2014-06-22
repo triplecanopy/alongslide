@@ -7,7 +7,7 @@ Gem::Specification.new do |gem|
 
   gem.authors  = ['Adam Florin', 'Anthony Tran']
   gem.email    = 'adam@canopycanopycanopy.com'
-  gem.homepage = 'http://github.com/triplecanopy'
+  gem.homepage = 'http://github.com/triplecanopy/alongslide'
 
   gem.add_dependency('redcarpet')
   gem.add_dependency('treetop')
