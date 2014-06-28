@@ -32,48 +32,11 @@ The gem includes both the Ruby and frontend components.
 
 ## Usage
 
-To use Alongslide, begin by setting up your view:
+The best introduction to using Alongslide is by checking out the demo Rails app:
 
-```erb
-<article id="frames">
-	<div class="backgrounds"></div>
-	<div class="flow"></div>
-	<div class="panels"></div>
-</article>
-<div id="content" style="display: none">
-	<%= Alongslide::render(your_markdown_string) %>
-</div>
-```
+https://github.com/triplecanopy/alongslide-demo
 
-Where `your_markdown_string` is a string of Alongslide-flavored Markdown.
-
-Note that the Alongslide HTML is rendered into a hidden DOM element. The empty
-elements above are there for Alongslide's JS to write into.
-
-Then, once the page is loaded and ready, you can kick off the Alongslide render:
-
-```javascript
-MIN_WINDOW_WIDTH = 980
-window.alongslide = new Alongslide({
-  source: '#content',
-  to: '#frames'
-})
-frameAspect = FixedAspect.prototype.fitFrame(MIN_WINDOW_WIDTH)
-window.alongslide.render(frameAspect, function({
-	FixedAspect.prototype.fitPanels(frameAspect)
-}))
-```
-
-For RegionFlow (our CSS Regions polyfill) to work properly, it is critical that
-_all_ styles and webfonts be loaded in browser memory before the Alongslide
-render begins. For that reason, it is recommend that you use the included
-`Styles.prototype.doLoad()` utility to force CSS to load (by loading it via
-Ajax and writing it to the DOM) and/or a tool such as
-[webfontloader](https://github.com/typekit/webfontloader).
-
-After the inital render, you can use `window.alongslide.refresh(frameAspect)`
-to update just the scroll positioning (after a window resize for example) without
-incurring the full cost of doing the layout over again. 
+This app demonstrates the minimum views, JS, and CSS needed to build an Alongslide site.
 
 ### Creating custom templates
 
