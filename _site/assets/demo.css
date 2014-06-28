@@ -1,0 +1,118 @@
+html, body {
+  font-size: 17px;
+  line-height: 22px;
+}
+#content-display {
+  font-family: Asap;
+  font-size: 120%;
+  line-height: 1.4em
+}
+#content-display h1 {
+  font-size: 200%;
+  font-weight: normal;
+}
+#content-display h2,
+#content-display h3 {
+  font-family: Asap;
+  font-weight: bold;
+}
+#content-display h3 {
+  font-size: 125%;
+}
+#content-display h1,
+#content-display h2,
+#content-display h3,
+#content-display h4,
+#content-display p {
+  margin: 0 0 0.5em;
+  line-height: 1.5em;
+}
+#content-display p {
+  text-indent: 6%;
+}
+#content-display h4 {
+  font: inherit;
+}
+#content-display a {
+  border-bottom: 2px solid darkcyan;
+  color: #222;
+  text-decoration: none;
+}
+#content-display ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#frames .panels [data-alongslide-id=intro].panel h1 {
+  padding-right: 20%;
+}
+#frames .panels [data-alongslide-id=intro].panel {
+  background-color: aquamarine;
+}
+#frames .panels [data-alongslide-id=footer].panel {
+  background-color: #222;
+}
+#frames .panels [data-alongslide-id=footer].panel {
+  color: floralwhite;
+}
+#frames .panels [data-alongslide-id=footer].panel p {
+  text-indent: 0;
+}
+#frames .panels [data-alongslide-id=footer].panel p:nth-child(1) {
+  margin-top: 2em;
+}
+#frames .panels [data-alongslide-id=footer].panel p:nth-child(3) {
+  padding-top: 1.6em;
+  font-size: 75%;
+}
+#frames .panels [data-alongslide-id=footer].panel a {
+  color: white;
+}
+#frames .panels [data-alongslide-id=technology-layers].panel {
+  background-color: gold;
+}
+#frames .panels [data-alongslide-id=technology-layers].panel .inner {
+  padding-right: 40%;
+}
+#frames .panels [data-alongslide-id=technology-layers].panel ol li {
+  list-style-type: upper-roman;
+  margin-left: 7%;
+  margin-bottom: 0.5em;
+}
+#frames .panels [data-alongslide-id=aspect].panel {
+  background-color: tomato;
+}
+#frames .panels [data-alongslide-id=aspect].panel .inner,
+#frames .panels [data-alongslide-id=philosophy].panel .inner {
+  padding: 10%;
+}
+#frames .panels [data-alongslide-id=philosophy].panel {
+  background-color: dodgerblue;
+}
+.column [data-alongslide-id=structure]>p,
+.column [data-alongslide-id=structure]>blockquote {
+  font-size: 90%;
+}
+.column [data-alongslide-id=structure] blockquote {
+  color: #666;
+  margin-left: 1.5em;
+}
+.column [data-alongslide-id=structure] blockquote p {
+  text-indent: 0 !important;
+  margin-top: 1em;
+}
+.column [data-alongslide-id=structure] blockquote p.region-flow-post-text-break {
+  margin-top: 0;
+}
+#frames .panels [data-alongslide-id=this-is-a-panel].panel.pin.right {
+  background-image: none;
+  background-color: #222;
+}
+#frames .panels [data-alongslide-id=this-is-a-panel].panel {
+  color: floralwhite;
+}
+#frames .panels [data-alongslide-id=this-is-a-panel].panel p  {
+  font-size: 90%;
+  margin-bottom: 1.5em;
+  text-indent: 0;
+}
