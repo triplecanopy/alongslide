@@ -21,6 +21,9 @@ class Alongslide::Layout
   IN_POINT_KEY: 'als-in-position'
   OUT_POINT_KEY: 'als-out-position'
 
+  # Corresponds to $fixed-frame-width in alongslide.sass
+  FRAME_WIDTH: 980
+
   # Pixel width of each frame == screen width.
   # 
   frameWidth: $(window).width()

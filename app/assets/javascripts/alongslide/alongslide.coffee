@@ -46,7 +46,8 @@ class Alongslide
   # @param frameAspect - bounding box computed by FixedAspect
   # @param postRenderCallback - to be called when layout returns
   # 
-  render: (frameAspect, postRenderCallback) ->
+  render: (postRenderCallback) ->
+    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH)
     @layout.render (lastFramePosition) =>
 
       @lastFramePosition = lastFramePosition
@@ -59,12 +60,15 @@ class Alongslide
       $(document).triggerHandler 'alongslide.ready', @frames
 
       @hashToPosition()
+      FixedAspect.prototype.fitPanels(frameAspect)
       postRenderCallback()
 
   # Refresh Skrollr only on resize events, as it's fast.
   # 
-  refresh: (frameAspect) ->
+  refresh: ->
+    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH)
     @scrolling.render(frameAspect, @lastFramePosition)
+    FixedAspect.prototype.fitPanels(frameAspect)
 
   hashToPosition: ->
     hash = window.location.hash
