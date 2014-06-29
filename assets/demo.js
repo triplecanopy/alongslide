@@ -1,20 +1,18 @@
 $(function() {
-  // position source modal
-  markdown_source_left = ($(window).width() - 900) / $(window).width() / 2;
-  Styles.prototype.write('markdown-source-frame-aspect', Styles.prototype.formatPercentages('#markdown-source', {
-    left: markdown_source_left
-  }));
+  var $source = $('#markdown-source')
 
   // click handler: open modal
   $(document).on('click', '[data-alongslide-id=footer] a:first', function() {
-    $('#markdown-source').addClass('on')
+    $source.css({
+      left: ($(window).width() - $source.outerWidth()) / 2
+    }).addClass('on')
     return false
   })
 
   // click handler: close modal
   $(document).on('click', function(event) {
     if ($(event.target).is('a') && !$(event.target).is('a.close')) return true
-    $('#markdown-source').removeClass('on')
+    $source.removeClass('on')
     return false
   })
 })
