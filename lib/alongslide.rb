@@ -75,6 +75,8 @@ module Alongslide
         error_line = markdown.split("\n")[parser.failure_line-1]
         raise SyntaxError.new "Alongslide syntax error around: \"#{error_line}\""
       end
+    rescue
+      raise SyntaxError.new "Unknown Alongslide syntax error"
     end
 
   end

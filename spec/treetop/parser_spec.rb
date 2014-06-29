@@ -12,6 +12,12 @@ describe Alongslide::Grammar::RootParser do
     @section_name = "SomeSection"
   end
 
+  before :each do
+    Rails.stub :configuration do
+      double(paths: {"app/views" => nil})
+    end
+  end
+
   describe "panels" do
     it "should show and unpin" do
       parsed = @parser.parse <<-MARKDOWN.strip_heredoc

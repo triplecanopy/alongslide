@@ -5,6 +5,8 @@
 # Copyright 2013 Canopy Canopy Canopy, Inc.
 # Author Adam Florin
 # 
+require 'action_view'
+require 'haml/template'
 
 module Alongslide
   module Templates
@@ -108,8 +110,8 @@ module Alongslide
       def renderer
         action_view = ActionView::Base.new(Rails.configuration.paths["app/views"])
         action_view.class_eval do 
-          include Rails.application.routes.url_helpers
-          include ApplicationHelper
+          include Rails.application.routes.url_helpers if defined? Rails.application.routes
+          include ApplicationHelper if defined? ApplicationHelper
 
           def protect_against_forgery?
             false

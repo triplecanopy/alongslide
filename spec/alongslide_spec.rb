@@ -2,6 +2,12 @@ require 'spec_helper'
 
 describe Alongslide do
 
+  before :each do
+    Rails.stub :configuration do
+      double(paths: {"app/views" => nil})
+    end
+  end
+  
   describe "rendering" do
     it "should render a whole document" do
       html = Alongslide::render <<-MARKDOWN.strip_heredoc
