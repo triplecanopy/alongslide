@@ -16,6 +16,8 @@
 
     Layout.prototype.OUT_POINT_KEY = 'als-out-position';
 
+    Layout.prototype.FRAME_WIDTH = 980;
+
     Layout.prototype.frameWidth = $(window).width();
 
     Layout.prototype.debug = false;

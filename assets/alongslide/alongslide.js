@@ -40,7 +40,9 @@
       });
     }
 
-    Alongslide.prototype.render = function(frameAspect, postRenderCallback) {
+    Alongslide.prototype.render = function(postRenderCallback) {
+      var frameAspect;
+      frameAspect = FixedAspect.prototype.fitFrame(this.layout.FRAME_WIDTH);
       return this.layout.render((function(_this) {
         return function(lastFramePosition) {
           _this.lastFramePosition = lastFramePosition;
@@ -49,13 +51,17 @@
           _this.applyAnchorScrolling();
           $(document).triggerHandler('alongslide.ready', _this.frames);
           _this.hashToPosition();
+          FixedAspect.prototype.fitPanels(frameAspect);
           return postRenderCallback();
         };
       })(this));
     };
 
-    Alongslide.prototype.refresh = function(frameAspect) {
-      return this.scrolling.render(frameAspect, this.lastFramePosition);
+    Alongslide.prototype.refresh = function() {
+      var frameAspect;
+      frameAspect = FixedAspect.prototype.fitFrame(this.layout.FRAME_WIDTH);
+      this.scrolling.render(frameAspect, this.lastFramePosition);
+      return FixedAspect.prototype.fitPanels(frameAspect);
     };
 
     Alongslide.prototype.hashToPosition = function() {

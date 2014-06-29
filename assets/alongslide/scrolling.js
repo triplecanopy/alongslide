@@ -209,7 +209,7 @@
                   if (!(position > options.lastFramePosition)) {
                     styles = {};
                     translateBy = (offset - direction) * scale;
-                    translateByPx = Math.round(translateBy * Math.max($(window).width(), 980));
+                    translateByPx = Math.round(translateBy * Math.max($(window).width(), alongslide.layout.FRAME_WIDTH));
                     styles["" + prefix.css + "transform"] = "translate(" + translateByPx + "px, 0) translateZ(0)";
                     styles.opacity = options.transition[transition] === "fade" ? 1.0 - Math.abs(direction) : 1.0;
                     _results2.push(frame.attr("data-" + (Math.round(position * 100)) + "p", (_.map(styles, function(value, key) {
