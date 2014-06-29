@@ -11,11 +11,14 @@
 html, body {
   height: 100%;
 }
-
 html, body, p {
   margin: 0;
   border: 0;
 }
+
 #content-display {
   opacity: 0;
+}
+#markdown-source {
+  display: none;
 }

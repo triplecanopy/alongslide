@@ -116,3 +116,60 @@ html, body {
   margin-bottom: 1.5em;
   text-indent: 0;
 }
+
+#markdown-source {
+  -webkit-transition: top 0.25s linear;
+  -moz-transition: top 0.25s linear;
+  -o-transition: top 0.25s linear;
+  transition: top 0.25s linear;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+  position: fixed;
+  top: 100%;
+  height: 100%;
+  width: 900px;
+  padding: 50px;
+  background-color: #f9f9f9;
+  color: black;
+  opacity: 0.96;
+  display: block;
+}
+#markdown-source a.close {
+  font-family: Asap;
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  text-decoration: none;
+  color: #222;
+}
+#markdown-source .source {
+  height: 100%;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 15px;
+}
+#markdown-source .source h3 {
+  font-family: Asap;
+  font-size: 180%;
+  margin-bottom: 1em;
+  font-weight: normal;
+}
+#markdown-source .source pre {
+  font-family: "Source Code Pro", "Lucida Console", Monaco, monospace;
+  white-space: pre-wrap;
+  margin: 0;
+}
+#markdown-source .source pre.indented:before {
+  content: "    ";
+}
+#markdown-source .source pre.directive {
+  background-color: royalblue;
+  color: white;
+}
+#markdown-source .source pre.in-block {
+  background-color: #e9f9ff;
+}
+#markdown-source.on {
+  top: 0%;
+}
