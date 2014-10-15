@@ -67,6 +67,9 @@ $white-bg: #fbfbfb
   text-rendering: optimizelegibility
   text-transform: auto
 
+  em
+    line-height: 1em
+
   // One frame is one screen's worth.
   // 
   // Panels, flow, backgrounds (front-to-back order) all contain frames.
@@ -98,6 +101,10 @@ $white-bg: #fbfbfb
         position: absolute
         // > div
         //   height: $full-bleed - $frame-height-padding
+        .section
+          &[data-section-flow-idx]
+            p:first-child
+              text-indent: 0 !important
 
         // Left/right columns
         // 
@@ -313,32 +320,29 @@ $white-bg: #fbfbfb
     hyphens: auto
 
   // Footnotes
-  sup[id^="fnref"]
-    position: absolute
-    left: -25px
+  .als-footnote
+    display: none
     z-index: 214748364
-    > a
-      border: none
-      position: absolute
-      height: 25px
-      width: 25px
-      z-index: 1000001
-    > li
-      background-color: $white-bg
-      opacity: 0
-      float: left
-      list-style: none
-      p:first-child
-        text-indent: 5% !important
-      ul,
-      a[rev="footnote"]
-        display: none
-    > a:hover,
-    > a.active
-      ~ li
-        opacity: 1
-
-
+    position: absolute
+    width: 100%
+    padding: 4% 0 4% 0
+    background-color: $white-bg
+    font-family: "FreeUniversal", Futura, "Trebuchet MS", Arial, sans-serif
+    font-size: 11px
+    > p
+      text-indent: 0%
+      padding: 2% 6% 0% 6%
+  .als-fn-sup
+    position: relative
+    top: -0.8em
+    z-index: 1000000
+    font-size: 13px
+    margin-left: -3.8%
+    margin-right: -3%
+    > .als-fn-ref
+      border: 15px solid rgba(0, 0, 0, 0.0)
+      z-index: 9999999999
+      margin-left: 1%
 
 // DEBUG GRID
 // 
@@ -428,9 +432,9 @@ $white-bg: #fbfbfb
     top: 0
     width: 100%
     height: 100%
-    background: white
+    background: #fbfbfb
     h1
-      font-size: 100px
+      font-size: 54px
       line-height: 1em
       margin: auto
       position: absolute
