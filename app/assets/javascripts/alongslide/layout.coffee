@@ -76,6 +76,9 @@ class Alongslide::Layout
     @setPositionOf background, to: @nextFramePosition() if background.length
     background.addClass('unstaged')
 
+    # Reset section index before building another section
+    @currentSectionFlowIndex = 0
+
     @renderFrame(flowName)
 
   # Render one frame and its containing columns.
@@ -92,6 +95,10 @@ class Alongslide::Layout
     # for each column in frame
     while frame.find('.'+@regionCls).length < @numFrameColumns(frame)
       column = @buildRegion frame, flowName
+
+      # Give each section flow an index
+      @currentSectionFlowIndex++
+      column.find('.section').attr('data-section-flow-idx', @currentSectionFlowIndex)
 
       # Move three-columns class from .section to .frame
       hasThreeColumns = (column.children('.three-columns').length)
