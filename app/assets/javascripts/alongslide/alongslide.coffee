@@ -17,6 +17,7 @@ class Alongslide
     @source     = $(options.source)  ? $('#content .raw')
     @frames     = $(options.to)      ? $('#frames')
     @regionCls  = options.regionCls  ? 'column'
+    @marginTop  = options.marginTop  ? 0
 
     RegionFlow::init()
 
@@ -47,7 +48,7 @@ class Alongslide
   # @param postRenderCallback - to be called when layout returns
   # 
   render: (postRenderCallback) ->
-    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH)
+    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @layout.render (lastFramePosition) =>
 
       @lastFramePosition = lastFramePosition
@@ -66,7 +67,7 @@ class Alongslide
   # Refresh Skrollr only on resize events, as it's fast.
   # 
   refresh: ->
-    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH)
+    frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @scrolling.render(frameAspect, @lastFramePosition)
     FixedAspect.prototype.fitPanels(frameAspect)
 
