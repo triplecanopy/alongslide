@@ -83,16 +83,32 @@ class Alongslide
   # Sanitize Markdown generated HTML
   applyFootnotes: ->
     # For each footnote in the article
-    @frames.find('a[rel=footnote]').each (i, el) =>
+    @frames.find('.als-fn-ref').each (i, el) =>
       # Reference the footnote
       $el = $(el)
-      # Find the actual footnote
-      $footnote = @footnotes.find($el.attr('href'))
-      # Append actualy footnote to footnote reference
-      $el.parent('sup').append($footnote)
+      # Find the footnote text
+      $footnote = @footnotes.find($el.data('anchor'))
 
-      # Add event listener to pin/unpin when clicked
-      $el.on "click", (e) -> $(this).toggleClass('active')
+      # Append the footnote text element to the column
+      $column = $el.parents('.column')
+      $column.append($footnote)
+
+      # place footnote, prevent placing offscreen
+      bottom = $column.height() + $column.offset().top
+      if ($el.offset().top + $footnote.height()) > bottom
+        $footnote.css('bottom', 0)
+      else
+        $footnote.css('top', $el.parent().position().top )
+
+      $el.on "mouseenter click", (e) ->
+        e.preventDefault()
+        e.stopImmediatePropagation()
+        $footnote.fadeIn(150)
+        false
+
+      $footnote.on "mouseleave click", (e) -> 
+        setTimeout ( ()-> $footnote.fadeOut(150) ), 100
+        false
 
   applyAnchorScrolling: ->
     self = @

@@ -114,12 +114,12 @@ class Alongslide::Parser
       background = idElement.clone().addClass('background frame').html("&nbsp;")
       @backgrounds.push(background)
 
-  # Search for footntes as formatted by Redcarpet.
+  # Search for footntes as formatted by Redcarpet's footnotes callback
   # 
   # Each has an ID of the form `fn1`, which corresponds to the links in the
   # footnote references.
   # 
-  # Returns a jQuery list of li elements and removes the generated footnotes from DOM
+  # Returns a DOM node whose child elements are footnote definitions and removes the generated footnotes from DOM
   collectFootnotes: ->
-    @source.find('.footnotes:last-child')
+    @source.find('.als-footnotes:last')
            .remove()

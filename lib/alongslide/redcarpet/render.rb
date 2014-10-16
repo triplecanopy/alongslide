@@ -23,6 +23,21 @@ module Redcarpet
         ::Alongslide::render_block text
       end
 
+      def footnote_def(text, number)
+        # example args
+        #
+        # "<p>Here is the text of the footnote</p>\n", 1
+        "<div id='fn#{number}' class='als-footnote'>#{text.insert(3,number.to_s+'  ')}</p></div>"
+      end
+
+      def footnotes(text)
+        "<div class='als-footnotes'>"+text+"</div>"
+      end
+
+      def footnote_ref(number)
+        "<sup id='fnref#{number}' class='als-fn-sup'><span class='als-fn-ref' data-anchor='#fn#{number}'>#{number}</span></sup>"
+      end
+
     end
   end
 end
