@@ -2,7 +2,7 @@ $(function() {
   var $source = $('#markdown-source')
 
   // click handler: open modal
-  $(document).on('click', '[data-alongslide-id=footer] a:first', function() {
+  $(document).on('click', '[data-alongslide-id=footer] a:eq(1)', function() {
     $source.css({
       left: ($(window).width() - $source.outerWidth()) / 2
     }).addClass('on')
