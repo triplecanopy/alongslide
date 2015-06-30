@@ -1,9 +1,9 @@
-# 
+#
 # alongslide.cofee: Central init, pull in submodules.
-# 
+#
 # Copyright 2013 Canopy Canopy Canopy, Inc.
 # Authors Adam Florin & Anthony Tran
-# 
+#
 class Alongslide
 
   panels     : {}
@@ -12,12 +12,14 @@ class Alongslide
   parser     : null
   layout     : null
   scrolling  : null
+  state      : null
 
   constructor: (options= {}) ->
-    @source     = $(options.source)  ? $('#content .raw')
-    @frames     = $(options.to)      ? $('#frames')
-    @regionCls  = options.regionCls  ? 'column'
-    @marginTop  = options.marginTop  ? 0
+    @source       = $(options.source)  ? $('#content .raw')
+    @frames       = $(options.to)      ? $('#frames')
+    @regionCls    = options.regionCls  ? 'column'
+    @marginTop    = options.marginTop  ? 0
+    @historyState = History.getState()
 
     RegionFlow::init()
 
@@ -38,15 +40,19 @@ class Alongslide
     @scrolling = new @Scrolling
       frames:          @frames
 
+    # init broswer history
+    @state = new @State
+      historyState: @historyState
+
 
   # Render flowing layout and scroll behavior.
-  # 
+  #
   # Force use of CSS Regions polyfill. (Don't trust native browser support
   # while W3C draft is under active development.)
-  # 
+  #
   # @param frameAspect - bounding box computed by FixedAspect
   # @param postRenderCallback - to be called when layout returns
-  # 
+  #
   render: (postRenderCallback) ->
     frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @layout.render (lastFramePosition) =>
@@ -60,12 +66,14 @@ class Alongslide
       # Emit notification that layout is complete.
       $(document).triggerHandler 'alongslide.ready', @frames
 
+      console.log 'Alongslide ready!'
+
       @hashToPosition()
       FixedAspect.prototype.fitPanels(frameAspect)
       postRenderCallback()
 
   # Refresh Skrollr only on resize events, as it's fast.
-  # 
+  #
   refresh: ->
     frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @scrolling.render(frameAspect, @lastFramePosition)
@@ -80,7 +88,7 @@ class Alongslide
 
 
   # Create footnotes
-  # 
+  #
   # Sanitize Markdown generated HTML
   applyFootnotes: ->
     # For each footnote in the article
@@ -107,7 +115,7 @@ class Alongslide
         $footnote.fadeIn(150)
         false
 
-      $footnote.on "mouseleave click", (e) -> 
+      $footnote.on "mouseleave click", (e) ->
         setTimeout ( ()-> $footnote.fadeOut(150) ), 100
         false
 
@@ -124,5 +132,5 @@ class Alongslide
 
 
 # Make global
-# 
+#
 window.Alongslide = Alongslide
