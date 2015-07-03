@@ -31,6 +31,9 @@ class Alongslide::Scrolling
 
   mouseDown: false
 
+  # browser history
+  stateData: {}
+
   constructor: (options= {}) ->
     {@frames} = options
 
@@ -369,11 +372,9 @@ class Alongslide::Scrolling
       duration: duration
       easing: 'easeOutQuad'
       done: (skrollr) =>
-
-        stateData =
-          index:@currentPosition
-
-        alongslide.state.update(stateData)
+        @stateData =
+          index: @currentPosition
+        alongslide.state.update(@stateData)
 
     # For mobile, stage/unstage frames after transition
     if @skrollr.isMobile()

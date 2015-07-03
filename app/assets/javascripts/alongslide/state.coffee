@@ -5,17 +5,22 @@
 #
 class Alongslide::State
 
-  historyState = {}
+  panelNames   : {}
+  documentTitle: ''
+  hash         : '#'
 
-  constructor: (options= {}) ->
-    {@historyState} = options
+  constructor: (options = {}) ->
+    History = window.History
+    if !History.enabled then return false
+    # state          = History.getState()
+    @documentTitle = document.getElementsByTagName('title')[0].innerHTML
+    @panelNames    = options.panelNames
 
-    History.Adapter.bind window,'statechange', =>
-      stateData = History.getState()
-      @update(stateData)
-      return
+  rewindStateIndex:(state) ->
+    state.index -= 1
+    @update(state);
 
-  update: (stateData) ->
-    i = stateData.index
-    return if !i
-    History.pushState({state:i}, "Page " + i, "#" + alongslide.layout.flowNames[i]);
+  update:(state)->
+    if @panelNames[state.index]
+      History.replaceState null, @documentTitle, @hash + @panelNames[state.index]
+    else @rewindStateIndex(state)

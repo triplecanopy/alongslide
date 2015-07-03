@@ -19,7 +19,7 @@ class Alongslide
     @frames       = $(options.to)      ? $('#frames')
     @regionCls    = options.regionCls  ? 'column'
     @marginTop    = options.marginTop  ? 0
-    @historyState = History.getState()
+    @panelNames   = {}
 
     RegionFlow::init()
 
@@ -35,6 +35,7 @@ class Alongslide
       backgrounds:     @backgrounds
       panels:          @panels
       regionCls:       @regionCls
+      panelNames:      @panelNames
 
     # init scrolling
     @scrolling = new @Scrolling
@@ -42,7 +43,7 @@ class Alongslide
 
     # init broswer history
     @state = new @State
-      historyState: @historyState
+      panelNames: @panelNames
 
 
   # Render flowing layout and scroll behavior.
