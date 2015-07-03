@@ -12,7 +12,6 @@ class Alongslide::State
   constructor: (options = {}) ->
     History = window.History
     if !History.enabled then return false
-    # state          = History.getState()
     @documentTitle = document.getElementsByTagName('title')[0].innerHTML
     @panelNames    = options.panelNames
 
@@ -21,6 +20,11 @@ class Alongslide::State
     @update(state);
 
   update:(state)->
-    if @panelNames[state.index]
+    if @panelNames[state.index] and state.index > -1
       History.replaceState null, @documentTitle, @hash + @panelNames[state.index]
-    else @rewindStateIndex(state)
+      pageData =
+        index    : state.index
+        hash     : @panelNames[state.index]
+      $(document).triggerHandler 'alongslide.pagechange', pageData
+    else
+      @rewindStateIndex(state)
