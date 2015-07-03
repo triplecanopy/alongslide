@@ -67,8 +67,6 @@ class Alongslide
       # Emit notification that layout is complete.
       $(document).triggerHandler 'alongslide.ready', @frames
 
-      console.log 'Alongslide ready!'
-
       @hashToPosition()
       FixedAspect.prototype.fitPanels(frameAspect)
       postRenderCallback()
