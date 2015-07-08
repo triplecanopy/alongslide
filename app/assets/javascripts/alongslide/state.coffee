@@ -20,11 +20,13 @@ class Alongslide::State
     @update(state);
 
   update:(state)->
-    if @panelNames[state.index] and state.index > -1
+    if @panelNames[state.index]
       History.replaceState null, @documentTitle, @hash + @panelNames[state.index]
       pageData =
         index    : state.index
         hash     : @panelNames[state.index]
       $(document).triggerHandler 'alongslide.pagechange', pageData
-    else
+    else if !@panelNames[state.index] and state.index > -1
       @rewindStateIndex(state)
+    else if state.index <= -1
+      return
