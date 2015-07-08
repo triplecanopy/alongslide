@@ -1,13 +1,13 @@
-# 
+#
 # alongslide/scrolling.coffee: Skrollr wrapper.
-# 
+#
 # Copyright 2013 Canopy Canopy Canopy, Inc.
 # Authors Adam Florin & Anthony Tran
-# 
+#
 class Alongslide::Scrolling
 
   # For applyTransition.
-  # 
+  #
   TRANSITIONS:
     in: [-1..0]
     out: [0..1]
@@ -23,13 +23,16 @@ class Alongslide::Scrolling
   indexedTransitions: {}
 
   # For desktop scroll throttling.
-  # 
+  #
   wheelHistory: []
   lastAverageMagnitude: 0
   ignoreScroll: false
   lastRequestedPosition: 0
 
   mouseDown: false
+
+  # browser history
+  stateData: {}
 
   constructor: (options= {}) ->
     {@frames} = options
@@ -39,7 +42,7 @@ class Alongslide::Scrolling
       horizontal: true
       edgeStrategy: 'set'
       render: @snap
-      easing: 
+      easing:
         easeInOutQuad: (p) ->
           if p < 0.5
             Math.pow(p*2, 1.5) / 2
@@ -58,15 +61,15 @@ class Alongslide::Scrolling
       @monitorMouse()
 
   # Init skrollr once content data attributes are populated.
-  # 
+  #
   # @param - frameAspect - percentage horizontal offset (0.-1.)
   #   to factor in when applying scroll transitions
-  # 
+  #
   render: (@frameAspect, lastFramePosition) ->
     @applyTransitions(lastFramePosition)
     @skrollr.refresh()
 
-  # TODO: write API that injects functions 
+  # TODO: write API that injects functions
   # i.e. functionName(event, frame number, function) `('before', 3, animateTable)`
   events: =>
     @frames.on 'skrollrBefore', (e) -> e.target
@@ -74,11 +77,11 @@ class Alongslide::Scrolling
     @frames.on 'skrollrAfter', (e) -> e.target
 
   # Apply skrollr-style attrs based on Alongslide attrs.
-  # 
+  #
   #
   applyTransitions: (lastFramePosition) ->
     @indexedTransitions = {}
-    
+
     @frames.find('.frame').each (index, frameEl) =>
       frame = $(frameEl)
 
@@ -111,23 +114,23 @@ class Alongslide::Scrolling
 
 
   # Write skrollr-style scroll transitions into jQuery DOM element.
-  # 
+  #
   # Note that, since a frame may enter and exit with different transitions,
   # the CSS snippets for each transition should zero out effects of other
   # transitions. (That's why the "slide" transition sets opacity.)
-  # 
+  #
   # Also, frames may scroll over a shorter distance ('scale') if they
   # are with horizontally pinned panels. The code below must be context-aware
   # enough to know when to do a normal-length scroll and when to shorten it.
-  # 
+  #
   # @param frame: jQuery object wrapping new DOM frame
   # @param options: hash containing:
   #   - in: percentage of total page width when frame should enter
   #   - out (optional): percentage of total page width when frame should exit
   #   - lastFramePosition: last position of any frame in DOM.
-  # 
+  #
   # @return frame
-  # 
+  #
   applyTransition: (frame, options = {}) ->
     # fuzzy logic coefficient. see below.
     A_LITTLE_MORE = 2
@@ -149,7 +152,7 @@ class Alongslide::Scrolling
 
           # Set framescale for horizontal panels if there's another horizontal
           # panel at the opposite edge before AND after the transition.
-          # 
+          #
           if Math.abs(direction) > 0
             if frame.parent().hasClass('panels')
               panelAlignment = alongslide.layout.panelAlignment(frame)
@@ -162,8 +165,8 @@ class Alongslide::Scrolling
                     frameScale = 0.495
 
           # In certain cases, we need more than one keypoint per direction.
-          # 
-          keypoints = 
+          #
+          keypoints =
             if frameScale?
               # if frameScale is set, use it--but add an additional keypoint
               # at 1.0 to make sure these closely-packed frames are out of
@@ -178,7 +181,7 @@ class Alongslide::Scrolling
                 # Double keypoints in order to keep the frame out of the visible
                 # window until absolutely necessary so that it doesn't sit atop
                 # the visible frame (and consume link clicks).
-                # 
+                #
                 [ {magnitude: magnitude, scale: scale * A_LITTLE_MORE},
                   {magnitude: magnitude * 0.99, scale: scale}]
 
@@ -194,7 +197,7 @@ class Alongslide::Scrolling
               [{magnitude: direction, scale: 1.0}]
 
           # apply Skrollr transitions for each keypoint.
-          # 
+          #
           for keypoint in _.flatten(keypoints)
             {magnitude, scale} = keypoint
             position = options[transition] + magnitude
@@ -221,9 +224,9 @@ class Alongslide::Scrolling
 
   # Check frame's CSS classes for transition cues in the format
   # `*-in` or `*-out`.
-  # 
+  #
   # Currently defaults to "slide", and does no validation.
-  # 
+  #
   transitionOptions: (frame, options = {}) ->
     frameClass = frame.get(0).className
 
@@ -236,9 +239,9 @@ class Alongslide::Scrolling
     return options
 
   # If we're in the refractory period, extinguish all scroll events immediately.
-  # 
+  #
   # Desktop only.
-  # 
+  #
   throttleScrollEvents: ->
     $(window).on 'wheel mousewheel DOMMouseScroll MozMousePixelScroll', (e) =>
 
@@ -254,12 +257,12 @@ class Alongslide::Scrolling
           e.preventDefault()
 
       @lastAverageMagnitude = averageMagnitude
-  
+
   # To gauge scroll inertia on desktop, need to constantly populate our
   # wheelHistory array with zeroes to mark time.
-  # 
+  #
   # Desktop only.
-  # 
+  #
   monitorScroll: ->
     # zero handler
     zeroHistory = => @lastAverageMagnitude = @updateWheelHistory(0)
@@ -269,11 +272,11 @@ class Alongslide::Scrolling
 
     # repeat forever.
     setInterval zeroHistory, 5
-  
+
   # Add the latest delta to the running history, enforce max length.
-  # 
+  #
   # Returns average after updating.
-  # 
+  #
   updateWheelHistory: (delta) ->
     # add delta to history
     @wheelHistory.unshift(delta)
@@ -287,7 +290,7 @@ class Alongslide::Scrolling
     return Math.abs(average)
 
   # Monitor mousedown state on desktop to separate scrollbar from mousewheel
-  # 
+  #
   monitorMouse: ->
     $(document).mousedown =>
       @mouseDown = true
@@ -297,17 +300,17 @@ class Alongslide::Scrolling
       window.alongslide?.scrolling.scrollToPosition(requestedPosition)
 
   # Scroll to requested frame.
-  # 
+  #
   # Don't scroll below zero, and don't do redundant scrolls.
-  # 
+  #
   # @param position - ALS position (= frame number). May be floating point!
-  # 
+  #
   # @option skrollr - caller may pass in skrollr if our variable hasn't been
   #   set yet
   # @option force - if true, force a corrective scroll, even if we think we're
   #   at the position we think we're supposed to be at.
   # @option scrollMethod - is this a "scroll", a "touch", or "keys"?
-  # 
+  #
   scrollToPosition: (requestedPosition, options = {}) =>
     # use our stored copy of skrollr instance if available
     skrollr = @skrollr || options.skrollr
@@ -348,13 +351,13 @@ class Alongslide::Scrolling
       if (position * $(window).width()) isnt skrollr.getScrollPosition()
         scrollTo = @currentPosition
         duration = @FORCE_SLIDE_DURATION_MS
-    
+
     @doScroll(scrollTo, skrollr, duration, options) if scrollTo?
 
     @lastRequestedPosition = requestedPosition
-  
-  # 
-  # 
+
+  #
+  #
   doScroll: (scrollTo, skrollr, duration, options) ->
     scrollDelta = scrollTo - @currentPosition
     @currentPosition = scrollTo
@@ -368,7 +371,10 @@ class Alongslide::Scrolling
     skrollr.animateTo scrollTo * $(window).width(),
       duration: duration
       easing: 'easeOutQuad'
-      done: (skrollr) ->
+      done: (skrollr) =>
+        @stateData =
+          index: @currentPosition
+        alongslide.state.update(@stateData)
 
     # For mobile, stage/unstage frames after transition
     if @skrollr.isMobile()
@@ -388,11 +394,11 @@ class Alongslide::Scrolling
 
   # Snap-to-content scrolling, implemented as a skrollr callback, called after
   # each frame in the animation loop.
-  # 
+  #
   # Bias the scroll so that it moves in the same direction as the user's input
   # (i.e., use floor()/ceil() rather than round(), so that scroll never
   # snaps BACK, which can feel disheartening as a user experience).
-  # 
+  #
   snap: (info) ->
 
     # don't do anything if skrollr is animating
@@ -410,7 +416,7 @@ class Alongslide::Scrolling
 
   # Listen to left/right arrow (unless modifier keys are pressed),
   # and scroll accordingly.
-  # 
+  #
   arrowKeys: ->
     $(document).keydown (event) =>
       if event.altKey or event.shiftKey or event.ctrlKey or event.metaKey
