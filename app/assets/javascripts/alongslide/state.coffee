@@ -5,28 +5,35 @@
 #
 class Alongslide::State
 
-  panelNames   : {}
-  documentTitle: ''
-  hash         : '#'
-
   constructor: (options = {}) ->
     History = window.History
     if !History.enabled then return false
-    @documentTitle = document.getElementsByTagName('title')[0].innerHTML
-    @panelNames    = options.panelNames
+    @documentTitle    = document.getElementsByTagName('title')[0].innerHTML
+    @panelNames       = options.panelNames
+    @flowNames        = options.flowNames
+    @panelIndices     = options.panelIndices
+    @flowIndices      = options.flowIndices
+    @hash             = '#'
 
-  rewindStateIndex:(state) ->
+  rewindIndex:(state) ->
     state.index -= 1
-    @update(state);
+    @updateLocation(state);
 
-  update:(state)->
-    if @panelNames[state.index]
-      History.replaceState null, @documentTitle, @hash + @panelNames[state.index]
+  updateLocation:(state = {})->
+
+    # hashIndices = @panelIndices
+    hashIndices = @flowIndices
+
+    if hashIndices[state.index] != undefined
+      setTimeout ( ()=>
+        History.replaceState null, @documentTitle, @hash + hashIndices[state.index]
+      ), 0
       pageData =
-        index    : state.index
-        hash     : @panelNames[state.index]
-      $(document).triggerHandler 'alongslide.pagechange', pageData
-    else if !@panelNames[state.index] and state.index > -1
-      @rewindStateIndex(state)
+        index      : state.index
+        panelHash  : @panelIndices[state.index]
+        sectionHash: @flowIndices[state.index]
+      $(document).triggerHandler 'alongslide.panelChange', pageData
+    else if !hashIndices[state.index] and state.index > -1
+      @rewindIndex(state)
     else if state.index <= -1
       return

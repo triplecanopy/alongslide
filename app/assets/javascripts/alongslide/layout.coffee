@@ -38,7 +38,7 @@ class Alongslide::Layout
   #
   #
   constructor: (options = {}) ->
-    {@frames, @flowNames, @backgrounds, @panels, @regionCls, @sourceLength, @panelNames} = options
+    {@frames, @flowNames, @flowIndices, @panel, @panelIndices, @backgrounds, @panels, @regionCls, @sourceLength} = options
 
   # Main entrypoint for asynchronous chain of render calls.
   #
@@ -122,6 +122,7 @@ class Alongslide::Layout
 
         # render next section, or complete render.
         @currentFlowIndex++
+
         unless @currentFlowIndex is @flowNames.length
           background = @findBackground(flowName)
           @setPositionOf background, until: @lastFramePosition() if background.length
@@ -333,7 +334,6 @@ class Alongslide::Layout
   # @param id - Alongslide panel ID
   #
   buildPanel: (id, position) ->
-    @panelNames[position] = id
     panel = @panels[id].clone().addClass('unstaged').show()
     alignment = _.filter @ALIGNMENTS, (alignment) -> panel.hasClass(alignment)
     @log "Building #{alignment} panel frame \"#{id}\" at position #{position}", @FRAME_LEVEL
@@ -341,6 +341,7 @@ class Alongslide::Layout
     panel.attr('data-panel-index', position);
     panel.appendTo @frames.children('.panels')
     @setPositionOf panel, to: position
+    @paginateSection @panelIndices, id, position
     return panel
 
   # Destroy all previously laid out content.
@@ -369,6 +370,7 @@ class Alongslide::Layout
   #
   setPositionOf: (frame, options={}) ->
     frameType = frame.parent().get(0).className
+
     if options.to?
       if (currentFramePosition = @getPositionOf frame)?
         @log "Moving #{frameType} frame at #{currentFramePosition} to " +
@@ -378,6 +380,7 @@ class Alongslide::Layout
       @log "Dismissing #{frameType} frame \"#{frame.data('alongslide-id')}\" " +
         "at #{options.until}", @SUB_FRAME_LEVEL
       frame.data @OUT_POINT_KEY, options.until
+      @paginateSection @flowIndices, frame.data('alongslide-id'), options.until
     return frame
 
   # Return start position.
@@ -417,6 +420,11 @@ class Alongslide::Layout
       for position in [$(panel).data(@IN_POINT_KEY)..outPosition]
         @panelIndex[position] ?= []
         @panelIndex[position].push panel
+
+  #
+  #
+  paginateSection:(obj, id, loc) ->
+    if loc > 0 then obj[loc] = id
 
   # Re-order elements in DOM if specified.
   #

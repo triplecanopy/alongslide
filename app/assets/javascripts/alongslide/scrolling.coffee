@@ -9,27 +9,27 @@ class Alongslide::Scrolling
   # For applyTransition.
   #
   TRANSITIONS:
-    in: [-1..0]
+    in : [-1..0]
     out: [0..1]
 
-  FLIP_THRESHOLD: 0.04
-  WAIT_BEFORE_RESET_MS: 250
-  SLIDE_DURATION_MS: 250
-  FORCE_SLIDE_DURATION_MS: 100
+  FLIP_THRESHOLD          : 0.04
+  WAIT_BEFORE_RESET_MS    : 250
+  SLIDE_DURATION_MS       : 250
+  FORCE_SLIDE_DURATION_MS : 100
   NUM_WHEEL_HISTORY_EVENTS: 10
-  MAGNITUDE_THRESHOLD: 2.2
+  MAGNITUDE_THRESHOLD     : 2.2
 
-  currentPosition: 0
-  indexedTransitions: {}
+  currentPosition         : 0
+  indexedTransitions      : {}
 
   # For desktop scroll throttling.
   #
-  wheelHistory: []
-  lastAverageMagnitude: 0
-  ignoreScroll: false
+  wheelHistory         : []
+  lastAverageMagnitude : 0
+  ignoreScroll         : false
   lastRequestedPosition: 0
 
-  mouseDown: false
+  mouseDown            : false
 
   # browser history
   stateData: {}
@@ -372,9 +372,9 @@ class Alongslide::Scrolling
       duration: duration
       easing: 'easeOutQuad'
       done: (skrollr) =>
-        @stateData =
+        stateData =
           index: @currentPosition
-        alongslide.state.update(@stateData)
+        alongslide.state.updateLocation(stateData)
 
     # For mobile, stage/unstage frames after transition
     if @skrollr.isMobile()

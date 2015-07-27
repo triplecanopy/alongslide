@@ -19,31 +19,37 @@ class Alongslide
     @frames       = $(options.to)      ? $('#frames')
     @regionCls    = options.regionCls  ? 'column'
     @marginTop    = options.marginTop  ? 0
-    @panelNames   = {}
+    @panelIndices = {}
+    @flowIndices  = {}
 
     RegionFlow::init()
 
     # parse
     @parser = new @Parser source: @source
-    {@flowNames, @backgrounds, @panels, @footnotes, @sourceLength} = @parser.parse()
+    {@flowNames, @panelNames, @backgrounds, @panels, @footnotes, @sourceLength} = @parser.parse()
 
     # init layout
     @layout = new @Layout
-      sourceLength:    @sourceLength
-      frames:          @frames
-      flowNames:       @flowNames
-      backgrounds:     @backgrounds
-      panels:          @panels
-      regionCls:       @regionCls
-      panelNames:      @panelNames
+      sourceLength: @sourceLength
+      frames      : @frames
+      flowNames   : @flowNames
+      backgrounds : @backgrounds
+      panels      : @panels
+      regionCls   : @regionCls
+      panelNames  : @panelNames
+      panelIndices: @panelIndices
+      flowIndices : @flowIndices
 
     # init scrolling
     @scrolling = new @Scrolling
-      frames:          @frames
+      frames: @frames
 
     # init broswer history
     @state = new @State
-      panelNames: @panelNames
+      panelNames  : @panelNames
+      flowNames   : @flowNames
+      panelIndices: @panelIndices
+      flowIndices : @flowIndices
 
 
   # Render flowing layout and scroll behavior.
@@ -80,11 +86,11 @@ class Alongslide
 
   hashToPosition: ->
     hash = window.location.hash
-    if hash.length > 0
+    if hash.length
       @goToPanel(hash.substr(1))
     else
-      @goToPanel('titlesplash')
-
+      state = index:0
+      @state.updateLocation state
 
   # Create footnotes
   #
