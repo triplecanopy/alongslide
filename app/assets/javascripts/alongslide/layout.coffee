@@ -38,13 +38,14 @@ class Alongslide::Layout
   #
   #
   constructor: (options = {}) ->
-    {@frames, @flowNames, @flowIndices, @panel, @panelIndices, @backgrounds, @panels, @regionCls, @sourceLength} = options
+    {@frames, @flowNames, @flowIndices, @panel, @panelIndices, @backgrounds, @panels, @regionCls, @sourceLength, @cols} = options
 
   # Main entrypoint for asynchronous chain of render calls.
   #
   # @param postRenderCallback - to be called when layout is 100% complete
   #
   render: (@postRenderCallback) ->
+    console.log 'render from layout --- '
     @reset()
     @writeBackgrounds()
     @layout()
@@ -98,7 +99,14 @@ class Alongslide::Layout
 
       # Give each section flow an index
       @currentSectionFlowIndex++
-      column.find('.section').attr('data-section-flow-idx', @currentSectionFlowIndex)
+
+      obj = {}
+      obj =
+        section:column.find('.section')
+        idx: @currentSectionFlowIndex
+      @cols.push(obj)
+
+      # column.find('.section').attr('data-section-flow-idx', @currentSectionFlowIndex)
 
       # Move three-columns class from .section to .frame
       hasThreeColumns = (column.children('.three-columns').length)
@@ -341,7 +349,15 @@ class Alongslide::Layout
     panel.attr('data-panel-index', position);
     panel.appendTo @frames.children('.panels')
     @setPositionOf panel, to: position
-    @paginateSection @panelIndices, id, position
+
+    # @paginateSection @panelIndices, id, position
+
+    obj = {}
+    obj =
+      id: id
+      position:position
+    @panelIndices.push(obj)
+
     return panel
 
   # Destroy all previously laid out content.

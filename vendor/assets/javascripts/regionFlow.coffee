@@ -200,7 +200,7 @@ class RegionFlow::NamedFlow
 
 
   # Helper function, recurses up the DOM looking for a block element
-  # @params elem jQuery object
+  # @params elem - jQuery object
   #
   getBlockParent:(elem) ->
     arr = ['b', 'big', 'i', 'small', 'tt', 'abbr', 'acronym', 'cite', 'code', 'dfn', 'em', 'kbd', 'strong', 'samp', 'var', 'a', 'bdo', 'br', 'img', 'map', 'object', 'q', 'script', 'span', 'sub', 'sup', 'button', 'input', 'label', 'select', 'textarea']

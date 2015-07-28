@@ -19,8 +19,9 @@ class Alongslide
     @frames       = $(options.to)      ? $('#frames')
     @regionCls    = options.regionCls  ? 'column'
     @marginTop    = options.marginTop  ? 0
-    @panelIndices = {}
+    @panelIndices = []
     @flowIndices  = {}
+    @cols  = []
 
     RegionFlow::init()
 
@@ -39,6 +40,7 @@ class Alongslide
       panelNames  : @panelNames
       panelIndices: @panelIndices
       flowIndices : @flowIndices
+      cols : @cols
 
     # init scrolling
     @scrolling = new @Scrolling
@@ -61,6 +63,7 @@ class Alongslide
   # @param postRenderCallback - to be called when layout returns
   #
   render: (postRenderCallback) ->
+    console.log 'render from als --- '
     frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @layout.render (lastFramePosition) =>
 
@@ -72,6 +75,32 @@ class Alongslide
 
       # Emit notification that layout is complete.
       $(document).triggerHandler 'alongslide.ready', @frames
+
+      _cols = @cols
+      $('.section').each( (i)->
+        if _cols[i] then $(@).attr('data-section-flow-idx', _cols[i].idx)
+      )
+
+      _panelIndices = @panelIndices
+      _tmp = []
+      panelIdx = 0
+      while panelIdx < _panelIndices.length
+        if panelIdx == _tmp.length
+          _tmp.push(_panelIndices[panelIdx].id)
+        else if panelIdx > _tmp.length
+          while panelIdx > _tmp.length
+            _tmp.push(_panelIndices[_panelIndices.length - 1].id)
+        panelIdx++
+
+
+      window._tmp = _tmp
+      @panelIndices = _tmp
+
+      console.log @panelIndices
+
+      @state.setIndices(@panelIndices)
+
+
 
       @hashToPosition()
       FixedAspect.prototype.fitPanels(frameAspect)
