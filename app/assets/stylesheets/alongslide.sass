@@ -66,9 +66,10 @@ $white-bg: #ffffff
   position: absolute
   text-rendering: optimizelegibility
   text-transform: auto
-
-  em
-    line-height: 1em
+  p:nth-of-type(1):not(.region-flow-post-text-break)
+    text-indent: 0
+  // em
+    // line-height: 1em // this breaks things
 
   // One frame is one screen's worth.
   //
@@ -101,10 +102,6 @@ $white-bg: #ffffff
         position: absolute
         // > div
         //   height: $full-bleed - $frame-height-padding
-        .section
-          &[data-section-flow-idx]
-            p:first-child
-              text-indent: 0 !important
 
         // Left/right columns
         //

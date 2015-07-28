@@ -21,8 +21,8 @@ class Alongslide::State
 
   updateLocation:(state = {})->
 
-    # hashIndices = @panelIndices
-    hashIndices = @flowIndices
+    hashIndices = @panelIndices
+    # hashIndices = @flowIndices
 
     if hashIndices[state.index] != undefined
       setTimeout ( ()=>
