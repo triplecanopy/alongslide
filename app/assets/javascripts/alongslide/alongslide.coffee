@@ -122,8 +122,8 @@ class Alongslide
     if hash.length
       @goToPanel(hash.substr(1))
     else
-      state = index:0
-      @state.updateLocation state
+      # state = index:0
+      # @state.updateLocation state
 
   # Create footnotes
   #

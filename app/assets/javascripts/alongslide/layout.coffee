@@ -71,36 +71,25 @@ class Alongslide::Layout
   # one frame at a time, asynchronously.
   #
   renderSection: ->
-
-    console.log "@currentFlowIndex --- #{@currentFlowIndex}"
-
-    console.log '@flowNames --- '
-    console.log @flowNames
-
     flowName = @flowNames[@currentFlowIndex]
-    @log "Laying out section \"#{flowName}\"", @SUPER_FRAME_LEVEL
-
-    # `flowName` is sometimes `undefined`
-    #
-
-
-    console.log "Attempting to lay out section \"#{flowName}\""
 
     if flowName?
 
-      # `currentFlowIndex` was being incremented in `renderFrame`, without
-      # checking that `flowNames[currentFlowIndex]` had been successfully
+      @log "Laying out section \"#{flowName}\"", @SUPER_FRAME_LEVEL
+
+      # `flowName` is sometimes `undefined`. `currentFlowIndex` was being
+      # incremented in `renderFrame`, without checking that
+      # `flowNames[currentFlowIndex]` existed, and had been successfully
       # rendered.  when `flowNames[currentFlowIndex]` had not been rendered,
       # `renderFrame` would increment `currentFlowIndex` anyway, and then
-      # attempt to layout `flowNames[currentFlowIndex++]`. this would return
-      # undefined if `currentFlowIndex > flowNames.length - 1`, allowing
-      # `renderFrame` to increment again, and cause an infinite loop.
+      # attempt to layout `flowNames[currentFlowIndex++]`. this would
+      # eventually return undefined if `currentFlowIndex > flowNames.length -
+      # 1`, allowing `renderFrame` to increment again, and cause an infinite
+      # loop.
       #
 
       @currentFlowIndex++
-      console.log "laying out #{flowName}"
       background = @findBackground(flowName)
-      console.log 'calling setPositionOf from renderSection'
       @setPositionOf background, to: @nextFramePosition()
       background.addClass('unstaged')
 
@@ -109,24 +98,9 @@ class Alongslide::Layout
 
       # Reset section index before building another section
       @currentSectionFlowIndex = 0
-
       position = @nextFramePosition()
-
-      console.log "position --  #{position}"
-
       @pushIndices(flowName, position, @flowIndices)
-
-      # http://localhost:3000/contents/notes-on-a-performance-by-kellie-jones/
-
       @renderFrame(flowName)
-
-
-
-
-
-
-
-
 
 
 
@@ -141,8 +115,6 @@ class Alongslide::Layout
   #
   renderFrame: (flowName, frame, lastColumn) ->
     frame = @findOrBuildNextFlowFrame frame
-
-    console.log frame
 
     # for each column in frame
     while frame.find('.'+@regionCls).length < @numFrameColumns(frame)
@@ -188,16 +160,10 @@ class Alongslide::Layout
         #   @currentFlowIndex + 1
 
         unless @currentFlowIndex is @flowNames.length
-          console.log 'wants to render section--- '
           background = @findBackground(flowName)
-          console.log 'calling setPositionOf from renderFrame'
           @setPositionOf background, until: @lastFramePosition() if background.length
-
-          # callback here to make `renderSection` synchronous?
           setTimeout((=> @renderSection()), 0)
-
         else
-          console.log 'layoutComplete --'
           @log "Layout complete"
           @reorder()
           @index()
@@ -206,18 +172,9 @@ class Alongslide::Layout
         return
 
       lastColumn = column
-      console.log 'lastColumn -- '
-      console.log lastColumn
 
     # unstage earlier frames
     frame.prevAll().addClass('unstaged')
-
-
-    # # render next frame
-    # #
-    # # `renderFrame` calling itself recursively is causing stage/unstage bug?
-    # #
-    console.log 'renderFrame another time -- '
     @renderFrame(flowName, frame, lastColumn)
 
 
@@ -276,7 +233,6 @@ class Alongslide::Layout
             # pinned panel layout
             when directive.hasClass "pin"
               # display forever (until unpinned)
-              console.log 'calling setPositionOf from checkForDirectives'
               @setPositionOf panelFrame, until: -1
 
               # which frames need to have classes set--next and/or current?
@@ -312,7 +268,6 @@ class Alongslide::Layout
                 @setPositionOf flowFrame, to: nextFlowFramePosition
 
               if nextFlowFrame?
-                console.log 'calling setPositionOf from checkForDirectives 3'
                 @setPositionOf nextFlowFrame, to: nextFlowFramePosition + 1
 
         # unpin pinned panel
@@ -320,7 +275,6 @@ class Alongslide::Layout
           panelFrame = @findPanel(id)
 
           unless panelFrame.length == 0
-            console.log 'calling setPositionOf from checkForDirectives 4'
             @setPositionOf panelFrame, until:
               if layoutComplete
                 @nextFramePosition() - 1
@@ -391,10 +345,8 @@ class Alongslide::Layout
     frame = if lastFrame?.length
       lastFrame?.clone().empty()
     else
-      console.log 'add new frame --- '
       $('<div class="frame"/>')
     frame.appendTo @frames.children('.flow')
-    console.log 'calling setPositionOf from buildFlowFrame'
     @setPositionOf frame, to: position
 
   # Destroy frame, shifting any subsequent panels up by one.
@@ -444,20 +396,14 @@ class Alongslide::Layout
   # @param id - Alongslide panel ID
   #
   buildPanel: (id, position) ->
-    console.log 'buildPanel -----'
     panel = @panels[id]
       .clone()
       .addClass('unstaged frame')
       .attr('data-panel-index', position)
-      .appendTo @frames.children('.panels')
       .show()
+      .appendTo @frames.children('.panels')
     alignment = _.filter @ALIGNMENTS, (alignment) -> panel.hasClass(alignment)
     @log "Building #{alignment} panel frame \"#{id}\" at position #{position}", @FRAME_LEVEL
-    # panel.addClass('frame')
-    # panel.attr('data-panel-index', position);
-    # panel.appendTo @frames.children('.panels')
-    # console.log panel
-    console.log 'calling setPositionOf from buildPanel'
     @setPositionOf panel, to: position
     @pushIndices(id, position, @panelIndices)
 
@@ -466,7 +412,6 @@ class Alongslide::Layout
   # Destroy all previously laid out content.
   #
   reset: ->
-    # console.log 'calling reset'
     @laidOutLength = 0
 
     @frames.find('.backgrounds').empty()
@@ -489,11 +434,6 @@ class Alongslide::Layout
   #   until: out point (= end position)
   #
   setPositionOf: (frame, options={}) ->
-
-    console.log 'setPositionOf --'
-    console.log 'frame.parent is ---- '
-    console.log frame.parent()
-
     parent = frame.parent()
     if parent.length
       frameType = parent[0].className
