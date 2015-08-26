@@ -39,7 +39,6 @@ class Alongslide
       panelNames  : @panelNames
       panelIndices: @panelIndices
       flowIndices : @flowIndices
-      cols : @cols
 
     # init scrolling
     @scrolling = new @Scrolling
@@ -67,9 +66,6 @@ class Alongslide
     frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @layout.render (lastFramePosition) =>
 
-
-      # console.log @flowIndices
-
       @lastFramePosition = lastFramePosition
 
       @refresh(frameAspect)
@@ -79,33 +75,19 @@ class Alongslide
       # Emit notification that layout is complete.
       $(document).triggerHandler 'alongslide.ready', @frames
 
-      # _cols = @cols
-      # $('.section').each( (i)->
-      #   if _cols[i] then $(@).attr('data-section-flow-idx', _cols[i].idx)
-      # )
 
-      # _panelIndices = @panelIndices
-      # _tmp = []
-      # panelIdx = 0
-      # while panelIdx < _panelIndices.length
-      #   if panelIdx == _tmp.length
-      #     _tmp.push(_panelIndices[panelIdx].id)
-      #   else if panelIdx > _tmp.length
-      #     while panelIdx > _tmp.length
-      #       _tmp.push(_panelIndices[_panelIndices.length - 1].id)
-      #   panelIdx++
+      # TODO: manually changing last `flowIndices` index to
+      # 'ThreePointOhFinal'.  Likley this is due to allowing `sectionFlow0` to
+      # be present in the `flowIndices` array, but this should be accounted
+      # for elsewhere.
+      #
 
+      @flowIndices[@flowIndices.length - 1] = 'ThreePointOhFinal'
 
-      # window._tmp = _tmp
-      # @panelIndices = _tmp
-
-      # console.log @panelIndices
-
+      @state.setIndices(@flowIndices)
       # @state.setIndices(@panelIndices)
 
-
-
-      # @hashToPosition()
+      @hashToPosition()
 
       FixedAspect.prototype.fitPanels(frameAspect)
       postRenderCallback()
@@ -120,10 +102,16 @@ class Alongslide
   hashToPosition: ->
     hash = window.location.hash
     if hash.length
+
+      # State will update hash on skroll
+      #
       @goToPanel(hash.substr(1))
     else
-      # state = index:0
-      # @state.updateLocation state
+
+      # Default state is set, hash is updated
+      #
+      state = index:0
+      @state.updateLocation state
 
   # Create footnotes
   #

@@ -14,8 +14,8 @@ class Alongslide::State
     @documentTitle = document.getElementsByTagName('title')[0].innerHTML
     @panelNames    = options.panelNames
     @flowNames     = options.flowNames
-    @panelIndices  = options.panelIndices
-    @flowIndices   = options.flowIndices
+    @panelIndices  = options.panelIndices   # correct now
+    @flowIndices   = options.flowIndices    #
     @hashIndices   = []
     @hash          = '#'
 
@@ -29,18 +29,28 @@ class Alongslide::State
 
   updateLocation:(state = {})->
 
-    console.log @flowIndices[state.index]
+    # console.log @hashIndices[state.index]
 
-    # if @panelIndices[state.index]
-    #   setTimeout ( ()=>
-    #     History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
-    #   ), 0
-    #   pageData =
-    #     index      : state.index
-    #     # panelHash  : @panelIndices[state.index]
-    #     # sectionHash: @flowIndices[state.index]
-    #   $(document).triggerHandler 'alongslide.panelChange', pageData
-    # else if !@hashIndices[state.index] and state.index > -1
-    #   @rewindIndex(state)
-    # else if state.index <= -1
-    #   return
+    if !@hashIndices[state.index] and state.index > -1
+      # Accounting for layouts that only have one section, as the `position`s
+      # won't be in the indices array.
+      #
+      @rewindIndex(state)
+
+    else if state.index < 0
+      # Exit if the indices array is empty
+      #
+      return
+
+    else if @hashIndices[state.index]
+      # Update the hash
+      #
+      setTimeout =>
+        History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
+      , 0
+      pageData =
+        index      : state.index
+        panelHash  : @panelIndices[state.index]
+        sectionHash: @flowIndices[state.index]
+
+      $(document).triggerHandler 'alongslide.panelChange', pageData

@@ -93,9 +93,6 @@ class Alongslide::Layout
       @setPositionOf background, to: @nextFramePosition()
       background.addClass('unstaged')
 
-
-
-
       # Reset section index before building another section
       @currentSectionFlowIndex = 0
       position = @nextFramePosition()
@@ -123,11 +120,6 @@ class Alongslide::Layout
       # Give each section flow an index
       # @currentSectionFlowIndex++
 
-      # @currentFlowIndex = if isNaN(@currentFlowIndex)
-      #   0
-      # else
-      #   @currentFlowIndex + 1
-
       column.find('.section').attr('data-section-flow-idx', @currentSectionFlowIndex)
 
       # Move three-columns class from .section to .frame
@@ -145,7 +137,7 @@ class Alongslide::Layout
 
       # Section is complete. Current column is the last column of the
       # section (no longer the overflow column).
-      # @currentFlowIndex++
+      #
       if @flowComplete(flowName)
         @updateProgress column
         @checkForDirectives column, true
@@ -153,11 +145,6 @@ class Alongslide::Layout
 
         # render next section, or complete render.
         # @currentSectionFlowIndex++
-
-        # @currentFlowIndex = if isNaN(@currentFlowIndex)
-        #   0
-        # else
-        #   @currentFlowIndex + 1
 
         unless @currentFlowIndex is @flowNames.length
           background = @findBackground(flowName)
@@ -176,9 +163,6 @@ class Alongslide::Layout
     # unstage earlier frames
     frame.prevAll().addClass('unstaged')
     @renderFrame(flowName, frame, lastColumn)
-
-
-
 
 
 
@@ -262,9 +246,9 @@ class Alongslide::Layout
             # fullscreen panel layout
             when directive.hasClass "fullscreen"
               if directive.hasClass "now"
-                console.log 'calling setPositionOf from checkForDirectives 2'
-                console.log 'now panel -- '
-                console.log flowFrame
+                # console.log 'calling setPositionOf from checkForDirectives 2'
+                # console.log 'now panel -- '
+                # console.log flowFrame
                 @setPositionOf flowFrame, to: nextFlowFramePosition
 
               if nextFlowFrame?
@@ -373,7 +357,11 @@ class Alongslide::Layout
 
 
 
-  # Creating an index of flow/panels
+  # Create an index of flow names and panel names.  Since `position` can
+  # increment by steps (0: a, 1: b, 3: c), we fill the gaps in the indices
+  # array with the array's previous index, if there is one (0: a, 1: b, 2: b,
+  # 3: c). This is used to sync skroll position with flow/panel name by
+  # `State`.
   #
   pushIndices: (id, position, arr) ->
     if position is arr.length
@@ -381,12 +369,13 @@ class Alongslide::Layout
     else if position > arr.length
       while position > arr.length
         arr.push(arr[arr.length - 1])
+
+      # `sectionFlow[1-9]` frames are not part of the regular flow, and
+      # therefore shouldn't be included. However, `sectionFlow0`, which is the
+      # `titlesplash` frame, should be included in the indices.
+      #
       if id.match(/^sectionFlow[1-9]/) is null
         arr.push(id)
-
-
-
-
 
 
 
