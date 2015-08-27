@@ -86,7 +86,6 @@ class Alongslide
       # be present in the `flowIndices` array, but this should be accounted
       # for elsewhere.
       #
-
       @flowIndices[@flowIndices.length - 1] = 'ThreePointOhFinal'
 
       @state.setIndices(@flowIndices)

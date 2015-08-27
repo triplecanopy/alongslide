@@ -43,15 +43,14 @@ class Alongslide::State
       return
 
     else if @hashIndices[state.index]
-      return
       # Update the hash
       #
-      # setTimeout =>
-      #   History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
-      # , 0
-      # pageData =
-      #   index      : state.index
-      #   panelHash  : @panelIndices[state.index]
-      #   sectionHash: @flowIndices[state.index]
+      setTimeout =>
+        History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
+      , 0
+      pageData =
+        index      : state.index
+        panelHash  : @panelIndices[state.index]
+        sectionHash: @flowIndices[state.index]
 
-      # $(document).triggerHandler 'alongslide.panelChange', pageData
+      $(document).triggerHandler 'alongslide.panelChange', pageData
