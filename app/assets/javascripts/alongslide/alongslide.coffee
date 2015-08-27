@@ -9,10 +9,10 @@ class Alongslide
   panels     : {}
   sections   : {}
 
-  parser     : null
-  layout     : null
-  scrolling  : null
-  state      : null
+  parser    : null
+  layout    : null
+  scrolling : null
+  state     : null
 
   constructor: (options= {}) ->
     @source       = $(options.source)  ? $('#content .raw')
@@ -21,6 +21,11 @@ class Alongslide
     @marginTop    = options.marginTop  ? 0
     @panelIndices = []
     @flowIndices  = []
+    @isTouch      = 'touchstart' of document.documentElement
+    @eventMap     =
+      click      : if @isTouch then 'touchend' else 'click'
+      mouseenter : if @isTouch then 'touchend' else 'mouseenter'
+      mouseleave : if @isTouch then 'touchend' else 'mouseleave'
 
     RegionFlow::init()
 
@@ -135,19 +140,19 @@ class Alongslide
       else
         $footnote.css('top', $el.parent().position().top )
 
-      $el.on "mouseenter click", (e) ->
+      $el.on @eventMap.mouseenter, (e) ->
         e.preventDefault()
         e.stopImmediatePropagation()
         $footnote.fadeIn(150)
         false
 
-      $footnote.on "mouseleave click", (e) ->
+      $footnote.on @eventMap.mouseleave, (e) ->
         setTimeout ( ()-> $footnote.fadeOut(150) ), 100
         false
 
   applyAnchorScrolling: ->
     self = @
-    @frames.find('a[href*=#]:not([href=#])').on('click', (e) ->
+    @frames.find('a[href*=#]:not([href=#])').on(@eventMap.click, (e) ->
       self.goToPanel(@hash.substr(1))
     )
 
