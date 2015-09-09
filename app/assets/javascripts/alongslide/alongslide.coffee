@@ -56,7 +56,6 @@ class Alongslide
       panelIndices: @panelIndices
       flowIndices : @flowIndices
 
-
   # Render flowing layout and scroll behavior.
   #
   # Force use of CSS Regions polyfill. (Don't trust native browser support
@@ -66,7 +65,6 @@ class Alongslide
   # @param postRenderCallback - to be called when layout returns
   #
   render: (postRenderCallback) ->
-
 
     frameAspect = FixedAspect.prototype.fitFrame(@layout.FRAME_WIDTH, @marginTop)
     @layout.render (lastFramePosition) =>
@@ -78,19 +76,22 @@ class Alongslide
       @applyAnchorScrolling()
 
       # Emit notification that layout is complete.
+      #
       $(document).triggerHandler 'alongslide.ready', @frames
 
-
-      # TODO: manually changing last `flowIndices` index to
-      # 'ThreePointOhFinal'.  Likley this is due to allowing `sectionFlow0` to
-      # be present in the `flowIndices` array, but this should be accounted
-      # for elsewhere.
+      # Manually change first `flowIndices` index to 'title-page', since
+      # otherwise it's 'sectionFlow0'.
       #
-      @flowIndices[@flowIndices.length - 1] = 'ThreePointOhFinal'
+      @flowIndices[0] = 'title-page'
 
+      # Manually change last `flowIndices` index to 'digital-project-
+      # context'.
+      #
+      @flowIndices[@flowIndices.length - 1] = 'digital-project-context'
+
+      # Default array of indices for URL rewrites is set to section names
+      #
       @state.setIndices(@flowIndices)
-      # @state.setIndices(@panelIndices)
-
       @hashToPosition()
 
       FixedAspect.prototype.fitPanels(frameAspect)
@@ -124,15 +125,20 @@ class Alongslide
     # For each footnote in the article
     @frames.find('.als-fn-ref').each (i, el) =>
       # Reference the footnote
+      #
       $el = $(el)
+
       # Find the footnote text
+      #
       $footnote = @footnotes.find($el.data('anchor'))
 
       # Append the footnote text element to the column
+      #
       $column = $el.parents('.column')
       $column.append($footnote)
 
-      # place footnote, prevent placing offscreen
+      # Place footnote, prevent placing offscreen
+      #
       bottom = $column.height() + $column.offset().top
       if ($el.offset().top + $footnote.height()) > bottom
         $footnote.css('bottom', 0)
@@ -146,7 +152,9 @@ class Alongslide
         false
 
       $footnote.on @eventMap.mouseleave, (e) ->
-        setTimeout ( ()-> $footnote.fadeOut(150) ), 100
+        setTimeout ->
+          $footnote.fadeOut(150)
+        , 100
         false
 
   applyAnchorScrolling: ->
@@ -159,7 +167,6 @@ class Alongslide
     $target = $('#frames').find('[data-alongslide-id=' + alsId + ']')
     targetPos = $target.data('als-in-position')
     @scrolling.scrollToPosition(targetPos)
-
 
 # Make global
 #

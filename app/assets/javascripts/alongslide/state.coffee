@@ -14,11 +14,10 @@ class Alongslide::State
     @documentTitle = document.getElementsByTagName('title')[0].innerHTML
     @panelNames    = options.panelNames
     @flowNames     = options.flowNames
-    @panelIndices  = options.panelIndices   # correct now
-    @flowIndices   = options.flowIndices    #
+    @panelIndices  = options.panelIndices
+    @flowIndices   = options.flowIndices
     @hashIndices   = []
     @hash          = '#'
-
 
   setIndices:(arr) ->
     @hashIndices = arr
@@ -29,25 +28,24 @@ class Alongslide::State
 
   updateLocation:(state = {})->
 
-    # console.log @hashIndices[state.index]
-
+    # Account for layouts that only have one section, as the `position`s
+    # won't be in the indices array.
+    #
     if !@hashIndices[state.index] and state.index > -1
-      # Accounting for layouts that only have one section, as the `position`s
-      # won't be in the indices array.
-      #
       @rewindIndex(state)
 
+    # Exit if the indices array is empty
+    #
     else if state.index < 0
-      # Exit if the indices array is empty
-      #
       return
 
+    # Update the hash
+    #
     else if @hashIndices[state.index]
-      # Update the hash
-      #
       setTimeout =>
         History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
       , 0
+
       pageData =
         index      : state.index
         panelHash  : @panelIndices[state.index]

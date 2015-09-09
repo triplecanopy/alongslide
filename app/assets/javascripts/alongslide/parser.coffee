@@ -47,8 +47,6 @@ class Alongslide::Parser
     footnotes   : footnotes
     sourceLength: @sourceLength
 
-  #
-  #
   collectPanels: ->
     rawPanels = @source.find('.alongslide.show.panel')
 

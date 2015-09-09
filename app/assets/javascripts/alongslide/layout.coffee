@@ -56,8 +56,6 @@ class Alongslide::Layout
   # This is all done asynchronously so that DOM can update itself periodically
   # (namely for layout progress updates).
   #
-
-
   layout: =>
     @startTime = new Date
     @log "Beginning layout"
@@ -75,32 +73,21 @@ class Alongslide::Layout
 
     if flowName?
 
-      @log "Laying out section \"#{flowName}\"", @SUPER_FRAME_LEVEL
-
-      # `flowName` is sometimes `undefined`. `currentFlowIndex` was being
-      # incremented in `renderFrame`, without checking that
-      # `flowNames[currentFlowIndex]` existed, and had been successfully
-      # rendered.  when `flowNames[currentFlowIndex]` had not been rendered,
-      # `renderFrame` would increment `currentFlowIndex` anyway, and then
-      # attempt to layout `flowNames[currentFlowIndex++]`. this would
-      # eventually return undefined if `currentFlowIndex > flowNames.length -
-      # 1`, allowing `renderFrame` to increment again, and cause an infinite
-      # loop.
+      # If there `flowName` exists, i.e., not `undefined`, lay out the section
+      # and increment `@currentFlowIndex`
       #
-
+      @log "Laying out section \"#{flowName}\"", @SUPER_FRAME_LEVEL
       @currentFlowIndex++
       background = @findBackground(flowName)
       @setPositionOf background, to: @nextFramePosition()
       background.addClass('unstaged')
 
       # Reset section index before building another section
+      #
       @currentSectionFlowIndex = 0
       position = @nextFramePosition()
       @pushIndices(flowName, position, @flowIndices)
       @renderFrame(flowName)
-
-
-
 
   # Render one frame and its containing columns.
   #
@@ -163,9 +150,6 @@ class Alongslide::Layout
     # unstage earlier frames
     frame.prevAll().addClass('unstaged')
     @renderFrame(flowName, frame, lastColumn)
-
-
-
 
   # Check the last "fit" column for any special directives (CSS classes).
   #
@@ -238,6 +222,7 @@ class Alongslide::Layout
 
               # If we changed this frame's layout, re-flow this whole section's
               # regions.
+              #
               if directive.hasClass("now")
                 sectionId = flowFrame.data('als-section-id')
                 @frames.children('.flow').find(".frame[data-als-section-id=#{sectionId}]").removeClass('unstaged')
@@ -246,9 +231,6 @@ class Alongslide::Layout
             # fullscreen panel layout
             when directive.hasClass "fullscreen"
               if directive.hasClass "now"
-                # console.log 'calling setPositionOf from checkForDirectives 2'
-                # console.log 'now panel -- '
-                # console.log flowFrame
                 @setPositionOf flowFrame, to: nextFlowFramePosition
 
               if nextFlowFrame?
@@ -355,8 +337,6 @@ class Alongslide::Layout
     document.namedFlows.get(flowName).addRegion(region.get(0))
     return region
 
-
-
   # Create an index of flow names and panel names.  Since `position` can
   # increment by steps (0: a, 1: b, 3: c), we fill the gaps in the indices
   # array with the array's previous index, if there is one (0: a, 1: b, 2: b,
@@ -370,14 +350,12 @@ class Alongslide::Layout
       while position > arr.length
         arr.push(arr[arr.length - 1])
 
-      # `sectionFlow[1-9]` frames are not part of the regular flow, and
+      # Frames named `sectionFlow[1-9]` are not part of the regular flow, and
       # therefore shouldn't be included. However, `sectionFlow0`, which is the
       # `titlesplash` frame, should be included in the indices.
       #
       if id.match(/^sectionFlow[1-9]/) is null
         arr.push(id)
-
-
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!
@@ -436,11 +414,6 @@ class Alongslide::Layout
         @log "Dismissing #{frameType} frame \"#{frame.data('alongslide-id')}\" " +
           "at #{options.until}", @SUB_FRAME_LEVEL
         frame.data @OUT_POINT_KEY, options.until
-
-        # @paginateSection @flowIndices, frame.data('alongslide-id'), options.until
-
-
-
     return frame
 
   # Return start position.
@@ -480,20 +453,6 @@ class Alongslide::Layout
       for position in [$(panel).data(@IN_POINT_KEY)..outPosition]
         @panelIndex[position] ?= []
         @panelIndex[position].push panel
-
-
-
-
-
-
-  #
-  #
-  # paginateSection:(obj, id, loc) ->
-  #   if loc > 0 then obj[loc] = id
-
-
-
-
 
   # Re-order elements in DOM if specified.
   #
