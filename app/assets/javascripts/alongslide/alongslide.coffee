@@ -79,13 +79,8 @@ class Alongslide
       #
       $(document).triggerHandler 'alongslide.ready', @frames
 
-      # Manually change first `flowIndices` index to 'title-page', since
-      # otherwise it's 'sectionFlow0'.
-      #
-      @flowIndices[0] = 'title-page'
-
-      # Manually change last `flowIndices` index to 'digital-project-
-      # context'.
+      # Manually change the last item of the `flowIndices` array to 'digital-
+      # project-context'.
       #
       @flowIndices[@flowIndices.length - 1] = 'digital-project-context'
 

@@ -46,9 +46,11 @@ class Alongslide::State
         History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
       , 0
 
-      pageData =
-        index      : state.index
-        panelHash  : @panelIndices[state.index]
-        sectionHash: @flowIndices[state.index]
+      data =
+        index       : state.index
+        panelHash   : @panelIndices[state.index]
+        sectionHash : @flowIndices[state.index]
+        panels      : @panelIndices
+        sections    : @flowIndices
 
-      $(document).triggerHandler 'alongslide.panelChange', pageData
+      $(document).triggerHandler 'alongslide.stateChange', data

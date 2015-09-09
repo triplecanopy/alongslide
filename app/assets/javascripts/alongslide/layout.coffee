@@ -86,7 +86,7 @@ class Alongslide::Layout
       #
       @currentSectionFlowIndex = 0
       position = @nextFramePosition()
-      @pushIndices(flowName, position, @flowIndices)
+      @pushFlows(flowName, position, @flowIndices)
       @renderFrame(flowName)
 
   # Render one frame and its containing columns.
@@ -343,19 +343,30 @@ class Alongslide::Layout
   # 3: c). This is used to sync skroll position with flow/panel name by
   # `State`.
   #
-  pushIndices: (id, position, arr) ->
+  pushFlows: (id, position, arr) ->
     if position is arr.length
       arr.push(id)
     else if position > arr.length
       while position > arr.length
         arr.push(arr[arr.length - 1])
 
-      # Frames named `sectionFlow[1-9]` are not part of the regular flow, and
-      # therefore shouldn't be included. However, `sectionFlow0`, which is the
-      # `titlesplash` frame, should be included in the indices.
+      # Frames named `sectionFlow[0-9]` are not part of the regular flow, and
+      # therefore shouldn't be included.
       #
-      if id.match(/^sectionFlow[1-9]/) is null
+      if id.match(/^sectionFlow[0-9]/) is null
         arr.push(id)
+
+
+  pushPanels: (id, position, arr) ->
+    if position
+      if position is 1 and arr.length is 0
+        arr.push('title-page')
+      else if arr.length > 0
+        if arr.length - 1 > -1
+          while position > arr.length
+            arr.push(arr[arr.length - 1])
+          arr.push(id)
+
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!
@@ -372,7 +383,7 @@ class Alongslide::Layout
     alignment = _.filter @ALIGNMENTS, (alignment) -> panel.hasClass(alignment)
     @log "Building #{alignment} panel frame \"#{id}\" at position #{position}", @FRAME_LEVEL
     @setPositionOf panel, to: position
-    @pushIndices(id, position, @panelIndices)
+    @pushPanels(id, position, @panelIndices)
 
     return panel
 
