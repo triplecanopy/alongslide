@@ -19,7 +19,7 @@ class Alongslide
     @frames       = $(options.to)      ? $('#frames')
     @regionCls    = options.regionCls  ? 'column'
     @marginTop    = options.marginTop  ? 0
-    @panelIndices = []
+    @panelIndices = {}
     @flowIndices  = []
     @isTouch      = 'touchstart' of document.documentElement
     @eventMap     =

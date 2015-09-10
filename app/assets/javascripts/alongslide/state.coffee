@@ -48,7 +48,6 @@ class Alongslide::State
 
       data =
         index       : state.index
-        panelHash   : @panelIndices[state.index]
         sectionHash : @flowIndices[state.index]
         panels      : @panelIndices
         sections    : @flowIndices

@@ -356,17 +356,21 @@ class Alongslide::Layout
       if id.match(/^sectionFlow[0-9]/) is null
         arr.push(id)
 
-
-  pushPanels: (id, position, arr) ->
-    if position
-      if position is 1 and arr.length is 0
-        arr.push('title-page')
-      else if arr.length > 0
-        if arr.length - 1 > -1
-          while position > arr.length
-            arr.push(arr[arr.length - 1])
-          arr.push(id)
-
+  # Multiple panels can occupy the same scroll position, so `@panelIndices` is
+  # an object of arrays, each containing panel names according to their scroll
+  # position
+  #
+  pushPanels: (id, pos, obj) ->
+    if pos
+      len = Object.keys(obj).length
+      if pos is 1 and len is 0
+        obj[0] = ['title-page']
+      else if len > 0
+        if len - 1 > -1
+          while pos > Object.keys(obj).length
+            obj[Object.keys(obj).length] = obj[Object.keys(obj).length - 1]
+          obj[pos] = obj[pos] or []
+          obj[pos].push(id)
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!
