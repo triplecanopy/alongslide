@@ -362,15 +362,12 @@ class Alongslide::Layout
   #
   pushPanels: (id, pos, obj) ->
     if pos
-      len = Object.keys(obj).length
-      if pos is 1 and len is 0
-        obj[0] = ['title-page']
-      else if len > 0
-        if len - 1 > -1
-          while pos > Object.keys(obj).length
-            obj[Object.keys(obj).length] = obj[Object.keys(obj).length - 1]
-          obj[pos] = obj[pos] or []
-          obj[pos].push(id)
+      len = Object.keys(obj).length + 1
+      if len >= 1
+        while pos > Object.keys(obj).length
+          obj[Object.keys(obj).length] = obj[Object.keys(obj).length - 1]
+        obj[pos] = obj[pos] or []
+        obj[pos].push(id)
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!

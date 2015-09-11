@@ -79,10 +79,10 @@ class Alongslide
       #
       $(document).triggerHandler 'alongslide.ready', @frames
 
-      # Manually change the last item of the `flowIndices` array to 'digital-
-      # project-context'.
+      # Manually pushing 'digital-project-context' to sections
       #
-      @flowIndices[@flowIndices.length - 1] = 'digital-project-context'
+      @flowIndices.push('digital-project-context')
+      delete @panelIndices[0]
 
       # Default array of indices for URL rewrites is set to section names
       #
