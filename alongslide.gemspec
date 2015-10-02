@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage = 'http://github.com/triplecanopy/alongslide'
 
   gem.add_dependency('redcarpet')
-  gem.add_dependency('treetop')
+  gem.add_dependency('treetop','~>1.4.14')
   gem.add_dependency('polyglot')
   gem.add_development_dependency('rspec')
 
