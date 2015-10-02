@@ -102,4 +102,7 @@ DEPENDENCIES
   redcarpet
   rspec
   sass
-  treetop
+  treetop (~> 1.4.14)
+
+BUNDLED WITH
+   1.10.6
