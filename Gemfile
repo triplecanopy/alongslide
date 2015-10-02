@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '2.2.2'
 
 gem 'redcarpet'
-gem 'treetop'
+gem 'treetop', '~>1.4.14'
 gem 'polyglot'
 gem 'haml'
 gem 'sass'
