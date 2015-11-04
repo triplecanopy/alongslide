@@ -21,11 +21,6 @@ class Alongslide
     @marginTop    = options.marginTop  ? 0
     @panelIndices = {}
     @flowIndices  = []
-    @isTouch      = 'touchstart' of document.documentElement
-    @eventMap     =
-      click      : if @isTouch then 'touchend' else 'click'
-      mouseenter : if @isTouch then 'touchend' else 'mouseenter'
-      mouseleave : if @isTouch then 'touchend' else 'mouseleave'
 
     RegionFlow::init()
 
@@ -79,11 +74,6 @@ class Alongslide
       #
       $(document).triggerHandler 'alongslide.ready', @frames
 
-      # Manually pushing 'digital-project-context' to sections
-      #
-      @flowIndices.push('digital-project-context')
-      delete @panelIndices[0]
-
       # Default array of indices for URL rewrites is set to section names
       #
       @state.setIndices(@flowIndices)
@@ -105,13 +95,10 @@ class Alongslide
 
       # State will update hash on skroll
       #
-      @goToPanel(hash.substr(1))
-    else
+      stateIndex = @goToPanel(hash.substr(1))
 
-      # Default state is set, hash is updated
-      #
-      state = index:0
-      @state.updateLocation state
+    state = index:stateIndex || 1
+    @state.updateLocation state
 
   # Create footnotes
   #
@@ -140,21 +127,19 @@ class Alongslide
       else
         $footnote.css('top', $el.parent().position().top )
 
-      $el.on @eventMap.mouseenter, (e) ->
+      $el.on 'click', (e) ->
         e.preventDefault()
         e.stopImmediatePropagation()
         $footnote.fadeIn(150)
-        false
 
-      $footnote.on @eventMap.mouseleave, (e) ->
+      $footnote.on 'click', (e) ->
         setTimeout ->
           $footnote.fadeOut(150)
         , 100
-        false
 
   applyAnchorScrolling: ->
     self = @
-    @frames.find('a[href*=#]:not([href=#])').on(@eventMap.click, (e) ->
+    @frames.find('a[href*=#]:not([href=#])').on('click', (e) ->
       self.goToPanel(@hash.substr(1))
     )
 
@@ -162,6 +147,7 @@ class Alongslide
     $target = $('#frames').find('[data-alongslide-id=' + alsId + ']')
     targetPos = $target.data('als-in-position')
     @scrolling.scrollToPosition(targetPos)
+    targetPos
 
 # Make global
 #
