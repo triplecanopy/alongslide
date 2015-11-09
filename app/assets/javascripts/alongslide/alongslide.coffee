@@ -97,7 +97,7 @@ class Alongslide
       #
       stateIndex = @goToPanel(hash.substr(1))
 
-    state = index:stateIndex || 1
+    state = index:stateIndex || 0
     @state.updateLocation state
 
   # Create footnotes
