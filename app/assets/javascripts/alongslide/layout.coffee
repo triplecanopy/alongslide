@@ -325,6 +325,7 @@ class Alongslide::Layout
       if panelPosition > frame.data(@IN_POINT_KEY)
         @log "Moving panel \"#{$(panel).data('alongslide-id')}\" at " +
           "#{panelPosition} to #{panelPosition-1}", @FRAME_LEVEL
+          @movePanelPos($(panel).data('alongslide-id'), panelPosition-1, panelPosition)
         $(panel).data(@IN_POINT_KEY, panelPosition-1)
 
   # Create region to receive flowing text (column). Return jQuery object.
@@ -356,18 +357,19 @@ class Alongslide::Layout
       if id.match(/^sectionFlow[0-9]/) is null
         arr.push(id)
 
-  # Multiple panels can occupy the same scroll position, so `@panelIndices` is
-  # an object of arrays, each containing panel names according to their scroll
-  # position
+  # To build an array of panel objects indicating each panel's scroll position
+  # and id
   #
-  pushPanels: (id, pos, obj) ->
-    if pos
-      len = Object.keys(obj).length + 1
-      if len >= 1
-        while pos > Object.keys(obj).length
-          obj[Object.keys(obj).length] = obj[Object.keys(obj).length - 1]
-        obj[pos] = obj[pos] or []
-        obj[pos].push(id)
+  pushPanels: (id, pos) ->
+    if pos then @panelIndices.push({pos:pos, id:id})
+
+  # When frames are destroyed, panels shift around, so we need to update the
+  # pointer to their scroll position in `@panelIndices` accordingly
+  #
+  movePanelPos:(panelName, newIndex, oldIndex)->
+    obj = _.findWhere(@panelIndices, {pos:oldIndex})
+    objIdx = _.indexOf(@panelIndices, obj)
+    @panelIndices[objIdx].pos = newIndex
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!
@@ -384,7 +386,7 @@ class Alongslide::Layout
     alignment = _.filter @ALIGNMENTS, (alignment) -> panel.hasClass(alignment)
     @log "Building #{alignment} panel frame \"#{id}\" at position #{position}", @FRAME_LEVEL
     @setPositionOf panel, to: position
-    @pushPanels(id, position, @panelIndices)
+    @pushPanels(id, position)
 
     return panel
 

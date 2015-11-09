@@ -24,17 +24,6 @@ class Alongslide::State
     # Manually pushing 'digital-project-context' to sections
     #
     @flowIndices.push('digital-project-context')
-    delete @panelIndices[0]
-
-    # Removing `undefined` from `@panelIndices`
-    #
-    newObj = {}
-    ct = 1
-    for i of @panelIndices
-      if @panelIndices[i] != undefined
-        newObj[ct] = @panelIndices[i]
-        ++ct
-    @panelIndices = newObj
 
   rewindIndex:(state) ->
     state.index -= 1
