@@ -327,6 +327,12 @@ class Alongslide::Layout
           "#{panelPosition} to #{panelPosition-1}", @FRAME_LEVEL
           @movePanelPos($(panel).data('alongslide-id'), panelPosition-1, panelPosition)
         $(panel).data(@IN_POINT_KEY, panelPosition-1)
+        oldOutKey = $(panel).data(@OUT_POINT_KEY)
+        newOutKey = if !isNaN(oldOutKey) and oldOutKey > -1
+          oldOutKey - 1
+        else
+          oldOutKey
+        $(panel).data(@OUT_POINT_KEY, newOutKey)
 
   # Create region to receive flowing text (column). Return jQuery object.
   #
