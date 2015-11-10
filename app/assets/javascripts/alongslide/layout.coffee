@@ -325,7 +325,7 @@ class Alongslide::Layout
       if panelPosition > frame.data(@IN_POINT_KEY)
         @log "Moving panel \"#{$(panel).data('alongslide-id')}\" at " +
           "#{panelPosition} to #{panelPosition-1}", @FRAME_LEVEL
-          @movePanelPos($(panel).data('alongslide-id'), panelPosition-1, panelPosition)
+        @movePanelPos($(panel).data('alongslide-id'), panelPosition-1, panelPosition)
         $(panel).data(@IN_POINT_KEY, panelPosition-1)
         oldOutKey = $(panel).data(@OUT_POINT_KEY)
         newOutKey = if !isNaN(oldOutKey) and oldOutKey > -1
@@ -374,8 +374,7 @@ class Alongslide::Layout
   #
   movePanelPos:(panelName, newIndex, oldIndex)->
     obj = _.findWhere(@panelIndices, {pos:oldIndex})
-    objIdx = _.indexOf(@panelIndices, obj)
-    @panelIndices[objIdx].pos = newIndex
+    obj.pos = newIndex
 
   # Pull panel element out of @panels storage, apply its transition, and
   # append to DOM!
