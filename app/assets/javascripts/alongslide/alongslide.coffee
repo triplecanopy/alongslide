@@ -119,20 +119,21 @@ class Alongslide
       $column = $el.parents('.column')
       $column.append($footnote)
 
-      # Place footnote, prevent placing offscreen
-      #
-      bottom = $column.height() + $column.offset().top
-      if ($el.offset().top + $footnote.height()) > bottom
-        $footnote.css('bottom', 0)
-      else
-        $footnote.css('top', $el.parent().position().top )
-
-      $el.on 'click', (e) ->
+      $el.on 'click mouseenter', (e) ->
         e.preventDefault()
         e.stopImmediatePropagation()
+
+        # Place footnote, prevent placing offscreen
+        #
+        bottom = $column.height() + $column.offset().top
+        if ($el.offset().top + $footnote.height()) > bottom
+          $footnote.css('bottom', 0)
+        else
+          $footnote.css('top', $el.parent().position().top )
+
         $footnote.fadeIn(150)
 
-      $footnote.on 'click', (e) ->
+      $footnote.on 'click mouseleave', (e) ->
         setTimeout ->
           $footnote.fadeOut(150)
         , 100
