@@ -203,9 +203,9 @@ class RegionFlow::NamedFlow
   # @params elem - jQuery object
   #
   getBlockParent:(elem) ->
-    arr = ['b', 'big', 'i', 'small', 'tt', 'abbr', 'acronym', 'cite', 'code', 'dfn', 'em', 'kbd', 'strong', 'samp', 'var', 'a', 'bdo', 'br', 'img', 'map', 'object', 'q', 'script', 'span', 'sub', 'sup', 'button', 'input', 'label', 'select', 'textarea']
-    blockElem = if $.inArray(elem.prop('tagName').toLowerCase(), arr) > -1
-      @getBlockParent(elem.parent(), arr)
+    inlineEls = ['B', 'BIG', 'I', 'SMALL', 'TT', 'ABBR', 'ACRONYM', 'CITE', 'CODE', 'DFN', 'EM', 'KBD', 'STRONG', 'SAMP', 'VAR', 'A', 'BDO', 'BR', 'IMG', 'MAP', 'OBJECT', 'Q', 'SCRIPT', 'SPAN', 'SUB', 'SUP', 'BUTTON', 'INPUT', 'LABEL', 'SELECT', 'TEXTAREA']
+    blockElem = if $.inArray(elem.prop('tagName'), inlineEls) > -1
+      @getBlockParent(elem.parent(), inlineEls)
     else
       elem
     return blockElem
