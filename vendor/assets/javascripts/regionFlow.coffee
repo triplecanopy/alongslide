@@ -159,6 +159,21 @@ class RegionFlow::NamedFlow
   populateRegions: ->
     @lastRegion().appendNode(node.clone()) for node in @contentNodes
 
+
+  # Verify that a node can be separated from it's predecessor. Used to prevent
+  # breaks on context-dependent elements, e.g., footnote references.
+  #
+  contextDependent:(node) ->
+    conditions = [
+      -> Boolean(@nodeName is 'SUP')
+    ]
+    result = false
+    i = conditions.length
+    while i--
+      result = conditions[i].call(node)
+      if result then break
+    result
+
   # Recursive layout call.
   #
   # @params options - hash
@@ -182,7 +197,7 @@ class RegionFlow::NamedFlow
       formerParent = $(childNode).parent()
       $(childNode).remove().appendTo(targetNode)
 
-      if @oversetRegion().updateOverset() is 'overset'
+      if @oversetRegion().updateOverset() is 'overset' and not @contextDependent(childNode)
 
         # move it back where it was
         $(childNode).remove().prependTo(formerParent)
@@ -198,7 +213,6 @@ class RegionFlow::NamedFlow
       else if $(childNode).hasClass('break-after-always')
         return false
 
-
   # Helper function, recurses up the DOM looking for a block element
   # @params elem - jQuery object
   #
@@ -210,9 +224,6 @@ class RegionFlow::NamedFlow
       elem
     return blockElem
 
-
-
-
   # Given a text node and a target node (in the overset region), find the number
   # of words which fit.
   #
@@ -223,8 +234,7 @@ class RegionFlow::NamedFlow
   breakUpText: (options = {}) ->
     textNode = options.node
     targetNode = document.createTextNode("")
-    inlineElements =
-    $(targetNode).appendTo(options.into)
+    inlineElements = $(targetNode).appendTo(options.into)
 
     words = textNode.nodeValue.split(/[ ]+/)
     highIndex = words.length - 1
@@ -248,7 +258,7 @@ class RegionFlow::NamedFlow
     else
       targetNode.textContent = words[0..tryIndex].join(" ")
       textNode.nodeValue = words[tryIndex+1..words.length-1].join(" ")
-      $parentElem = @getBlockParent $(textNode).parent() # prevents us from attaching classes to <em>, <i>, etc
+      $parentElem = @getBlockParent $(textNode).parent() # prevents us from attaching classes to inline elements
       $parentElem.addClass("region-flow-post-text-break")
 
     @oversetRegion().updateOverset() unless RegionFlow::lazyMode
