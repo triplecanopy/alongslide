@@ -110,11 +110,11 @@ class Alongslide
       #
       $el = $(el)
 
-      # Find the footnote text
+      # Find and clone the footnote element
       #
-      $footnote = @footnotes.find($el.data('anchor'))
+      $footnote = @footnotes.find($el.data('anchor')).clone()
 
-      # Append the footnote text element to the column
+      # Append the cloned element to the column
       #
       $column = $el.parents('.column')
       $column.append($footnote)
