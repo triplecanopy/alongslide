@@ -351,15 +351,14 @@ class Alongslide::Layout
   # `State`.
   #
   pushFlows: (id, position, arr) ->
-    if position is arr.length
+    # Frames named `sectionFlow[0-9]` are not part of the regular flow, and
+    # therefore shouldn't be included.
+    #
+    if position is arr.length and id.match(/^sectionFlow[0-9]/) is null
       arr.push(id)
     else if position > arr.length
       while position > arr.length
         arr.push(arr[arr.length - 1])
-
-      # Frames named `sectionFlow[0-9]` are not part of the regular flow, and
-      # therefore shouldn't be included.
-      #
       if id.match(/^sectionFlow[0-9]/) is null
         arr.push(id)
 
