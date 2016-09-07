@@ -1,6 +1,6 @@
 Gem::Specification.new do |gem|
   gem.name    = 'alongslide'
-  gem.version = '0.9.11'
+  gem.version = '0.9.12'
 
   gem.summary = "Create dynamic web layouts with an extended Markdown syntax"
   gem.description = "Create dynamic web layouts with an extended Markdown syntax"
