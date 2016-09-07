@@ -9,8 +9,6 @@ class Alongslide::State
 
     History = window.History
 
-    if !History.enabled then return false
-
     @documentTitle = document.getElementsByTagName('title')[0].innerHTML
     @panelNames    = options.panelNames
     @flowNames     = options.flowNames
@@ -31,6 +29,8 @@ class Alongslide::State
 
   updateLocation:(state = {})->
 
+    if !History.enabled then return
+
     # Account for layouts that only have one section, as the `position`s
     # won't be in the indices array.
     #
@@ -45,9 +45,8 @@ class Alongslide::State
     # Update the hash
     #
     else if @hashIndices[state.index]
-      setTimeout =>
-        History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
-      , 0
+
+      History.replaceState null, @documentTitle, @hash + @hashIndices[state.index]
 
       data =
         index       : state.index

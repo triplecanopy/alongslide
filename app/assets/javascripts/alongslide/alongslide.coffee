@@ -140,7 +140,7 @@ class Alongslide
 
   applyAnchorScrolling: ->
     self = @
-    @frames.find('a[href*=#]:not([href=#])').on('click', (e) ->
+    @frames.find('a[href*=\\#]:not([href=\\#])').on('click', (e) ->
       self.goToPanel(@hash.substr(1))
     )
 
