@@ -85,7 +85,7 @@
     Alongslide.prototype.applyAnchorScrolling = function() {
       var self;
       self = this;
-      return this.frames.find('a[href*=#]:not([href=#])').on('click', function(e) {
+      return this.frames.find('a[href*=\\#]:not([href=\\#])').on('click', function(e) {
         return self.goToPanel(this.hash.substr(1));
       });
     };
