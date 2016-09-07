@@ -722,7 +722,7 @@
 		var deltaTime;
 
 		_addEvent(documentElement, [EVENT_TOUCHSTART, EVENT_TOUCHMOVE, EVENT_TOUCHCANCEL, EVENT_TOUCHEND].join(' '), function(e) {
-			// e.preventDefault();
+			e.preventDefault();
 
 			var touch = e.changedTouches[0];
 
@@ -750,18 +750,12 @@
 					deltaX = currentTouchX - lastTouchX;
 					deltaTime = currentTouchTime - lastTouchTime;
 
-					// Allow horizontal scroll on overflowing elements
-					if (Math.abs(deltaX) < Math.abs(deltaY)) {
-						return;
-					} else {
-						var position = _mobileOffset - (!_scrollHorizontal ? deltaY : deltaX);
-						_instance.setScrollPosition(position, true);
+					var position = _mobileOffset - (!_scrollHorizontal ? deltaY : deltaX);
+					_instance.setScrollPosition(position, true);
 
-						lastTouchY = currentTouchY;
-						lastTouchX = currentTouchX;
-						lastTouchTime = currentTouchTime;
-					}
-
+					lastTouchY = currentTouchY;
+					lastTouchX = currentTouchX;
+					lastTouchTime = currentTouchTime;
 					break;
 				default:
 				case EVENT_TOUCHCANCEL:
