@@ -496,7 +496,7 @@ class Alongslide::Layout
   #
   horizontalPanelAt: (position, edge) ->
     edges = if edge? then [edge] else @HORIZONTAL_EDGES
-    _(@panelIndex[position] || []).any (panel) ->
+    _(@panelIndex?[position] || []).any (panel) ->
       _(edges).any (edge) -> $(panel).hasClass(edge)
 
   # Check if flow frame shares space with horizontally-pinned panel.
