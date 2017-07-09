@@ -25,6 +25,8 @@ module Alongslide
     @@template_names = {}
 
 
+    @@action_view_path = ["app/views"]
+
     @@locals = {}
 
     class << self
@@ -103,10 +105,20 @@ module Alongslide
         @@locals = locals
       end
 
+
+      # Set path for ActionView templates
+      # (used in some Alongslide templates)
+      #
+      def action_view_path=(path)
+        @@action_view_path = path
+      end
+
+
+
       # Return an ActionView instance
       #
       def renderer
-        action_view = ActionView::Base.new(["app/views"])
+        action_view = ActionView::Base.new(@@action_view_path)
         action_view.class_eval do
           include ApplicationHelper if defined? ApplicationHelper
           def protect_against_forgery?
