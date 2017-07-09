@@ -106,7 +106,7 @@ module Alongslide
       # Return an ActionView instance
       #
       def renderer
-        ActionView::Base.new
+        ActionView::Base.new(["app/views"])
       end
     end
 
