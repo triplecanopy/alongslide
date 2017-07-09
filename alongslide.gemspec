@@ -12,6 +12,10 @@ Gem::Specification.new do |gem|
   gem.add_dependency('redcarpet')
   gem.add_dependency('treetop','~>1.4.14')
   gem.add_dependency('polyglot')
+  gem.add_dependency('haml')
+  gem.add_dependency('sass')
+  gem.add_dependency('coffee-script')
+  gem.add_dependency('actionview')
   gem.add_development_dependency('rspec')
 
   gem.files = `git ls-files`.split("\n")
