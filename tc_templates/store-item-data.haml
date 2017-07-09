@@ -1,0 +1,21 @@
+---
+greedy: false
+---
+
+- if content_item.is_a? StoreItem
+  .sidebar
+    // Store Item Customization and Buy Button
+    .meta(tc-buy store-item-id="#{content_item._id}"
+                 promotions="#{content_item.promotions.to_json}"
+                 stripe-plan-options="#{content_item._stripe_plan_details.to_json}"
+                 buy-url="#{content_item.buy_url}"
+                 download-url="#{content_item.download_url}"
+                 config="#{content_item.config.to_json}"
+                 cost="#{content_item.cost}"
+                 discounted="#{content_item.discounted}"
+                 store-item-type="#{store_item_class(content_item)}"
+                 class="#{store_item_class(content_item)}"
+                 variants="#{content_item.variants.to_json}")
+
+    - if content_item.info.present?
+      .material= raw content_item.info

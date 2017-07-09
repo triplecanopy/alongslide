@@ -5,4 +5,4 @@ greedy: true
 .alongslide.show.panel{"data-alongslide-id" => identifier, :class => classes}
   .contents
     .inner
-      = raw content.join
+      = content.join.html_safe

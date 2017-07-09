@@ -1,0 +1,26 @@
+---
+greedy: false
+---
+
+- header_id = ""
+- if content_item.primary_collection.present?
+  - header_id = wrapper_id(content_item.primary_collection)
+  %style= content_item.primary_collection.custom_css
+
+%header{id: header_id}
+
+  .desc= raw content_item.lede_or_description
+
+  %h1= content_item.title
+
+  = raw content.join
+
+  - unless content_item.authorships.empty?
+    %p.authors by #{author_links(content_item.authorships)}
+
+  .publish_date
+    = render "content_items/issue_series_icons", :context => content_item
+    %span.type-name= content_item_type_name(content_item).humanize.titleize
+    - unless content_item.published_at.blank?
+      Published on
+      = l content_item.published_at, format: :publish_date

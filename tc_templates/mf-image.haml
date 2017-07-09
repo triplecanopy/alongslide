@@ -1,0 +1,29 @@
+---
+independent: true
+greedy: false
+---
+
+:ruby
+  id ||= nil
+  url ||= nil
+  alt ||= ""
+  content ||= ""
+  type ||= ""
+
+-# Render img with caption, or .error if anything goes wrong.
+- if id.nil? and url.nil?
+  .als-error Image requires either an 'id' or a 'url'.
+- else
+  - if id.present?
+    - begin
+      - image = Upload.find id
+      - url = image.asset.url
+    - rescue Mongoid::Errors::DocumentNotFound
+      .error No image found for id "#{id}"
+
+  - if url.present?
+    .als-mf.als-image{:class => "#{type}"}
+      %img.image-box{:src => "#{url}", :alt => "#{alt}"}
+      .caption
+        %span.index
+        = raw content.join

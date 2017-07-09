@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Alongslide::Grammar::RootParser do
-  
+
   before :all do
     Alongslide.configure do |config|
       config.user_template_dir = File.expand_path("../fixtures", File.dirname(__FILE__))
@@ -13,9 +13,9 @@ describe Alongslide::Grammar::RootParser do
   end
 
   before :each do
-    Rails.stub :configuration do
-      double(paths: {"app/views" => nil})
-    end
+    # Rails.stub :configuration do
+    #   double(paths: {"app/views" => nil})
+    # end
   end
 
   describe "panels" do
@@ -24,6 +24,7 @@ describe Alongslide::Grammar::RootParser do
         + panel #{@panel_name} pin bottom
 
         + unpin #{@panel_name}
+        
       MARKDOWN
       parsed.should_not be_nil
       parsed.render.should include(@panel_name)

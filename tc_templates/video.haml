@@ -1,0 +1,22 @@
+---
+greedy: false
+---
+
+:ruby
+  src ||= nil
+  content ||= ""
+  type ||= ""
+  height ||= ""
+  width ||= ""
+  type ||= ""
+
+-# Render img with caption, or .error if anything goes wrong.
+- if src.nil?
+  .als-error Video requires a 'src'
+- else
+  .als-video
+    .video-box
+      %iframe{:src => "#{src}", :width => "#{width}", :height => "#{height}", :frameborder => "0", :webkitallowfullscreen => true, :mozallowfullscreen => true, :allowfullscreen => true}
+    .caption
+      %span.index
+      = raw content.join
