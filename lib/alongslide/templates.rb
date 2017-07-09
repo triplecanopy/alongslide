@@ -5,7 +5,7 @@
 # Copyright 2013 Canopy Canopy Canopy, Inc.
 # Author Adam Florin
 #
-require 'action_view' # only kept for html_safe string helpers
+require 'action_view'
 require 'haml/template'
 
 module Alongslide
@@ -66,9 +66,15 @@ module Alongslide
       end
 
       # Do HAML render.
+      #
+      # Use ActionView instead of Haml::Engine because we need our Rails helpers.
+      #
       def render_template(name, is_user_template, render_params)
         template_params, haml = load(name, is_user_template)
-        Haml::Engine.new(haml).render(Object.new, render_params.merge(@@locals))
+        renderer.render(
+          inline: haml,
+          type: :haml,
+          locals: render_params.merge(@@locals))
       end
 
       # Filesystem utility
@@ -97,6 +103,11 @@ module Alongslide
         @@locals = locals
       end
 
+      # Return an ActionView instance
+      #
+      def renderer
+        ActionView::Base.new
+      end
     end
 
   end
