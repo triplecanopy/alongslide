@@ -3,9 +3,9 @@ require 'spec_helper'
 describe Alongslide::Grammar::RootParser do
 
   before :all do
-    Alongslide.configure do |config|
-      config.user_template_dir = File.expand_path("../fixtures", File.dirname(__FILE__))
-    end
+    # Alongslide.configure do |config|
+    #   config.user_template_dir = File.expand_path("../fixtures", File.dirname(__FILE__))
+    # end
 
     @parser = Alongslide::Grammar::RootParser.new
     @panel_name = "SomePanel"
@@ -24,7 +24,7 @@ describe Alongslide::Grammar::RootParser do
         + panel #{@panel_name} pin bottom
 
         + unpin #{@panel_name}
-        
+
       MARKDOWN
       parsed.should_not be_nil
       parsed.render.should include(@panel_name)
@@ -74,7 +74,7 @@ describe Alongslide::Grammar::RootParser do
 
           + gallery
 
-          + image
+          + image url "img.jpg"
         MARKDOWN
         parsed.should_not be_nil
         parsed.render.should include("gallery")
@@ -84,9 +84,9 @@ describe Alongslide::Grammar::RootParser do
         parsed = @parser.parse <<-MARKDOWN.strip_heredoc
           + panel #{@panel_name}
 
-          + image
+          + image url "img.jpg"
 
-          + image
+          + image url "img.jpg"
         MARKDOWN
         parsed.should_not be_nil
         parsed.render.should include("image")
@@ -97,7 +97,7 @@ describe Alongslide::Grammar::RootParser do
         parsed = @parser.parse <<-MARKDOWN.strip_heredoc
           + panel a
 
-          + image
+          + image url "img.jpg"
 
           #{text_contents}
           #{text_contents}
@@ -113,6 +113,7 @@ describe Alongslide::Grammar::RootParser do
           + panel a
 
           + image url "#{url}" alt "#{alt_text}"
+
         MARKDOWN
         parsed.should_not be_nil
         parsed.render.should include(url)
