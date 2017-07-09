@@ -106,7 +106,14 @@ module Alongslide
       # Return an ActionView instance
       #
       def renderer
-        ActionView::Base.new(["app/views"])
+        action_view = ActionView::Base.new(["app/views"])
+        action_view.class_eval do
+          include ApplicationHelper if defined? ApplicationHelper
+          def protect_against_forgery?
+            false
+          end
+        end
+        return action_view
       end
     end
 

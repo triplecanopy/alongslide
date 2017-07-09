@@ -3,9 +3,9 @@ require 'spec_helper'
 describe Alongslide::Grammar::RootParser do
 
   before :all do
-    # Alongslide.configure do |config|
-    #   config.user_template_dir = File.expand_path("../fixtures", File.dirname(__FILE__))
-    # end
+    Alongslide.configure do |config|
+      config.user_template_dir = File.expand_path("../fixtures", File.dirname(__FILE__))
+    end
 
     @parser = Alongslide::Grammar::RootParser.new
     @panel_name = "SomePanel"
@@ -108,16 +108,15 @@ describe Alongslide::Grammar::RootParser do
 
       it "should support template parameters" do
         url = "http://some-image.com/over_there.jpg?q=999"
-        alt_text = "Some \\\"alternate\\\" text."
+        alt_text = "Some alternate text."
         parsed = @parser.parse <<-MARKDOWN.strip_heredoc
           + panel a
 
           + image url "#{url}" alt "#{alt_text}"
-
         MARKDOWN
         parsed.should_not be_nil
         parsed.render.should include(url)
-        parsed.render.should include(alt_text.gsub(/\\"/, '"'))
+        parsed.render.should include(alt_text)
       end
     end
   end

@@ -15,9 +15,6 @@ require "alongslide/syntax_error"
 module Alongslide
   @@parser = nil
 
-  tc_templates = File.expand_path("../tc_templates", File.dirname(__FILE__))
-  Alongslide::Templates.user_template_dir = tc_templates
-
   class << self
 
     # Accept configuration from initializer.
