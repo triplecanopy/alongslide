@@ -208,7 +208,7 @@ class Alongslide::Scrolling
 
               # x translate
               translateBy = (offset - direction) * scale
-              translateByPx = Math.round(translateBy * Math.max($(window).width(), alongslide.layout.FRAME_WIDTH))
+              translateByPx = Math.round(translateBy * Math.max(window.innerWidth, alongslide.layout.FRAME_WIDTH))
               styles["#{prefix.css}transform"] =
                 "translate(#{translateByPx}px, 0) translateZ(0)"
 
@@ -296,7 +296,7 @@ class Alongslide::Scrolling
       @mouseDown = true
     $(document).mouseup =>
       @mouseDown = false
-      requestedPosition = $(window).scrollLeft() / $(window).width()
+      requestedPosition = $(window).scrollLeft() / window.innerWidth
       window.alongslide?.scrolling.scrollToPosition(requestedPosition)
 
   # Scroll to requested frame.
@@ -348,7 +348,7 @@ class Alongslide::Scrolling
       ), @WAIT_BEFORE_RESET_MS)
 
     else if options.force
-      if (position * $(window).width()) isnt skrollr.getScrollPosition()
+      if (position * window.innerWidth) isnt skrollr.getScrollPosition()
         scrollTo = @currentPosition
         duration = @FORCE_SLIDE_DURATION_MS
 
@@ -368,7 +368,7 @@ class Alongslide::Scrolling
       @ignoreScroll = true
 
     # Do scroll
-    skrollr.animateTo scrollTo * $(window).width(),
+    skrollr.animateTo scrollTo * window.innerWidth,
       duration: duration
       easing: 'easeOutQuad'
       done: (skrollr) =>
@@ -411,7 +411,7 @@ class Alongslide::Scrolling
     return if window.alongslide?.scrolling.mouseDown
 
     # see how far the user has scrolled, scroll to the next frame.
-    requestedPosition = info.curTop / $(window).width()
+    requestedPosition = info.curTop / window.innerWidth
     window.alongslide?.scrolling.scrollToPosition(requestedPosition, skrollr: @)
 
   # Listen to left/right arrow (unless modifier keys are pressed),

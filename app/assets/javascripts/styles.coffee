@@ -24,7 +24,7 @@ class window.Styles
     $.each @urls, (index, url) =>
       $.get(url)
         .success (data) -> styles.append data
-        .error (response) -> console.error response
+        .error (err) -> console.error err
     callback()
 
   # Util: CSS formatter
