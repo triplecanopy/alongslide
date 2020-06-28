@@ -21,11 +21,12 @@ class window.Styles
   #
   doLoad: (callback) ->
     styles = $('<style type="text/css"/>').appendTo('body')
-    $.each @urls, (index, url) =>
+    promises = @urls.map (url) ->
       $.get(url)
         .success (data) -> styles.append data
         .error (response) -> console.error response
-    callback()
+
+    Promise.all(promises).then(callback)
 
   # Util: CSS formatter
   #
