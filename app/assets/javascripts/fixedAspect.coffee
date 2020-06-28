@@ -1,20 +1,20 @@
-# 
+#
 # fixedAspect.coffee: Maintain fixed aspect ratio for given element.
-# 
+#
 # Copyright 2013 Canopy Canopy Canopy, Inc.
-# 
+#
 
 class window.FixedAspect
 
   # Fit the content elements so that they maintain a consistent aspect ratio
   # no matter the aspect ratio of the browser window.
-  # 
+  #
   # @param minWidthPx - minimum width in pixels to allow. Don't shrink smaller!
   # @param marginTopPx - margin top in pixels to leave open.
-  # 
+  #
   # @return frame - bounding rect of content area, expressed as percentages
   #   relative to the browser window (0.0-1.0).
-  # 
+  #
   fitFrame: (minWidthPx, marginTopPx = 0) ->
     FRAME_ASPECT = 1.6
     FRAME_SELECTOR = '#frames > .flow > .frame'
@@ -65,20 +65,20 @@ class window.FixedAspect
 
   # Go through all panels and manually turn absolute pixel-based values into
   # percentage-based values.
-  # 
+  #
   # Do this after render, as once the operation is done, it can't be undone.
-  # 
+  #
   # Because of the complex interrelation between the CSS values (specified in a
   # long, structural SASS doc) and the frame aspect value (computed on the fly),
   # there's just no other way to do this but to get dirty and effectively write
   # part of a CSS engine.
-  # 
+  #
   # Every `.panel` contains a `.contents`. The latter class has top/left/width/height
   # specified--relative to the `.panel`. We re-derive the percentages from these
   # relative values, because JS can't easily access CSS percentage values. And this
   # method of dynamic re-percentifying seemed more sensible than putting large amounts
   # of style data into JSON.
-  # 
+  #
   fitPanels: (frameAspect) ->
     $('#frames > .panels > .panel').each (index, panel) =>
       $panel = $(panel)
@@ -94,8 +94,8 @@ class window.FixedAspect
         $contents.data('innerFrame', innerFrame)
 
       # .panel
-      # 
-      panelFrame = 
+      #
+      panelFrame =
         width: 1.0
         height: 1.0
 
@@ -113,8 +113,8 @@ class window.FixedAspect
           panelFrame.height = frameAspectBottom + (1.0 - innerFrame.top) * frameAspect.height
 
       # .panel .contents
-      # 
-      contentsFrame = 
+      #
+      contentsFrame =
         left: (frameAspect.left + innerFrame.left * frameAspect.width) / panelFrame.width
         top: (frameAspect.top + innerFrame.top * frameAspect.height) / panelFrame.height
         width: (innerFrame.width * frameAspect.width) / panelFrame.width
@@ -130,12 +130,12 @@ class window.FixedAspect
           contentsFrame.top = 0
 
       # burn styles into CSS
-      # 
+      #
       $panel.css Styles::formatPercentageValues panelFrame
       $contents.css Styles::formatPercentageValues contentsFrame
 
   # Given a panel, determine its innerFrame.
-  # 
+  #
   innerFrame: ($panel) ->
     $contents = $panel.find('> .contents')
 

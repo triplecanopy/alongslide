@@ -28,6 +28,10 @@ class Alongslide::Layout
   #
   frameWidth: $(window).width()
 
+  # Used to account for transform offsets in Alongslide::Layout.applyTransition
+  #
+  scrollbarOffset: 0
+
   # Switch to true for verbose debugging. Plus constants for indent level.
   #
   debug            : false
@@ -405,6 +409,24 @@ class Alongslide::Layout
 
     # remove regionFlows' internal record of regions we just destroyed
     _.each document.namedFlows.namedFlows, (flow) -> flow.resetRegions()
+
+    @calculateScrollbarOffset()
+
+  # Find the horizontal scrollbar offset. Must be done before body has fixed px
+  # width applied during render.
+  #
+  calculateScrollbarOffset: ->
+    documentElement = $('html')
+
+    # Set height programatically to force vertical scrollbars
+    documentElement.height($(window).height() * 2)
+
+    # Calculate scrollbar height. Use native window.innerWidth because jQuery's
+    # width method reports incorrect value (i.e., window width - scrollbar width)
+    @scrollbarOffset = window.innerWidth - document.documentElement.clientWidth
+
+    # Unset height
+    documentElement.height('')
 
   # Write the given array of backgrounds to the DOM.
   #

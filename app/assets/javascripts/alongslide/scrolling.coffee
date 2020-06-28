@@ -208,7 +208,9 @@ class Alongslide::Scrolling
 
               # x translate
               translateBy = (offset - direction) * scale
-              translateByPx = Math.round(translateBy * Math.max($(window).width(), alongslide.layout.FRAME_WIDTH))
+              windowWidth = $(window).width() + alongslide.layout.scrollbarOffset
+              translateByPx = Math.round(translateBy * Math.max(windowWidth, alongslide.layout.FRAME_WIDTH))
+
               styles["#{prefix.css}transform"] =
                 "translate(#{translateByPx}px, 0) translateZ(0)"
 
