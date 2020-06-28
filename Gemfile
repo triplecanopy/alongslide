@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.2.2'
+ruby '2.5.8'
 
 gem 'redcarpet'
 gem 'treetop', '~>1.4.14'
