@@ -414,6 +414,12 @@ class Alongslide::Scrolling
 
     # see how far the user has scrolled, scroll to the next frame.
     requestedPosition = info.curTop / $(window).width()
+
+    # The requested position is rounded to nearest 1/1000 to prevent
+    # frame wobble when curTop is not divisible by the window width.
+    # This is only apparent when a user is zoomed-in on their browser.
+    requestedPosition = Math.round((requestedPosition + Number.EPSILON) * 1000) / 1000
+
     window.alongslide?.scrolling.scrollToPosition(requestedPosition, skrollr: @)
 
   # Listen to left/right arrow (unless modifier keys are pressed),
