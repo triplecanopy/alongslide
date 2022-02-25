@@ -197,6 +197,20 @@ class RegionFlow::NamedFlow
       formerParent = $(childNode).parent()
       $(childNode).remove().appendTo(targetNode)
 
+      # Splice in any hanging punctuation that will get pushed to the next column
+      if @oversetRegion().updateOverset() is 'fit' and (nextNode = nodes[index + 1])
+
+        # Include unicode for single and double right quotation mark
+        re = /^\s*[\)\]\},.\u2019\u201D]+/g
+
+        # If there is hanging punctuation, remove it from the next node and splice
+        # it onto the current node
+        if re.test(nextNode.textContent)
+          index = re.lastIndex
+          punc = nextNode.textContent.slice(0, index)
+          nextNode.textContent = nextNode.textContent.slice(index)
+          targetNode.append(punc)
+
       if @oversetRegion().updateOverset() is 'overset' and not @contextDependent(childNode)
 
         # move it back where it was
@@ -216,13 +230,13 @@ class RegionFlow::NamedFlow
   # Helper function, recurses up the DOM looking for a block element
   # @params elem - jQuery object
   #
-  getBlockParent:(elem) ->
-    inlineEls = ['B', 'BIG', 'I', 'SMALL', 'TT', 'ABBR', 'ACRONYM', 'CITE', 'CODE', 'DFN', 'EM', 'KBD', 'STRONG', 'SAMP', 'VAR', 'A', 'BDO', 'BR', 'IMG', 'MAP', 'OBJECT', 'Q', 'SCRIPT', 'SPAN', 'SUB', 'SUP', 'BUTTON', 'INPUT', 'LABEL', 'SELECT', 'TEXTAREA']
-    blockElem = if $.inArray(elem.prop('tagName'), inlineEls) > -1
-      @getBlockParent(elem.parent(), inlineEls)
+  getBlockParent: (elem) ->
+    inline = { 'B': true, 'BIG': true, 'I': true, 'SMALL': true, 'TT': true, 'ABBR': true, 'ACRONYM': true, 'CITE': true, 'CODE': true, 'DFN': true, 'EM': true, 'KBD': true, 'STRONG': true, 'SAMP': true, 'VAR': true, 'A': true, 'BDO': true, 'BR': true, 'IMG': true, 'MAP': true, 'OBJECT': true, 'Q': true, 'SCRIPT': true, 'SPAN': true, 'SUB': true, 'SUP': true, 'BUTTON': true, 'INPUT': true, 'LABEL': true, 'SELECT': true, 'TEXTAREA': true }
+    block = if inline[elem.prop('tagName')]
+      @getBlockParent(elem.parent())
     else
       elem
-    return blockElem
+    return block
 
   # Given a text node and a target node (in the overset region), find the number
   # of words which fit.
@@ -258,7 +272,10 @@ class RegionFlow::NamedFlow
     else
       targetNode.textContent = words[0..tryIndex].join(" ")
       textNode.nodeValue = words[tryIndex+1..words.length-1].join(" ")
-      $parentElem = @getBlockParent $(textNode).parent() # prevents us from attaching classes to inline elements
+
+      # Prevents from attaching classes to inline elements
+      $parentElem = @getBlockParent($(textNode).parent())
+
       $parentElem.addClass("region-flow-post-text-break")
 
     @oversetRegion().updateOverset() unless RegionFlow::lazyMode
